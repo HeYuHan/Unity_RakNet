@@ -202,6 +202,8 @@
     <Compile Include="Assets\RakNet\SwigOutput\SwigCSharpOutput\UnsignedShortPointer.cs" />
     <Compile Include="Assets\RakNet\SwigOutput\SwigCSharpOutput\uint24_t.cs" />
     <Compile Include="Assets\Script\Chat.cs" />
+    <Compile Include="Assets\Script\NetworkConnection.cs" />
+    <Compile Include="Assets\Script\NetworkStream.cs" />
     <Compile Include="Assets\Script\Test.cs" />
   </ItemGroup>
   <ItemGroup>
