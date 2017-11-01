@@ -16,7 +16,9 @@ public class Chat : MonoBehaviour {
         stream.connection = connection;
         connection.m_OnConnected = OnConnected;
         connection.m_OnDisconnected = OnDisconnected;
-        connection.Connect("127.0.0.1", 9500, "channel");
+        bool ret = connection.Connect("192.168.1.168", 9530, "channel");
+        Debug.Log("ret = " + ret);
+
     }
     public void OnMessage()
     {
