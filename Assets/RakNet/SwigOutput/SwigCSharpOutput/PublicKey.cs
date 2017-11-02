@@ -33,7 +33,7 @@ public class PublicKey : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_PublicKey(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_PublicKey(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -43,45 +43,45 @@ public class PublicKey : IDisposable {
 
   public PublicKeyMode publicKeyMode {
     set {
-      RakNetPINVOKE.PublicKey_publicKeyMode_set(swigCPtr, (int)value);
+      RakNetPINVOKE.CSharp_PublicKey_publicKeyMode_set(swigCPtr, (int)value);
     } 
     get {
-      PublicKeyMode ret = (PublicKeyMode)RakNetPINVOKE.PublicKey_publicKeyMode_get(swigCPtr);
+      PublicKeyMode ret = (PublicKeyMode)RakNetPINVOKE.CSharp_PublicKey_publicKeyMode_get(swigCPtr);
       return ret;
     } 
   }
 
   public string remoteServerPublicKey {
     set {
-      RakNetPINVOKE.PublicKey_remoteServerPublicKey_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_PublicKey_remoteServerPublicKey_set(swigCPtr, value);
     } 
     get {
-      string ret = RakNetPINVOKE.PublicKey_remoteServerPublicKey_get(swigCPtr);
+      string ret = RakNetPINVOKE.CSharp_PublicKey_remoteServerPublicKey_get(swigCPtr);
       return ret;
     } 
   }
 
   public string myPublicKey {
     set {
-      RakNetPINVOKE.PublicKey_myPublicKey_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_PublicKey_myPublicKey_set(swigCPtr, value);
     } 
     get {
-      string ret = RakNetPINVOKE.PublicKey_myPublicKey_get(swigCPtr);
+      string ret = RakNetPINVOKE.CSharp_PublicKey_myPublicKey_get(swigCPtr);
       return ret;
     } 
   }
 
   public string myPrivateKey {
     set {
-      RakNetPINVOKE.PublicKey_myPrivateKey_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_PublicKey_myPrivateKey_set(swigCPtr, value);
     } 
     get {
-      string ret = RakNetPINVOKE.PublicKey_myPrivateKey_get(swigCPtr);
+      string ret = RakNetPINVOKE.CSharp_PublicKey_myPrivateKey_get(swigCPtr);
       return ret;
     } 
   }
 
-  public PublicKey() : this(RakNetPINVOKE.new_PublicKey(), true) {
+  public PublicKey() : this(RakNetPINVOKE.CSharp_new_PublicKey(), true) {
   }
 
 }

@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class NatPunchthroughDebugInterface_PacketLogger : NatPunchthroughDebugInterface {
   private HandleRef swigCPtr;
 
-  internal NatPunchthroughDebugInterface_PacketLogger(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.NatPunchthroughDebugInterface_PacketLogger_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal NatPunchthroughDebugInterface_PacketLogger(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_NatPunchthroughDebugInterface_PacketLogger_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class NatPunchthroughDebugInterface_PacketLogger : NatPunchthroughDebugIn
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_NatPunchthroughDebugInterface_PacketLogger(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_NatPunchthroughDebugInterface_PacketLogger(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -42,20 +42,20 @@ public class NatPunchthroughDebugInterface_PacketLogger : NatPunchthroughDebugIn
 
   public PacketLogger pl {
     set {
-      RakNetPINVOKE.NatPunchthroughDebugInterface_PacketLogger_pl_set(swigCPtr, PacketLogger.getCPtr(value));
+      RakNetPINVOKE.CSharp_NatPunchthroughDebugInterface_PacketLogger_pl_set(swigCPtr, PacketLogger.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.NatPunchthroughDebugInterface_PacketLogger_pl_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_NatPunchthroughDebugInterface_PacketLogger_pl_get(swigCPtr);
       PacketLogger ret = (cPtr == IntPtr.Zero) ? null : new PacketLogger(cPtr, false);
       return ret;
     } 
   }
 
-  public NatPunchthroughDebugInterface_PacketLogger() : this(RakNetPINVOKE.new_NatPunchthroughDebugInterface_PacketLogger(), true) {
+  public NatPunchthroughDebugInterface_PacketLogger() : this(RakNetPINVOKE.CSharp_new_NatPunchthroughDebugInterface_PacketLogger(), true) {
   }
 
   public override void OnClientMessage(string msg) {
-    RakNetPINVOKE.NatPunchthroughDebugInterface_PacketLogger_OnClientMessage(swigCPtr, msg);
+    RakNetPINVOKE.CSharp_NatPunchthroughDebugInterface_PacketLogger_OnClientMessage(swigCPtr, msg);
   }
 
 }

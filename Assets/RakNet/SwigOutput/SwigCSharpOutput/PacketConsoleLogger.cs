@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class PacketConsoleLogger : PacketLogger {
   private HandleRef swigCPtr;
 
-  internal PacketConsoleLogger(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.PacketConsoleLogger_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal PacketConsoleLogger(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_PacketConsoleLogger_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class PacketConsoleLogger : PacketLogger {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_PacketConsoleLogger(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_PacketConsoleLogger(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -40,15 +40,15 @@ public class PacketConsoleLogger : PacketLogger {
     }
   }
 
-  public PacketConsoleLogger() : this(RakNetPINVOKE.new_PacketConsoleLogger(), true) {
+  public PacketConsoleLogger() : this(RakNetPINVOKE.CSharp_new_PacketConsoleLogger(), true) {
   }
 
   public virtual void SetLogCommandParser(LogCommandParser lcp) {
-    RakNetPINVOKE.PacketConsoleLogger_SetLogCommandParser(swigCPtr, LogCommandParser.getCPtr(lcp));
+    RakNetPINVOKE.CSharp_PacketConsoleLogger_SetLogCommandParser(swigCPtr, LogCommandParser.getCPtr(lcp));
   }
 
   public override void WriteLog(string str) {
-    RakNetPINVOKE.PacketConsoleLogger_WriteLog(swigCPtr, str);
+    RakNetPINVOKE.CSharp_PacketConsoleLogger_WriteLog(swigCPtr, str);
   }
 
 }

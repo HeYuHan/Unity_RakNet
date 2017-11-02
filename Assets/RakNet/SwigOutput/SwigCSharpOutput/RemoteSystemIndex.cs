@@ -33,7 +33,7 @@ public class RemoteSystemIndex : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RemoteSystemIndex(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RemoteSystemIndex(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -43,26 +43,26 @@ public class RemoteSystemIndex : IDisposable {
 
   public uint index {
     set {
-      RakNetPINVOKE.RemoteSystemIndex_index_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RemoteSystemIndex_index_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.RemoteSystemIndex_index_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_RemoteSystemIndex_index_get(swigCPtr);
       return ret;
     } 
   }
 
   public RemoteSystemIndex next {
     set {
-      RakNetPINVOKE.RemoteSystemIndex_next_set(swigCPtr, RemoteSystemIndex.getCPtr(value));
+      RakNetPINVOKE.CSharp_RemoteSystemIndex_next_set(swigCPtr, RemoteSystemIndex.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.RemoteSystemIndex_next_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_RemoteSystemIndex_next_get(swigCPtr);
       RemoteSystemIndex ret = (cPtr == IntPtr.Zero) ? null : new RemoteSystemIndex(cPtr, false);
       return ret;
     } 
   }
 
-  public RemoteSystemIndex() : this(RakNetPINVOKE.new_RemoteSystemIndex(), true) {
+  public RemoteSystemIndex() : this(RakNetPINVOKE.CSharp_new_RemoteSystemIndex(), true) {
   }
 
 }

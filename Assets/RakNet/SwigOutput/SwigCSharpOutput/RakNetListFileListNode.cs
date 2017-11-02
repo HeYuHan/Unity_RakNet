@@ -33,7 +33,7 @@ public class RakNetListFileListNode : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetListFileListNode(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetListFileListNode(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -53,85 +53,85 @@ public class RakNetListFileListNode : IDisposable {
         }  
     } 
 
-  public RakNetListFileListNode() : this(RakNetPINVOKE.new_RakNetListFileListNode__SWIG_0(), true) {
+  public RakNetListFileListNode() : this(RakNetPINVOKE.CSharp_new_RakNetListFileListNode__SWIG_0(), true) {
   }
 
-  public RakNetListFileListNode(RakNetListFileListNode original_copy) : this(RakNetPINVOKE.new_RakNetListFileListNode__SWIG_1(RakNetListFileListNode.getCPtr(original_copy)), true) {
+  public RakNetListFileListNode(RakNetListFileListNode original_copy) : this(RakNetPINVOKE.CSharp_new_RakNetListFileListNode__SWIG_1(RakNetListFileListNode.getCPtr(original_copy)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public RakNetListFileListNode CopyData(RakNetListFileListNode original_copy) {
-    RakNetListFileListNode ret = new RakNetListFileListNode(RakNetPINVOKE.RakNetListFileListNode_CopyData(swigCPtr, RakNetListFileListNode.getCPtr(original_copy)), false);
+    RakNetListFileListNode ret = new RakNetListFileListNode(RakNetPINVOKE.CSharp_RakNetListFileListNode_CopyData(swigCPtr, RakNetListFileListNode.getCPtr(original_copy)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public FileListNode Get(uint position) {
-    FileListNode ret = new FileListNode(RakNetPINVOKE.RakNetListFileListNode_Get(swigCPtr, position), false);
+    FileListNode ret = new FileListNode(RakNetPINVOKE.CSharp_RakNetListFileListNode_Get(swigCPtr, position), false);
     return ret;
   }
 
   public void Push(FileListNode input, string file, uint line) {
-    RakNetPINVOKE.RakNetListFileListNode_Push(swigCPtr, FileListNode.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_Push(swigCPtr, FileListNode.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public FileListNode Pop() {
-    FileListNode ret = new FileListNode(RakNetPINVOKE.RakNetListFileListNode_Pop(swigCPtr), false);
+    FileListNode ret = new FileListNode(RakNetPINVOKE.CSharp_RakNetListFileListNode_Pop(swigCPtr), false);
     return ret;
   }
 
   public void Insert(FileListNode input, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListFileListNode_Insert__SWIG_0(swigCPtr, FileListNode.getCPtr(input), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_Insert__SWIG_0(swigCPtr, FileListNode.getCPtr(input), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Insert(FileListNode input, string file, uint line) {
-    RakNetPINVOKE.RakNetListFileListNode_Insert__SWIG_1(swigCPtr, FileListNode.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_Insert__SWIG_1(swigCPtr, FileListNode.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(FileListNode input, FileListNode filler, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListFileListNode_Replace__SWIG_0(swigCPtr, FileListNode.getCPtr(input), FileListNode.getCPtr(filler), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_Replace__SWIG_0(swigCPtr, FileListNode.getCPtr(input), FileListNode.getCPtr(filler), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(FileListNode input) {
-    RakNetPINVOKE.RakNetListFileListNode_Replace__SWIG_1(swigCPtr, FileListNode.getCPtr(input));
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_Replace__SWIG_1(swigCPtr, FileListNode.getCPtr(input));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAtIndex(uint position) {
-    RakNetPINVOKE.RakNetListFileListNode_RemoveAtIndex(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_RemoveAtIndex(swigCPtr, position);
   }
 
   public void RemoveAtIndexFast(uint position) {
-    RakNetPINVOKE.RakNetListFileListNode_RemoveAtIndexFast(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_RemoveAtIndexFast(swigCPtr, position);
   }
 
   public void RemoveFromEnd(uint num) {
-    RakNetPINVOKE.RakNetListFileListNode_RemoveFromEnd__SWIG_0(swigCPtr, num);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_RemoveFromEnd__SWIG_0(swigCPtr, num);
   }
 
   public void RemoveFromEnd() {
-    RakNetPINVOKE.RakNetListFileListNode_RemoveFromEnd__SWIG_1(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_RemoveFromEnd__SWIG_1(swigCPtr);
   }
 
   public uint Size() {
-    uint ret = RakNetPINVOKE.RakNetListFileListNode_Size(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakNetListFileListNode_Size(swigCPtr);
     return ret;
   }
 
   public void Clear(bool doNotDeallocateSmallBlocks, string file, uint line) {
-    RakNetPINVOKE.RakNetListFileListNode_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
   }
 
   public void Preallocate(uint countNeeded, string file, uint line) {
-    RakNetPINVOKE.RakNetListFileListNode_Preallocate(swigCPtr, countNeeded, file, line);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_Preallocate(swigCPtr, countNeeded, file, line);
   }
 
   public void Compress(string file, uint line) {
-    RakNetPINVOKE.RakNetListFileListNode_Compress(swigCPtr, file, line);
+    RakNetPINVOKE.CSharp_RakNetListFileListNode_Compress(swigCPtr, file, line);
   }
 
 }

@@ -33,7 +33,7 @@ public class RakNetListSystemAddress : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetListSystemAddress(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetListSystemAddress(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -53,91 +53,91 @@ public class RakNetListSystemAddress : IDisposable {
         }  
     } 
 
-  public RakNetListSystemAddress() : this(RakNetPINVOKE.new_RakNetListSystemAddress__SWIG_0(), true) {
+  public RakNetListSystemAddress() : this(RakNetPINVOKE.CSharp_new_RakNetListSystemAddress__SWIG_0(), true) {
   }
 
-  public RakNetListSystemAddress(RakNetListSystemAddress original_copy) : this(RakNetPINVOKE.new_RakNetListSystemAddress__SWIG_1(RakNetListSystemAddress.getCPtr(original_copy)), true) {
+  public RakNetListSystemAddress(RakNetListSystemAddress original_copy) : this(RakNetPINVOKE.CSharp_new_RakNetListSystemAddress__SWIG_1(RakNetListSystemAddress.getCPtr(original_copy)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public RakNetListSystemAddress CopyData(RakNetListSystemAddress original_copy) {
-    RakNetListSystemAddress ret = new RakNetListSystemAddress(RakNetPINVOKE.RakNetListSystemAddress_CopyData(swigCPtr, RakNetListSystemAddress.getCPtr(original_copy)), false);
+    RakNetListSystemAddress ret = new RakNetListSystemAddress(RakNetPINVOKE.CSharp_RakNetListSystemAddress_CopyData(swigCPtr, RakNetListSystemAddress.getCPtr(original_copy)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SystemAddress Get(uint position) {
-    SystemAddress ret = new SystemAddress(RakNetPINVOKE.RakNetListSystemAddress_Get(swigCPtr, position), false);
+    SystemAddress ret = new SystemAddress(RakNetPINVOKE.CSharp_RakNetListSystemAddress_Get(swigCPtr, position), false);
     return ret;
   }
 
   public void Push(SystemAddress input, string file, uint line) {
-    RakNetPINVOKE.RakNetListSystemAddress_Push(swigCPtr, SystemAddress.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_Push(swigCPtr, SystemAddress.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public SystemAddress Pop() {
-    SystemAddress ret = new SystemAddress(RakNetPINVOKE.RakNetListSystemAddress_Pop(swigCPtr), false);
+    SystemAddress ret = new SystemAddress(RakNetPINVOKE.CSharp_RakNetListSystemAddress_Pop(swigCPtr), false);
     return ret;
   }
 
   public void Insert(SystemAddress input, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListSystemAddress_Insert__SWIG_0(swigCPtr, SystemAddress.getCPtr(input), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_Insert__SWIG_0(swigCPtr, SystemAddress.getCPtr(input), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Insert(SystemAddress input, string file, uint line) {
-    RakNetPINVOKE.RakNetListSystemAddress_Insert__SWIG_1(swigCPtr, SystemAddress.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_Insert__SWIG_1(swigCPtr, SystemAddress.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(SystemAddress input, SystemAddress filler, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListSystemAddress_Replace__SWIG_0(swigCPtr, SystemAddress.getCPtr(input), SystemAddress.getCPtr(filler), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_Replace__SWIG_0(swigCPtr, SystemAddress.getCPtr(input), SystemAddress.getCPtr(filler), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(SystemAddress input) {
-    RakNetPINVOKE.RakNetListSystemAddress_Replace__SWIG_1(swigCPtr, SystemAddress.getCPtr(input));
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_Replace__SWIG_1(swigCPtr, SystemAddress.getCPtr(input));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAtIndex(uint position) {
-    RakNetPINVOKE.RakNetListSystemAddress_RemoveAtIndex(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_RemoveAtIndex(swigCPtr, position);
   }
 
   public void RemoveAtIndexFast(uint position) {
-    RakNetPINVOKE.RakNetListSystemAddress_RemoveAtIndexFast(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_RemoveAtIndexFast(swigCPtr, position);
   }
 
   public void RemoveFromEnd(uint num) {
-    RakNetPINVOKE.RakNetListSystemAddress_RemoveFromEnd__SWIG_0(swigCPtr, num);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_RemoveFromEnd__SWIG_0(swigCPtr, num);
   }
 
   public void RemoveFromEnd() {
-    RakNetPINVOKE.RakNetListSystemAddress_RemoveFromEnd__SWIG_1(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_RemoveFromEnd__SWIG_1(swigCPtr);
   }
 
   public uint GetIndexOf(SystemAddress input) {
-    uint ret = RakNetPINVOKE.RakNetListSystemAddress_GetIndexOf(swigCPtr, SystemAddress.getCPtr(input));
+    uint ret = RakNetPINVOKE.CSharp_RakNetListSystemAddress_GetIndexOf(swigCPtr, SystemAddress.getCPtr(input));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public uint Size() {
-    uint ret = RakNetPINVOKE.RakNetListSystemAddress_Size(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakNetListSystemAddress_Size(swigCPtr);
     return ret;
   }
 
   public void Clear(bool doNotDeallocateSmallBlocks, string file, uint line) {
-    RakNetPINVOKE.RakNetListSystemAddress_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
   }
 
   public void Preallocate(uint countNeeded, string file, uint line) {
-    RakNetPINVOKE.RakNetListSystemAddress_Preallocate(swigCPtr, countNeeded, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_Preallocate(swigCPtr, countNeeded, file, line);
   }
 
   public void Compress(string file, uint line) {
-    RakNetPINVOKE.RakNetListSystemAddress_Compress(swigCPtr, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSystemAddress_Compress(swigCPtr, file, line);
   }
 
 }

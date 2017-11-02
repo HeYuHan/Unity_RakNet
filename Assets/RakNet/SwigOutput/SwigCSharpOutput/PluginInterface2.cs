@@ -33,7 +33,7 @@ public class PluginInterface2 : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_PluginInterface2(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_PluginInterface2(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,32 +41,32 @@ public class PluginInterface2 : IDisposable {
     }
   }
 
-  public PluginInterface2() : this(RakNetPINVOKE.new_PluginInterface2(), true) {
+  public PluginInterface2() : this(RakNetPINVOKE.CSharp_new_PluginInterface2(), true) {
   }
 
   public virtual bool UsesReliabilityLayer() {
-    bool ret = RakNetPINVOKE.PluginInterface2_UsesReliabilityLayer(swigCPtr);
+    bool ret = RakNetPINVOKE.CSharp_PluginInterface2_UsesReliabilityLayer(swigCPtr);
     return ret;
   }
 
   public virtual void OnReliabilityLayerNotification(string errorMessage, uint bitsUsed, SystemAddress remoteSystemAddress, bool isError) {
-    RakNetPINVOKE.PluginInterface2_OnReliabilityLayerNotification(swigCPtr, errorMessage, bitsUsed, SystemAddress.getCPtr(remoteSystemAddress), isError);
+    RakNetPINVOKE.CSharp_PluginInterface2_OnReliabilityLayerNotification(swigCPtr, errorMessage, bitsUsed, SystemAddress.getCPtr(remoteSystemAddress), isError);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public RakPeerInterface GetRakPeerInterface() {
-    IntPtr cPtr = RakNetPINVOKE.PluginInterface2_GetRakPeerInterface(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_PluginInterface2_GetRakPeerInterface(swigCPtr);
     RakPeerInterface ret = (cPtr == IntPtr.Zero) ? null : new RakPeerInterface(cPtr, false);
     return ret;
   }
 
   public RakNetGUID GetMyGUIDUnified() {
-    RakNetGUID ret = new RakNetGUID(RakNetPINVOKE.PluginInterface2_GetMyGUIDUnified(swigCPtr), true);
+    RakNetGUID ret = new RakNetGUID(RakNetPINVOKE.CSharp_PluginInterface2_GetMyGUIDUnified(swigCPtr), true);
     return ret;
   }
 
   public void SetTCPInterface(SWIGTYPE_p_RakNet__TCPInterface ptr) {
-    RakNetPINVOKE.PluginInterface2_SetTCPInterface(swigCPtr, SWIGTYPE_p_RakNet__TCPInterface.getCPtr(ptr));
+    RakNetPINVOKE.CSharp_PluginInterface2_SetTCPInterface(swigCPtr, SWIGTYPE_p_RakNet__TCPInterface.getCPtr(ptr));
   }
 
 }

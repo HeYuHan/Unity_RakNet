@@ -210,6 +210,7 @@
     <Compile Include="Assets\Script\Test.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\IOS\CMakeLists.txt" />
     <None Include="Assets\RakNet\Source\CMakeLists.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

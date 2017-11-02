@@ -33,7 +33,7 @@ public class RakNetListUnsignedShort : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetListUnsignedShort(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetListUnsignedShort(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -62,85 +62,85 @@ public class RakNetListUnsignedShort : IDisposable {
         }  
     } 
 
-  public RakNetListUnsignedShort() : this(RakNetPINVOKE.new_RakNetListUnsignedShort__SWIG_0(), true) {
+  public RakNetListUnsignedShort() : this(RakNetPINVOKE.CSharp_new_RakNetListUnsignedShort__SWIG_0(), true) {
   }
 
-  public RakNetListUnsignedShort(RakNetListUnsignedShort original_copy) : this(RakNetPINVOKE.new_RakNetListUnsignedShort__SWIG_1(RakNetListUnsignedShort.getCPtr(original_copy)), true) {
+  public RakNetListUnsignedShort(RakNetListUnsignedShort original_copy) : this(RakNetPINVOKE.CSharp_new_RakNetListUnsignedShort__SWIG_1(RakNetListUnsignedShort.getCPtr(original_copy)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public RakNetListUnsignedShort CopyData(RakNetListUnsignedShort original_copy) {
-    RakNetListUnsignedShort ret = new RakNetListUnsignedShort(RakNetPINVOKE.RakNetListUnsignedShort_CopyData(swigCPtr, RakNetListUnsignedShort.getCPtr(original_copy)), false);
+    RakNetListUnsignedShort ret = new RakNetListUnsignedShort(RakNetPINVOKE.CSharp_RakNetListUnsignedShort_CopyData(swigCPtr, RakNetListUnsignedShort.getCPtr(original_copy)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private SWIGTYPE_p_unsigned_short GetHelper(uint position) {
-    SWIGTYPE_p_unsigned_short ret = new SWIGTYPE_p_unsigned_short(RakNetPINVOKE.RakNetListUnsignedShort_GetHelper(swigCPtr, position), false);
+    SWIGTYPE_p_unsigned_short ret = new SWIGTYPE_p_unsigned_short(RakNetPINVOKE.CSharp_RakNetListUnsignedShort_GetHelper(swigCPtr, position), false);
     return ret;
   }
 
   public void Push(ushort input, string file, uint line) {
-    RakNetPINVOKE.RakNetListUnsignedShort_Push(swigCPtr, input, file, line);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Push(swigCPtr, input, file, line);
   }
 
   private SWIGTYPE_p_unsigned_short PopHelper() {
-    SWIGTYPE_p_unsigned_short ret = new SWIGTYPE_p_unsigned_short(RakNetPINVOKE.RakNetListUnsignedShort_PopHelper(swigCPtr), false);
+    SWIGTYPE_p_unsigned_short ret = new SWIGTYPE_p_unsigned_short(RakNetPINVOKE.CSharp_RakNetListUnsignedShort_PopHelper(swigCPtr), false);
     return ret;
   }
 
   public void Insert(ushort input, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListUnsignedShort_Insert__SWIG_0(swigCPtr, input, position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Insert__SWIG_0(swigCPtr, input, position, file, line);
   }
 
   public void Insert(ushort input, string file, uint line) {
-    RakNetPINVOKE.RakNetListUnsignedShort_Insert__SWIG_1(swigCPtr, input, file, line);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Insert__SWIG_1(swigCPtr, input, file, line);
   }
 
   public void Replace(ushort input, ushort filler, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListUnsignedShort_Replace__SWIG_0(swigCPtr, input, filler, position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Replace__SWIG_0(swigCPtr, input, filler, position, file, line);
   }
 
   public void Replace(ushort input) {
-    RakNetPINVOKE.RakNetListUnsignedShort_Replace__SWIG_1(swigCPtr, input);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Replace__SWIG_1(swigCPtr, input);
   }
 
   public void RemoveAtIndex(uint position) {
-    RakNetPINVOKE.RakNetListUnsignedShort_RemoveAtIndex(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_RemoveAtIndex(swigCPtr, position);
   }
 
   public void RemoveAtIndexFast(uint position) {
-    RakNetPINVOKE.RakNetListUnsignedShort_RemoveAtIndexFast(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_RemoveAtIndexFast(swigCPtr, position);
   }
 
   public void RemoveFromEnd(uint num) {
-    RakNetPINVOKE.RakNetListUnsignedShort_RemoveFromEnd__SWIG_0(swigCPtr, num);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_RemoveFromEnd__SWIG_0(swigCPtr, num);
   }
 
   public void RemoveFromEnd() {
-    RakNetPINVOKE.RakNetListUnsignedShort_RemoveFromEnd__SWIG_1(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_RemoveFromEnd__SWIG_1(swigCPtr);
   }
 
   public uint GetIndexOf(ushort input) {
-    uint ret = RakNetPINVOKE.RakNetListUnsignedShort_GetIndexOf(swigCPtr, input);
+    uint ret = RakNetPINVOKE.CSharp_RakNetListUnsignedShort_GetIndexOf(swigCPtr, input);
     return ret;
   }
 
   public uint Size() {
-    uint ret = RakNetPINVOKE.RakNetListUnsignedShort_Size(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Size(swigCPtr);
     return ret;
   }
 
   public void Clear(bool doNotDeallocateSmallBlocks, string file, uint line) {
-    RakNetPINVOKE.RakNetListUnsignedShort_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
   }
 
   public void Preallocate(uint countNeeded, string file, uint line) {
-    RakNetPINVOKE.RakNetListUnsignedShort_Preallocate(swigCPtr, countNeeded, file, line);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Preallocate(swigCPtr, countNeeded, file, line);
   }
 
   public void Compress(string file, uint line) {
-    RakNetPINVOKE.RakNetListUnsignedShort_Compress(swigCPtr, file, line);
+    RakNetPINVOKE.CSharp_RakNetListUnsignedShort_Compress(swigCPtr, file, line);
   }
 
 }

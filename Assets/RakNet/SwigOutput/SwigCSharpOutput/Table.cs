@@ -33,7 +33,7 @@ public class Table : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_Table(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_Table(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -116,178 +116,178 @@ public class Table : IDisposable {
  	return ColumnIndexHelper(columnName);
  	}
  
-  public Table() : this(RakNetPINVOKE.new_Table(), true) {
+  public Table() : this(RakNetPINVOKE.CSharp_new_Table(), true) {
   }
 
   public uint AddColumn(string columnName, Table.ColumnType columnType) {
-    uint ret = RakNetPINVOKE.Table_AddColumn(swigCPtr, columnName, (int)columnType);
+    uint ret = RakNetPINVOKE.CSharp_Table_AddColumn(swigCPtr, columnName, (int)columnType);
     return ret;
   }
 
   public void RemoveColumn(uint columnIndex) {
-    RakNetPINVOKE.Table_RemoveColumn(swigCPtr, columnIndex);
+    RakNetPINVOKE.CSharp_Table_RemoveColumn(swigCPtr, columnIndex);
   }
 
   public string ColumnName(uint index) {
-    string ret = RakNetPINVOKE.Table_ColumnName(swigCPtr, index);
+    string ret = RakNetPINVOKE.CSharp_Table_ColumnName(swigCPtr, index);
     return ret;
   }
 
   public Table.ColumnType GetColumnType(uint index) {
-    Table.ColumnType ret = (Table.ColumnType)RakNetPINVOKE.Table_GetColumnType(swigCPtr, index);
+    Table.ColumnType ret = (Table.ColumnType)RakNetPINVOKE.CSharp_Table_GetColumnType(swigCPtr, index);
     return ret;
   }
 
   public uint GetColumnCount() {
-    uint ret = RakNetPINVOKE.Table_GetColumnCount(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_Table_GetColumnCount(swigCPtr);
     return ret;
   }
 
   public uint GetRowCount() {
-    uint ret = RakNetPINVOKE.Table_GetRowCount(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_Table_GetRowCount(swigCPtr);
     return ret;
   }
 
   public Row AddRow(uint rowId) {
-    IntPtr cPtr = RakNetPINVOKE.Table_AddRow__SWIG_0(swigCPtr, rowId);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_Table_AddRow__SWIG_0(swigCPtr, rowId);
     Row ret = (cPtr == IntPtr.Zero) ? null : new Row(cPtr, false);
     return ret;
   }
 
   public Row AddRow(uint rowId, RakNetListCell initialCellValues) {
-    IntPtr cPtr = RakNetPINVOKE.Table_AddRow__SWIG_1(swigCPtr, rowId, RakNetListCell.getCPtr(initialCellValues));
+    IntPtr cPtr = RakNetPINVOKE.CSharp_Table_AddRow__SWIG_1(swigCPtr, rowId, RakNetListCell.getCPtr(initialCellValues));
     Row ret = (cPtr == IntPtr.Zero) ? null : new Row(cPtr, false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Row AddRow(uint rowId, RakNetListCellPointer initialCellValues, bool copyCells) {
-    IntPtr cPtr = RakNetPINVOKE.Table_AddRow__SWIG_2(swigCPtr, rowId, RakNetListCellPointer.getCPtr(initialCellValues), copyCells);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_Table_AddRow__SWIG_2(swigCPtr, rowId, RakNetListCellPointer.getCPtr(initialCellValues), copyCells);
     Row ret = (cPtr == IntPtr.Zero) ? null : new Row(cPtr, false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Row AddRow(uint rowId, RakNetListCellPointer initialCellValues) {
-    IntPtr cPtr = RakNetPINVOKE.Table_AddRow__SWIG_3(swigCPtr, rowId, RakNetListCellPointer.getCPtr(initialCellValues));
+    IntPtr cPtr = RakNetPINVOKE.CSharp_Table_AddRow__SWIG_3(swigCPtr, rowId, RakNetListCellPointer.getCPtr(initialCellValues));
     Row ret = (cPtr == IntPtr.Zero) ? null : new Row(cPtr, false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool RemoveRow(uint rowId) {
-    bool ret = RakNetPINVOKE.Table_RemoveRow(swigCPtr, rowId);
+    bool ret = RakNetPINVOKE.CSharp_Table_RemoveRow(swigCPtr, rowId);
     return ret;
   }
 
   public void RemoveRows(Table tableContainingRowIDs) {
-    RakNetPINVOKE.Table_RemoveRows(swigCPtr, Table.getCPtr(tableContainingRowIDs));
+    RakNetPINVOKE.CSharp_Table_RemoveRows(swigCPtr, Table.getCPtr(tableContainingRowIDs));
   }
 
   public bool UpdateCell(uint rowId, uint columnIndex, int value) {
-    bool ret = RakNetPINVOKE.Table_UpdateCell__SWIG_0(swigCPtr, rowId, columnIndex, value);
+    bool ret = RakNetPINVOKE.CSharp_Table_UpdateCell__SWIG_0(swigCPtr, rowId, columnIndex, value);
     return ret;
   }
 
   public bool UpdateCell(uint rowId, uint columnIndex, string str) {
-    bool ret = RakNetPINVOKE.Table_UpdateCell__SWIG_1(swigCPtr, rowId, columnIndex, str);
+    bool ret = RakNetPINVOKE.CSharp_Table_UpdateCell__SWIG_1(swigCPtr, rowId, columnIndex, str);
     return ret;
   }
 
   public bool UpdateCellByIndex(uint rowIndex, uint columnIndex, int value) {
-    bool ret = RakNetPINVOKE.Table_UpdateCellByIndex__SWIG_0(swigCPtr, rowIndex, columnIndex, value);
+    bool ret = RakNetPINVOKE.CSharp_Table_UpdateCellByIndex__SWIG_0(swigCPtr, rowIndex, columnIndex, value);
     return ret;
   }
 
   public bool UpdateCellByIndex(uint rowIndex, uint columnIndex, string str) {
-    bool ret = RakNetPINVOKE.Table_UpdateCellByIndex__SWIG_1(swigCPtr, rowIndex, columnIndex, str);
+    bool ret = RakNetPINVOKE.CSharp_Table_UpdateCellByIndex__SWIG_1(swigCPtr, rowIndex, columnIndex, str);
     return ret;
   }
 
   public void GetCellValueByIndex(uint rowIndex, uint columnIndex, out int output) {
-    RakNetPINVOKE.Table_GetCellValueByIndex(swigCPtr, rowIndex, columnIndex, out output);
+    RakNetPINVOKE.CSharp_Table_GetCellValueByIndex(swigCPtr, rowIndex, columnIndex, out output);
   }
 
   public Row GetRowByID(uint rowId) {
-    IntPtr cPtr = RakNetPINVOKE.Table_GetRowByID(swigCPtr, rowId);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_Table_GetRowByID(swigCPtr, rowId);
     Row ret = (cPtr == IntPtr.Zero) ? null : new Row(cPtr, false);
     return ret;
   }
 
   public Row GetRowByIndex(uint rowIndex, ref int key) {
-    IntPtr cPtr = RakNetPINVOKE.Table_GetRowByIndex(swigCPtr, rowIndex, ref key);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_Table_GetRowByIndex(swigCPtr, rowIndex, ref key);
     Row ret = (cPtr == IntPtr.Zero) ? null : new Row(cPtr, false);
     return ret;
   }
 
   public void Clear() {
-    RakNetPINVOKE.Table_Clear(swigCPtr);
+    RakNetPINVOKE.CSharp_Table_Clear(swigCPtr);
   }
 
   public RakNetListColumnDescriptor GetColumns() {
-    RakNetListColumnDescriptor ret = new RakNetListColumnDescriptor(RakNetPINVOKE.Table_GetColumns(swigCPtr), false);
+    RakNetListColumnDescriptor ret = new RakNetListColumnDescriptor(RakNetPINVOKE.CSharp_Table_GetColumns(swigCPtr), false);
     return ret;
   }
 
   public RakNetBPlusTreeRow GetRows() {
-    RakNetBPlusTreeRow ret = new RakNetBPlusTreeRow(RakNetPINVOKE.Table_GetRows(swigCPtr), false);
+    RakNetBPlusTreeRow ret = new RakNetBPlusTreeRow(RakNetPINVOKE.CSharp_Table_GetRows(swigCPtr), false);
     return ret;
   }
 
   public uint GetAvailableRowId() {
-    uint ret = RakNetPINVOKE.Table_GetAvailableRowId(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_Table_GetAvailableRowId(swigCPtr);
     return ret;
   }
 
   public Table CopyData(Table input) {
-    Table ret = new Table(RakNetPINVOKE.Table_CopyData(swigCPtr, Table.getCPtr(input)), false);
+    Table ret = new Table(RakNetPINVOKE.CSharp_Table_CopyData(swigCPtr, Table.getCPtr(input)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private RakNetPageRow GetListHeadHelper() {
-    IntPtr cPtr = RakNetPINVOKE.Table_GetListHeadHelper(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_Table_GetListHeadHelper(swigCPtr);
     RakNetPageRow ret = (cPtr == IntPtr.Zero) ? null : new RakNetPageRow(cPtr, false);
     return ret;
   }
 
   private void SortTableHelper(RakNetListSortQuery sortQueries, uint numSortQueries, RakNetListTableRow arg2) {
-    RakNetPINVOKE.Table_SortTableHelper(swigCPtr, RakNetListSortQuery.getCPtr(sortQueries), numSortQueries, RakNetListTableRow.getCPtr(arg2));
+    RakNetPINVOKE.CSharp_Table_SortTableHelper(swigCPtr, RakNetListSortQuery.getCPtr(sortQueries), numSortQueries, RakNetListTableRow.getCPtr(arg2));
   }
 
   private void GetCellValueByIndexHelper(uint rowIndex, uint columnIndex, byte[] inOutByteArray, out int outputLength) {
-    RakNetPINVOKE.Table_GetCellValueByIndexHelper__SWIG_0(swigCPtr, rowIndex, columnIndex, inOutByteArray, out outputLength);
+    RakNetPINVOKE.CSharp_Table_GetCellValueByIndexHelper__SWIG_0(swigCPtr, rowIndex, columnIndex, inOutByteArray, out outputLength);
   }
 
   private string GetCellValueByIndexHelper(uint rowIndex, uint columnIndex, string output) {
-    string ret = RakNetPINVOKE.Table_GetCellValueByIndexHelper__SWIG_1(swigCPtr, rowIndex, columnIndex, output);
+    string ret = RakNetPINVOKE.CSharp_Table_GetCellValueByIndexHelper__SWIG_1(swigCPtr, rowIndex, columnIndex, output);
     return ret;
   }
 
   public void PrintColumnHeaders(byte[] inOutByteArray, int byteArrayLength, char columnDelineator) {
-    RakNetPINVOKE.Table_PrintColumnHeaders(swigCPtr, inOutByteArray, byteArrayLength, columnDelineator);
+    RakNetPINVOKE.CSharp_Table_PrintColumnHeaders(swigCPtr, inOutByteArray, byteArrayLength, columnDelineator);
   }
 
   public void PrintRow(byte[] inOutByteArray, int byteArrayLength, char columnDelineator, bool printDelineatorForBinary, Row inputRow) {
-    RakNetPINVOKE.Table_PrintRow(swigCPtr, inOutByteArray, byteArrayLength, columnDelineator, printDelineatorForBinary, Row.getCPtr(inputRow));
+    RakNetPINVOKE.CSharp_Table_PrintRow(swigCPtr, inOutByteArray, byteArrayLength, columnDelineator, printDelineatorForBinary, Row.getCPtr(inputRow));
   }
 
   private void QueryTableHelper(uint[] columnIndicesSubset, uint numColumnSubset, RakNetListFilterQuery inclusionFilters, uint numInclusionFilters, uint[] rowIds, uint numRowIDs, Table result) {
-    RakNetPINVOKE.Table_QueryTableHelper(swigCPtr, columnIndicesSubset, numColumnSubset, RakNetListFilterQuery.getCPtr(inclusionFilters), numInclusionFilters, rowIds, numRowIDs, Table.getCPtr(result));
+    RakNetPINVOKE.CSharp_Table_QueryTableHelper(swigCPtr, columnIndicesSubset, numColumnSubset, RakNetListFilterQuery.getCPtr(inclusionFilters), numInclusionFilters, rowIds, numRowIDs, Table.getCPtr(result));
   }
 
   public bool UpdateCell(uint rowId, uint columnIndex, int byteLength, byte[] inByteArray) {
-    bool ret = RakNetPINVOKE.Table_UpdateCell__SWIG_2(swigCPtr, rowId, columnIndex, byteLength, inByteArray);
+    bool ret = RakNetPINVOKE.CSharp_Table_UpdateCell__SWIG_2(swigCPtr, rowId, columnIndex, byteLength, inByteArray);
     return ret;
   }
 
   public bool UpdateCellByIndex(uint rowIndex, uint columnIndex, int byteLength, byte[] inByteArray) {
-    bool ret = RakNetPINVOKE.Table_UpdateCellByIndex__SWIG_2(swigCPtr, rowIndex, columnIndex, byteLength, inByteArray);
+    bool ret = RakNetPINVOKE.CSharp_Table_UpdateCellByIndex__SWIG_2(swigCPtr, rowIndex, columnIndex, byteLength, inByteArray);
     return ret;
   }
 
   private uint ColumnIndexHelper(string columnName) {
-    uint ret = RakNetPINVOKE.Table_ColumnIndexHelper(swigCPtr, columnName);
+    uint ret = RakNetPINVOKE.CSharp_Table_ColumnIndexHelper(swigCPtr, columnName);
     return ret;
   }
 

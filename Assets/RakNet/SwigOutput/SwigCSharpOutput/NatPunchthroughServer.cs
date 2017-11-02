@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class NatPunchthroughServer : PluginInterface2 {
   private HandleRef swigCPtr;
 
-  internal NatPunchthroughServer(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.NatPunchthroughServer_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal NatPunchthroughServer(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_NatPunchthroughServer_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class NatPunchthroughServer : PluginInterface2 {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_NatPunchthroughServer(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_NatPunchthroughServer(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,28 +41,28 @@ public class NatPunchthroughServer : PluginInterface2 {
   }
 
   public static NatPunchthroughServer GetInstance() {
-    IntPtr cPtr = RakNetPINVOKE.NatPunchthroughServer_GetInstance();
+    IntPtr cPtr = RakNetPINVOKE.CSharp_NatPunchthroughServer_GetInstance();
     NatPunchthroughServer ret = (cPtr == IntPtr.Zero) ? null : new NatPunchthroughServer(cPtr, false);
     return ret;
   }
 
   public static void DestroyInstance(NatPunchthroughServer i) {
-    RakNetPINVOKE.NatPunchthroughServer_DestroyInstance(NatPunchthroughServer.getCPtr(i));
+    RakNetPINVOKE.CSharp_NatPunchthroughServer_DestroyInstance(NatPunchthroughServer.getCPtr(i));
   }
 
-  public NatPunchthroughServer() : this(RakNetPINVOKE.new_NatPunchthroughServer(), true) {
+  public NatPunchthroughServer() : this(RakNetPINVOKE.CSharp_new_NatPunchthroughServer(), true) {
   }
 
   public void SetDebugInterface(NatPunchthroughServerDebugInterface i) {
-    RakNetPINVOKE.NatPunchthroughServer_SetDebugInterface(swigCPtr, NatPunchthroughServerDebugInterface.getCPtr(i));
+    RakNetPINVOKE.CSharp_NatPunchthroughServer_SetDebugInterface(swigCPtr, NatPunchthroughServerDebugInterface.getCPtr(i));
   }
 
   public ulong lastUpdate {
     set {
-      RakNetPINVOKE.NatPunchthroughServer_lastUpdate_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_NatPunchthroughServer_lastUpdate_set(swigCPtr, value);
     } 
     get {
-      ulong ret = RakNetPINVOKE.NatPunchthroughServer_lastUpdate_get(swigCPtr);
+      ulong ret = RakNetPINVOKE.CSharp_NatPunchthroughServer_lastUpdate_get(swigCPtr);
       return ret;
     } 
   }

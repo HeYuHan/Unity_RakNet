@@ -33,7 +33,7 @@ public class Row : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_Row(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_Row(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -43,28 +43,28 @@ public class Row : IDisposable {
 
   public RakNetListCellPointer cells {
     set {
-      RakNetPINVOKE.Row_cells_set(swigCPtr, RakNetListCellPointer.getCPtr(value));
+      RakNetPINVOKE.CSharp_Row_cells_set(swigCPtr, RakNetListCellPointer.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.Row_cells_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_Row_cells_get(swigCPtr);
       RakNetListCellPointer ret = (cPtr == IntPtr.Zero) ? null : new RakNetListCellPointer(cPtr, false);
       return ret;
     } 
   }
 
   public void UpdateCell(uint columnIndex, double value) {
-    RakNetPINVOKE.Row_UpdateCell__SWIG_0(swigCPtr, columnIndex, value);
+    RakNetPINVOKE.CSharp_Row_UpdateCell__SWIG_0(swigCPtr, columnIndex, value);
   }
 
   public void UpdateCell(uint columnIndex, string str) {
-    RakNetPINVOKE.Row_UpdateCell__SWIG_1(swigCPtr, columnIndex, str);
+    RakNetPINVOKE.CSharp_Row_UpdateCell__SWIG_1(swigCPtr, columnIndex, str);
   }
 
   public void UpdateCell(uint columnIndex, int byteLength, byte[] inByteArray) {
-    RakNetPINVOKE.Row_UpdateCell__SWIG_2(swigCPtr, columnIndex, byteLength, inByteArray);
+    RakNetPINVOKE.CSharp_Row_UpdateCell__SWIG_2(swigCPtr, columnIndex, byteLength, inByteArray);
   }
 
-  public Row() : this(RakNetPINVOKE.new_Row(), true) {
+  public Row() : this(RakNetPINVOKE.CSharp_new_Row(), true) {
   }
 
 }

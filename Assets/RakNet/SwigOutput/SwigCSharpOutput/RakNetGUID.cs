@@ -34,7 +34,7 @@ public class RakNetGUID : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetGUID(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetGUID(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -96,79 +96,79 @@ public class RakNetGUID : IDisposable {
 		dest = ToString();
 	}
 
-  public RakNetGUID() : this(RakNetPINVOKE.new_RakNetGUID__SWIG_0(), true) {
+  public RakNetGUID() : this(RakNetPINVOKE.CSharp_new_RakNetGUID__SWIG_0(), true) {
   }
 
-  public RakNetGUID(ulong _g) : this(RakNetPINVOKE.new_RakNetGUID__SWIG_1(_g), true) {
+  public RakNetGUID(ulong _g) : this(RakNetPINVOKE.CSharp_new_RakNetGUID__SWIG_1(_g), true) {
   }
 
   public ulong g {
     set {
-      RakNetPINVOKE.RakNetGUID_g_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetGUID_g_set(swigCPtr, value);
     } 
     get {
-      ulong ret = RakNetPINVOKE.RakNetGUID_g_get(swigCPtr);
+      ulong ret = RakNetPINVOKE.CSharp_RakNetGUID_g_get(swigCPtr);
       return ret;
     } 
   }
 
   public override string ToString() {
-    string ret = RakNetPINVOKE.RakNetGUID_ToString(swigCPtr);
+    string ret = RakNetPINVOKE.CSharp_RakNetGUID_ToString(swigCPtr);
     return ret;
   }
 
   public bool FromString(string source) {
-    bool ret = RakNetPINVOKE.RakNetGUID_FromString(swigCPtr, source);
+    bool ret = RakNetPINVOKE.CSharp_RakNetGUID_FromString(swigCPtr, source);
     return ret;
   }
 
   public static uint ToUint32(RakNetGUID g) {
-    uint ret = RakNetPINVOKE.RakNetGUID_ToUint32(RakNetGUID.getCPtr(g));
+    uint ret = RakNetPINVOKE.CSharp_RakNetGUID_ToUint32(RakNetGUID.getCPtr(g));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public RakNetGUID CopyData(RakNetGUID input) {
-    RakNetGUID ret = new RakNetGUID(RakNetPINVOKE.RakNetGUID_CopyData(swigCPtr, RakNetGUID.getCPtr(input)), false);
+    RakNetGUID ret = new RakNetGUID(RakNetPINVOKE.CSharp_RakNetGUID_CopyData(swigCPtr, RakNetGUID.getCPtr(input)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ushort systemIndex {
     set {
-      RakNetPINVOKE.RakNetGUID_systemIndex_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetGUID_systemIndex_set(swigCPtr, value);
     } 
     get {
-      ushort ret = RakNetPINVOKE.RakNetGUID_systemIndex_get(swigCPtr);
+      ushort ret = RakNetPINVOKE.CSharp_RakNetGUID_systemIndex_get(swigCPtr);
       return ret;
     } 
   }
 
   public static int size() {
-    int ret = RakNetPINVOKE.RakNetGUID_size();
+    int ret = RakNetPINVOKE.CSharp_RakNetGUID_size();
     return ret;
   }
 
   public bool Equals(RakNetGUID right) {
-    bool ret = RakNetPINVOKE.RakNetGUID_Equals(swigCPtr, RakNetGUID.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_RakNetGUID_Equals(swigCPtr, RakNetGUID.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpNotEqual(RakNetGUID right) {
-    bool ret = RakNetPINVOKE.RakNetGUID_OpNotEqual(swigCPtr, RakNetGUID.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_RakNetGUID_OpNotEqual(swigCPtr, RakNetGUID.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpGreater(RakNetGUID right) {
-    bool ret = RakNetPINVOKE.RakNetGUID_OpGreater(swigCPtr, RakNetGUID.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_RakNetGUID_OpGreater(swigCPtr, RakNetGUID.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpLess(RakNetGUID right) {
-    bool ret = RakNetPINVOKE.RakNetGUID_OpLess(swigCPtr, RakNetGUID.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_RakNetGUID_OpLess(swigCPtr, RakNetGUID.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

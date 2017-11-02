@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class UDPProxyCoordinator : PluginInterface2 {
   private HandleRef swigCPtr;
 
-  internal UDPProxyCoordinator(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.UDPProxyCoordinator_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal UDPProxyCoordinator(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_UDPProxyCoordinator_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class UDPProxyCoordinator : PluginInterface2 {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_UDPProxyCoordinator(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_UDPProxyCoordinator(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,20 +41,20 @@ public class UDPProxyCoordinator : PluginInterface2 {
   }
 
   public static UDPProxyCoordinator GetInstance() {
-    IntPtr cPtr = RakNetPINVOKE.UDPProxyCoordinator_GetInstance();
+    IntPtr cPtr = RakNetPINVOKE.CSharp_UDPProxyCoordinator_GetInstance();
     UDPProxyCoordinator ret = (cPtr == IntPtr.Zero) ? null : new UDPProxyCoordinator(cPtr, false);
     return ret;
   }
 
   public static void DestroyInstance(UDPProxyCoordinator i) {
-    RakNetPINVOKE.UDPProxyCoordinator_DestroyInstance(UDPProxyCoordinator.getCPtr(i));
+    RakNetPINVOKE.CSharp_UDPProxyCoordinator_DestroyInstance(UDPProxyCoordinator.getCPtr(i));
   }
 
-  public UDPProxyCoordinator() : this(RakNetPINVOKE.new_UDPProxyCoordinator(), true) {
+  public UDPProxyCoordinator() : this(RakNetPINVOKE.CSharp_new_UDPProxyCoordinator(), true) {
   }
 
   public void SetRemoteLoginPassword(RakString password) {
-    RakNetPINVOKE.UDPProxyCoordinator_SetRemoteLoginPassword(swigCPtr, RakString.getCPtr(password));
+    RakNetPINVOKE.CSharp_UDPProxyCoordinator_SetRemoteLoginPassword(swigCPtr, RakString.getCPtr(password));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 

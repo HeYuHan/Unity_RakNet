@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class ThreadsafePacketLogger : PacketLogger {
   private HandleRef swigCPtr;
 
-  internal ThreadsafePacketLogger(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.ThreadsafePacketLogger_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ThreadsafePacketLogger(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_ThreadsafePacketLogger_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class ThreadsafePacketLogger : PacketLogger {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_ThreadsafePacketLogger(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_ThreadsafePacketLogger(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -40,7 +40,7 @@ public class ThreadsafePacketLogger : PacketLogger {
     }
   }
 
-  public ThreadsafePacketLogger() : this(RakNetPINVOKE.new_ThreadsafePacketLogger(), true) {
+  public ThreadsafePacketLogger() : this(RakNetPINVOKE.CSharp_new_ThreadsafePacketLogger(), true) {
   }
 
 }

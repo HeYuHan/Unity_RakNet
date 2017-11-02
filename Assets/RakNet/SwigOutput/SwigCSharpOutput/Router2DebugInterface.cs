@@ -33,7 +33,7 @@ public class Router2DebugInterface : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_Router2DebugInterface(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_Router2DebugInterface(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class Router2DebugInterface : IDisposable {
     }
   }
 
-  public Router2DebugInterface() : this(RakNetPINVOKE.new_Router2DebugInterface(), true) {
+  public Router2DebugInterface() : this(RakNetPINVOKE.CSharp_new_Router2DebugInterface(), true) {
   }
 
   public virtual void ShowFailure(string message) {
-    RakNetPINVOKE.Router2DebugInterface_ShowFailure(swigCPtr, message);
+    RakNetPINVOKE.CSharp_Router2DebugInterface_ShowFailure(swigCPtr, message);
   }
 
   public virtual void ShowDiagnostic(string message) {
-    RakNetPINVOKE.Router2DebugInterface_ShowDiagnostic(swigCPtr, message);
+    RakNetPINVOKE.CSharp_Router2DebugInterface_ShowDiagnostic(swigCPtr, message);
   }
 
 }

@@ -33,7 +33,7 @@ public class DownloadCompleteStruct : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_DownloadCompleteStruct(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_DownloadCompleteStruct(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -43,40 +43,40 @@ public class DownloadCompleteStruct : IDisposable {
 
   public ushort setID {
     set {
-      RakNetPINVOKE.DownloadCompleteStruct_setID_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_DownloadCompleteStruct_setID_set(swigCPtr, value);
     } 
     get {
-      ushort ret = RakNetPINVOKE.DownloadCompleteStruct_setID_get(swigCPtr);
+      ushort ret = RakNetPINVOKE.CSharp_DownloadCompleteStruct_setID_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint numberOfFilesInThisSet {
     set {
-      RakNetPINVOKE.DownloadCompleteStruct_numberOfFilesInThisSet_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_DownloadCompleteStruct_numberOfFilesInThisSet_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.DownloadCompleteStruct_numberOfFilesInThisSet_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_DownloadCompleteStruct_numberOfFilesInThisSet_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint byteLengthOfThisSet {
     set {
-      RakNetPINVOKE.DownloadCompleteStruct_byteLengthOfThisSet_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_DownloadCompleteStruct_byteLengthOfThisSet_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.DownloadCompleteStruct_byteLengthOfThisSet_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_DownloadCompleteStruct_byteLengthOfThisSet_get(swigCPtr);
       return ret;
     } 
   }
 
   public SystemAddress senderSystemAddress {
     set {
-      RakNetPINVOKE.DownloadCompleteStruct_senderSystemAddress_set(swigCPtr, SystemAddress.getCPtr(value));
+      RakNetPINVOKE.CSharp_DownloadCompleteStruct_senderSystemAddress_set(swigCPtr, SystemAddress.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.DownloadCompleteStruct_senderSystemAddress_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_DownloadCompleteStruct_senderSystemAddress_get(swigCPtr);
       SystemAddress ret = (cPtr == IntPtr.Zero) ? null : new SystemAddress(cPtr, false);
       return ret;
     } 
@@ -84,16 +84,16 @@ public class DownloadCompleteStruct : IDisposable {
 
   public RakNetGUID senderGuid {
     set {
-      RakNetPINVOKE.DownloadCompleteStruct_senderGuid_set(swigCPtr, RakNetGUID.getCPtr(value));
+      RakNetPINVOKE.CSharp_DownloadCompleteStruct_senderGuid_set(swigCPtr, RakNetGUID.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.DownloadCompleteStruct_senderGuid_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_DownloadCompleteStruct_senderGuid_get(swigCPtr);
       RakNetGUID ret = (cPtr == IntPtr.Zero) ? null : new RakNetGUID(cPtr, false);
       return ret;
     } 
   }
 
-  public DownloadCompleteStruct() : this(RakNetPINVOKE.new_DownloadCompleteStruct(), true) {
+  public DownloadCompleteStruct() : this(RakNetPINVOKE.CSharp_new_DownloadCompleteStruct(), true) {
   }
 
 }

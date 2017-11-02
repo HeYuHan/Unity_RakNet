@@ -34,7 +34,7 @@ public class RakString : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakString(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakString(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -181,431 +181,431 @@ public class RakString : IDisposable {
 		Replace(index,count,(byte)inChar);
 	}
 
-  public RakString() : this(RakNetPINVOKE.new_RakString__SWIG_0(), true) {
+  public RakString() : this(RakNetPINVOKE.CSharp_new_RakString__SWIG_0(), true) {
   }
 
-  public RakString(char input) : this(RakNetPINVOKE.new_RakString__SWIG_1(input), true) {
+  public RakString(char input) : this(RakNetPINVOKE.CSharp_new_RakString__SWIG_1(input), true) {
   }
 
-  public RakString(byte input) : this(RakNetPINVOKE.new_RakString__SWIG_2(input), true) {
+  public RakString(byte input) : this(RakNetPINVOKE.CSharp_new_RakString__SWIG_2(input), true) {
   }
 
-  public RakString(string format) : this(RakNetPINVOKE.new_RakString__SWIG_3(format), true) {
+  public RakString(string format) : this(RakNetPINVOKE.CSharp_new_RakString__SWIG_3(format), true) {
   }
 
-  public RakString(RakString rhs) : this(RakNetPINVOKE.new_RakString__SWIG_4(RakString.getCPtr(rhs)), true) {
+  public RakString(RakString rhs) : this(RakNetPINVOKE.CSharp_new_RakString__SWIG_4(RakString.getCPtr(rhs)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public string C_String() {
-    string ret = RakNetPINVOKE.RakString_C_String(swigCPtr);
+    string ret = RakNetPINVOKE.CSharp_RakString_C_String(swigCPtr);
     return ret;
   }
 
   public string C_StringUnsafe() {
-    string ret = RakNetPINVOKE.RakString_C_StringUnsafe(swigCPtr);
+    string ret = RakNetPINVOKE.CSharp_RakString_C_StringUnsafe(swigCPtr);
     return ret;
   }
 
   public RakString CopyData(RakString rhs) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_CopyData__SWIG_0(swigCPtr, RakString.getCPtr(rhs)), false);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_CopyData__SWIG_0(swigCPtr, RakString.getCPtr(rhs)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public RakString CopyData(string str) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_CopyData__SWIG_1(swigCPtr, str), false);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_CopyData__SWIG_1(swigCPtr, str), false);
     return ret;
   }
 
   public RakString CopyData(SWIGTYPE_p_unsigned_char str) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_CopyData__SWIG_2(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(str)), false);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_CopyData__SWIG_2(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(str)), false);
     return ret;
   }
 
   public RakString CopyData(char c) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_CopyData__SWIG_4(swigCPtr, c), false);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_CopyData__SWIG_4(swigCPtr, c), false);
     return ret;
   }
 
   private byte OpArray(uint position) {
-    byte ret = RakNetPINVOKE.RakString_OpArray(swigCPtr, position);
+    byte ret = RakNetPINVOKE.CSharp_RakString_OpArray(swigCPtr, position);
     return ret;
   }
 
   public uint Find(string stringToFind, uint pos) {
-    uint ret = RakNetPINVOKE.RakString_Find__SWIG_0(swigCPtr, stringToFind, pos);
+    uint ret = RakNetPINVOKE.CSharp_RakString_Find__SWIG_0(swigCPtr, stringToFind, pos);
     return ret;
   }
 
   public uint Find(string stringToFind) {
-    uint ret = RakNetPINVOKE.RakString_Find__SWIG_1(swigCPtr, stringToFind);
+    uint ret = RakNetPINVOKE.CSharp_RakString_Find__SWIG_1(swigCPtr, stringToFind);
     return ret;
   }
 
   public bool Equals(RakString rhs) {
-    bool ret = RakNetPINVOKE.RakString_Equals__SWIG_0(swigCPtr, RakString.getCPtr(rhs));
+    bool ret = RakNetPINVOKE.CSharp_RakString_Equals__SWIG_0(swigCPtr, RakString.getCPtr(rhs));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Equals(string str) {
-    bool ret = RakNetPINVOKE.RakString_Equals__SWIG_1(swigCPtr, str);
+    bool ret = RakNetPINVOKE.CSharp_RakString_Equals__SWIG_1(swigCPtr, str);
     return ret;
   }
 
   private bool OpLess(RakString right) {
-    bool ret = RakNetPINVOKE.RakString_OpLess(swigCPtr, RakString.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_RakString_OpLess(swigCPtr, RakString.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpLessEquals(RakString right) {
-    bool ret = RakNetPINVOKE.RakString_OpLessEquals(swigCPtr, RakString.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_RakString_OpLessEquals(swigCPtr, RakString.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpGreater(RakString right) {
-    bool ret = RakNetPINVOKE.RakString_OpGreater(swigCPtr, RakString.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_RakString_OpGreater(swigCPtr, RakString.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpGreaterEquals(RakString right) {
-    bool ret = RakNetPINVOKE.RakString_OpGreaterEquals(swigCPtr, RakString.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_RakString_OpGreaterEquals(swigCPtr, RakString.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpNotEqual(RakString rhs) {
-    bool ret = RakNetPINVOKE.RakString_OpNotEqual__SWIG_0(swigCPtr, RakString.getCPtr(rhs));
+    bool ret = RakNetPINVOKE.CSharp_RakString_OpNotEqual__SWIG_0(swigCPtr, RakString.getCPtr(rhs));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpNotEqual(string str) {
-    bool ret = RakNetPINVOKE.RakString_OpNotEqual__SWIG_1(swigCPtr, str);
+    bool ret = RakNetPINVOKE.CSharp_RakString_OpNotEqual__SWIG_1(swigCPtr, str);
     return ret;
   }
 
   public string ToLower() {
-    string ret = RakNetPINVOKE.RakString_ToLower(swigCPtr);
+    string ret = RakNetPINVOKE.CSharp_RakString_ToLower(swigCPtr);
     return ret;
   }
 
   public string ToUpper() {
-    string ret = RakNetPINVOKE.RakString_ToUpper(swigCPtr);
+    string ret = RakNetPINVOKE.CSharp_RakString_ToUpper(swigCPtr);
     return ret;
   }
 
   public void Set(string format) {
-    RakNetPINVOKE.RakString_Set(swigCPtr, format);
+    RakNetPINVOKE.CSharp_RakString_Set(swigCPtr, format);
   }
 
   public RakString Assign(string str, uint pos, uint n) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_Assign(swigCPtr, str, pos, n), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_Assign(swigCPtr, str, pos, n), true);
     return ret;
   }
 
   public bool IsEmpty() {
-    bool ret = RakNetPINVOKE.RakString_IsEmpty(swigCPtr);
+    bool ret = RakNetPINVOKE.CSharp_RakString_IsEmpty(swigCPtr);
     return ret;
   }
 
   public uint GetLength() {
-    uint ret = RakNetPINVOKE.RakString_GetLength(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakString_GetLength(swigCPtr);
     return ret;
   }
 
   public uint GetLengthUTF8() {
-    uint ret = RakNetPINVOKE.RakString_GetLengthUTF8(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakString_GetLengthUTF8(swigCPtr);
     return ret;
   }
 
   public void Replace(uint index, uint count, byte c) {
-    RakNetPINVOKE.RakString_Replace(swigCPtr, index, count, c);
+    RakNetPINVOKE.CSharp_RakString_Replace(swigCPtr, index, count, c);
   }
 
   public void SetChar(uint index, byte c) {
-    RakNetPINVOKE.RakString_SetChar__SWIG_0(swigCPtr, index, c);
+    RakNetPINVOKE.CSharp_RakString_SetChar__SWIG_0(swigCPtr, index, c);
   }
 
   public void SetChar(uint index, RakString s) {
-    RakNetPINVOKE.RakString_SetChar__SWIG_1(swigCPtr, index, RakString.getCPtr(s));
+    RakNetPINVOKE.CSharp_RakString_SetChar__SWIG_1(swigCPtr, index, RakString.getCPtr(s));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Truncate(uint length) {
-    RakNetPINVOKE.RakString_Truncate(swigCPtr, length);
+    RakNetPINVOKE.CSharp_RakString_Truncate(swigCPtr, length);
   }
 
   public void TruncateUTF8(uint length) {
-    RakNetPINVOKE.RakString_TruncateUTF8(swigCPtr, length);
+    RakNetPINVOKE.CSharp_RakString_TruncateUTF8(swigCPtr, length);
   }
 
   public RakString SubStr(uint index, uint count) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_SubStr(swigCPtr, index, count), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_SubStr(swigCPtr, index, count), true);
     return ret;
   }
 
   public void Erase(uint index, uint count) {
-    RakNetPINVOKE.RakString_Erase(swigCPtr, index, count);
+    RakNetPINVOKE.CSharp_RakString_Erase(swigCPtr, index, count);
   }
 
   public void TerminateAtFirstCharacter(char c) {
-    RakNetPINVOKE.RakString_TerminateAtFirstCharacter(swigCPtr, c);
+    RakNetPINVOKE.CSharp_RakString_TerminateAtFirstCharacter(swigCPtr, c);
   }
 
   public void TerminateAtLastCharacter(char c) {
-    RakNetPINVOKE.RakString_TerminateAtLastCharacter(swigCPtr, c);
+    RakNetPINVOKE.CSharp_RakString_TerminateAtLastCharacter(swigCPtr, c);
   }
 
   public void StartAfterFirstCharacter(char c) {
-    RakNetPINVOKE.RakString_StartAfterFirstCharacter(swigCPtr, c);
+    RakNetPINVOKE.CSharp_RakString_StartAfterFirstCharacter(swigCPtr, c);
   }
 
   public void StartAfterLastCharacter(char c) {
-    RakNetPINVOKE.RakString_StartAfterLastCharacter(swigCPtr, c);
+    RakNetPINVOKE.CSharp_RakString_StartAfterLastCharacter(swigCPtr, c);
   }
 
   public int GetCharacterCount(char c) {
-    int ret = RakNetPINVOKE.RakString_GetCharacterCount(swigCPtr, c);
+    int ret = RakNetPINVOKE.CSharp_RakString_GetCharacterCount(swigCPtr, c);
     return ret;
   }
 
   public void RemoveCharacter(char c) {
-    RakNetPINVOKE.RakString_RemoveCharacter(swigCPtr, c);
+    RakNetPINVOKE.CSharp_RakString_RemoveCharacter(swigCPtr, c);
   }
 
   public static RakString NonVariadic(string str) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_NonVariadic(str), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_NonVariadic(str), true);
     return ret;
   }
 
   public static uint ToInteger(string str) {
-    uint ret = RakNetPINVOKE.RakString_ToInteger__SWIG_0(str);
+    uint ret = RakNetPINVOKE.CSharp_RakString_ToInteger__SWIG_0(str);
     return ret;
   }
 
   public static uint ToInteger(RakString rs) {
-    uint ret = RakNetPINVOKE.RakString_ToInteger__SWIG_1(RakString.getCPtr(rs));
+    uint ret = RakNetPINVOKE.CSharp_RakString_ToInteger__SWIG_1(RakString.getCPtr(rs));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static int ReadIntFromSubstring(string str, uint pos, uint n) {
-    int ret = RakNetPINVOKE.RakString_ReadIntFromSubstring(str, pos, n);
+    int ret = RakNetPINVOKE.CSharp_RakString_ReadIntFromSubstring(str, pos, n);
     return ret;
   }
 
   public int StrCmp(RakString rhs) {
-    int ret = RakNetPINVOKE.RakString_StrCmp(swigCPtr, RakString.getCPtr(rhs));
+    int ret = RakNetPINVOKE.CSharp_RakString_StrCmp(swigCPtr, RakString.getCPtr(rhs));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int StrNCmp(RakString rhs, uint num) {
-    int ret = RakNetPINVOKE.RakString_StrNCmp(swigCPtr, RakString.getCPtr(rhs), num);
+    int ret = RakNetPINVOKE.CSharp_RakString_StrNCmp(swigCPtr, RakString.getCPtr(rhs), num);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int StrICmp(RakString rhs) {
-    int ret = RakNetPINVOKE.RakString_StrICmp(swigCPtr, RakString.getCPtr(rhs));
+    int ret = RakNetPINVOKE.CSharp_RakString_StrICmp(swigCPtr, RakString.getCPtr(rhs));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Clear() {
-    RakNetPINVOKE.RakString_Clear(swigCPtr);
+    RakNetPINVOKE.CSharp_RakString_Clear(swigCPtr);
   }
 
   public void Printf() {
-    RakNetPINVOKE.RakString_Printf(swigCPtr);
+    RakNetPINVOKE.CSharp_RakString_Printf(swigCPtr);
   }
 
   public bool IPAddressMatch(string IP) {
-    bool ret = RakNetPINVOKE.RakString_IPAddressMatch(swigCPtr, IP);
+    bool ret = RakNetPINVOKE.CSharp_RakString_IPAddressMatch(swigCPtr, IP);
     return ret;
   }
 
   public bool ContainsNonprintableExceptSpaces() {
-    bool ret = RakNetPINVOKE.RakString_ContainsNonprintableExceptSpaces(swigCPtr);
+    bool ret = RakNetPINVOKE.CSharp_RakString_ContainsNonprintableExceptSpaces(swigCPtr);
     return ret;
   }
 
   public bool IsEmailAddress() {
-    bool ret = RakNetPINVOKE.RakString_IsEmailAddress(swigCPtr);
+    bool ret = RakNetPINVOKE.CSharp_RakString_IsEmailAddress(swigCPtr);
     return ret;
   }
 
   public RakString URLEncode() {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_URLEncode(swigCPtr), false);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_URLEncode(swigCPtr), false);
     return ret;
   }
 
   public RakString URLDecode() {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_URLDecode(swigCPtr), false);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_URLDecode(swigCPtr), false);
     return ret;
   }
 
   public void SplitURI(RakString header, RakString domain, RakString path) {
-    RakNetPINVOKE.RakString_SplitURI(swigCPtr, RakString.getCPtr(header), RakString.getCPtr(domain), RakString.getCPtr(path));
+    RakNetPINVOKE.CSharp_RakString_SplitURI(swigCPtr, RakString.getCPtr(header), RakString.getCPtr(domain), RakString.getCPtr(path));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public RakString SQLEscape() {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_SQLEscape(swigCPtr), false);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_SQLEscape(swigCPtr), false);
     return ret;
   }
 
   public static RakString FormatForPOST(string uri, string contentType, string body, string extraHeaders) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_FormatForPOST__SWIG_0(uri, contentType, body, extraHeaders), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_FormatForPOST__SWIG_0(uri, contentType, body, extraHeaders), true);
     return ret;
   }
 
   public static RakString FormatForPOST(string uri, string contentType, string body) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_FormatForPOST__SWIG_1(uri, contentType, body), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_FormatForPOST__SWIG_1(uri, contentType, body), true);
     return ret;
   }
 
   public static RakString FormatForPUT(string uri, string contentType, string body, string extraHeaders) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_FormatForPUT__SWIG_0(uri, contentType, body, extraHeaders), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_FormatForPUT__SWIG_0(uri, contentType, body, extraHeaders), true);
     return ret;
   }
 
   public static RakString FormatForPUT(string uri, string contentType, string body) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_FormatForPUT__SWIG_1(uri, contentType, body), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_FormatForPUT__SWIG_1(uri, contentType, body), true);
     return ret;
   }
 
   public static RakString FormatForGET(string uri, string extraHeaders) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_FormatForGET__SWIG_0(uri, extraHeaders), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_FormatForGET__SWIG_0(uri, extraHeaders), true);
     return ret;
   }
 
   public static RakString FormatForGET(string uri) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_FormatForGET__SWIG_1(uri), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_FormatForGET__SWIG_1(uri), true);
     return ret;
   }
 
   public static RakString FormatForDELETE(string uri, string extraHeaders) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_FormatForDELETE__SWIG_0(uri, extraHeaders), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_FormatForDELETE__SWIG_0(uri, extraHeaders), true);
     return ret;
   }
 
   public static RakString FormatForDELETE(string uri) {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_FormatForDELETE__SWIG_1(uri), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_FormatForDELETE__SWIG_1(uri), true);
     return ret;
   }
 
   public RakString MakeFilePath() {
-    RakString ret = new RakString(RakNetPINVOKE.RakString_MakeFilePath(swigCPtr), false);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_RakString_MakeFilePath(swigCPtr), false);
     return ret;
   }
 
   public static void FreeMemory() {
-    RakNetPINVOKE.RakString_FreeMemory();
+    RakNetPINVOKE.CSharp_RakString_FreeMemory();
   }
 
   public static void FreeMemoryNoMutex() {
-    RakNetPINVOKE.RakString_FreeMemoryNoMutex();
+    RakNetPINVOKE.CSharp_RakString_FreeMemoryNoMutex();
   }
 
   public void Serialize(BitStream bs) {
-    RakNetPINVOKE.RakString_Serialize__SWIG_0(swigCPtr, BitStream.getCPtr(bs));
+    RakNetPINVOKE.CSharp_RakString_Serialize__SWIG_0(swigCPtr, BitStream.getCPtr(bs));
   }
 
   public static void Serialize(string str, BitStream bs) {
-    RakNetPINVOKE.RakString_Serialize__SWIG_1(str, BitStream.getCPtr(bs));
+    RakNetPINVOKE.CSharp_RakString_Serialize__SWIG_1(str, BitStream.getCPtr(bs));
   }
 
   public void SerializeCompressed(BitStream bs, byte languageId, bool writeLanguageId) {
-    RakNetPINVOKE.RakString_SerializeCompressed__SWIG_0(swigCPtr, BitStream.getCPtr(bs), languageId, writeLanguageId);
+    RakNetPINVOKE.CSharp_RakString_SerializeCompressed__SWIG_0(swigCPtr, BitStream.getCPtr(bs), languageId, writeLanguageId);
   }
 
   public void SerializeCompressed(BitStream bs, byte languageId) {
-    RakNetPINVOKE.RakString_SerializeCompressed__SWIG_1(swigCPtr, BitStream.getCPtr(bs), languageId);
+    RakNetPINVOKE.CSharp_RakString_SerializeCompressed__SWIG_1(swigCPtr, BitStream.getCPtr(bs), languageId);
   }
 
   public void SerializeCompressed(BitStream bs) {
-    RakNetPINVOKE.RakString_SerializeCompressed__SWIG_2(swigCPtr, BitStream.getCPtr(bs));
+    RakNetPINVOKE.CSharp_RakString_SerializeCompressed__SWIG_2(swigCPtr, BitStream.getCPtr(bs));
   }
 
   public static void SerializeCompressed(string str, BitStream bs, byte languageId, bool writeLanguageId) {
-    RakNetPINVOKE.RakString_SerializeCompressed__SWIG_3(str, BitStream.getCPtr(bs), languageId, writeLanguageId);
+    RakNetPINVOKE.CSharp_RakString_SerializeCompressed__SWIG_3(str, BitStream.getCPtr(bs), languageId, writeLanguageId);
   }
 
   public static void SerializeCompressed(string str, BitStream bs, byte languageId) {
-    RakNetPINVOKE.RakString_SerializeCompressed__SWIG_4(str, BitStream.getCPtr(bs), languageId);
+    RakNetPINVOKE.CSharp_RakString_SerializeCompressed__SWIG_4(str, BitStream.getCPtr(bs), languageId);
   }
 
   public static void SerializeCompressed(string str, BitStream bs) {
-    RakNetPINVOKE.RakString_SerializeCompressed__SWIG_5(str, BitStream.getCPtr(bs));
+    RakNetPINVOKE.CSharp_RakString_SerializeCompressed__SWIG_5(str, BitStream.getCPtr(bs));
   }
 
   public bool Deserialize(BitStream bs) {
-    bool ret = RakNetPINVOKE.RakString_Deserialize__SWIG_0(swigCPtr, BitStream.getCPtr(bs));
+    bool ret = RakNetPINVOKE.CSharp_RakString_Deserialize__SWIG_0(swigCPtr, BitStream.getCPtr(bs));
     return ret;
   }
 
   public static bool Deserialize(string str, BitStream bs) {
-    bool ret = RakNetPINVOKE.RakString_Deserialize__SWIG_1(str, BitStream.getCPtr(bs));
+    bool ret = RakNetPINVOKE.CSharp_RakString_Deserialize__SWIG_1(str, BitStream.getCPtr(bs));
     return ret;
   }
 
   public bool DeserializeCompressed(BitStream bs, bool readLanguageId) {
-    bool ret = RakNetPINVOKE.RakString_DeserializeCompressed__SWIG_0(swigCPtr, BitStream.getCPtr(bs), readLanguageId);
+    bool ret = RakNetPINVOKE.CSharp_RakString_DeserializeCompressed__SWIG_0(swigCPtr, BitStream.getCPtr(bs), readLanguageId);
     return ret;
   }
 
   public bool DeserializeCompressed(BitStream bs) {
-    bool ret = RakNetPINVOKE.RakString_DeserializeCompressed__SWIG_1(swigCPtr, BitStream.getCPtr(bs));
+    bool ret = RakNetPINVOKE.CSharp_RakString_DeserializeCompressed__SWIG_1(swigCPtr, BitStream.getCPtr(bs));
     return ret;
   }
 
   public static bool DeserializeCompressed(string str, BitStream bs, bool readLanguageId) {
-    bool ret = RakNetPINVOKE.RakString_DeserializeCompressed__SWIG_2(str, BitStream.getCPtr(bs), readLanguageId);
+    bool ret = RakNetPINVOKE.CSharp_RakString_DeserializeCompressed__SWIG_2(str, BitStream.getCPtr(bs), readLanguageId);
     return ret;
   }
 
   public static bool DeserializeCompressed(string str, BitStream bs) {
-    bool ret = RakNetPINVOKE.RakString_DeserializeCompressed__SWIG_3(str, BitStream.getCPtr(bs));
+    bool ret = RakNetPINVOKE.CSharp_RakString_DeserializeCompressed__SWIG_3(str, BitStream.getCPtr(bs));
     return ret;
   }
 
   public static string ToString(long i) {
-    string ret = RakNetPINVOKE.RakString_ToString__SWIG_0(i);
+    string ret = RakNetPINVOKE.CSharp_RakString_ToString__SWIG_0(i);
     return ret;
   }
 
   public static string ToString(ulong i) {
-    string ret = RakNetPINVOKE.RakString_ToString__SWIG_1(i);
+    string ret = RakNetPINVOKE.CSharp_RakString_ToString__SWIG_1(i);
     return ret;
   }
 
   public static uint GetSizeToAllocate(uint bytes) {
-    uint ret = RakNetPINVOKE.RakString_GetSizeToAllocate(bytes);
+    uint ret = RakNetPINVOKE.CSharp_RakString_GetSizeToAllocate(bytes);
     return ret;
   }
 
   public static int RakStringComp(RakString key, RakString data) {
-    int ret = RakNetPINVOKE.RakString_RakStringComp(RakString.getCPtr(key), RakString.getCPtr(data));
+    int ret = RakNetPINVOKE.CSharp_RakString_RakStringComp(RakString.getCPtr(key), RakString.getCPtr(data));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static void LockMutex() {
-    RakNetPINVOKE.RakString_LockMutex();
+    RakNetPINVOKE.CSharp_RakString_LockMutex();
   }
 
   public static void UnlockMutex() {
-    RakNetPINVOKE.RakString_UnlockMutex();
+    RakNetPINVOKE.CSharp_RakString_UnlockMutex();
   }
 
   public void AppendBytes(byte[] inByteArray, uint count) {
-    RakNetPINVOKE.RakString_AppendBytes(swigCPtr, inByteArray, count);
+    RakNetPINVOKE.CSharp_RakString_AppendBytes(swigCPtr, inByteArray, count);
   }
 
 }

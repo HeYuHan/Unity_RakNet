@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class UDPProxyServer : PluginInterface2 {
   private HandleRef swigCPtr;
 
-  internal UDPProxyServer(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.UDPProxyServer_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal UDPProxyServer(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_UDPProxyServer_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class UDPProxyServer : PluginInterface2 {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_UDPProxyServer(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_UDPProxyServer(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,43 +41,43 @@ public class UDPProxyServer : PluginInterface2 {
   }
 
   public static UDPProxyServer GetInstance() {
-    IntPtr cPtr = RakNetPINVOKE.UDPProxyServer_GetInstance();
+    IntPtr cPtr = RakNetPINVOKE.CSharp_UDPProxyServer_GetInstance();
     UDPProxyServer ret = (cPtr == IntPtr.Zero) ? null : new UDPProxyServer(cPtr, false);
     return ret;
   }
 
   public static void DestroyInstance(UDPProxyServer i) {
-    RakNetPINVOKE.UDPProxyServer_DestroyInstance(UDPProxyServer.getCPtr(i));
+    RakNetPINVOKE.CSharp_UDPProxyServer_DestroyInstance(UDPProxyServer.getCPtr(i));
   }
 
-  public UDPProxyServer() : this(RakNetPINVOKE.new_UDPProxyServer(), true) {
+  public UDPProxyServer() : this(RakNetPINVOKE.CSharp_new_UDPProxyServer(), true) {
   }
 
   public void SetSocketFamily(ushort _socketFamily) {
-    RakNetPINVOKE.UDPProxyServer_SetSocketFamily(swigCPtr, _socketFamily);
+    RakNetPINVOKE.CSharp_UDPProxyServer_SetSocketFamily(swigCPtr, _socketFamily);
   }
 
   public void SetResultHandler(UDPProxyServerResultHandler rh) {
-    RakNetPINVOKE.UDPProxyServer_SetResultHandler(swigCPtr, UDPProxyServerResultHandler.getCPtr(rh));
+    RakNetPINVOKE.CSharp_UDPProxyServer_SetResultHandler(swigCPtr, UDPProxyServerResultHandler.getCPtr(rh));
   }
 
   public bool LoginToCoordinator(RakString password, SystemAddress coordinatorAddress) {
-    bool ret = RakNetPINVOKE.UDPProxyServer_LoginToCoordinator(swigCPtr, RakString.getCPtr(password), SystemAddress.getCPtr(coordinatorAddress));
+    bool ret = RakNetPINVOKE.CSharp_UDPProxyServer_LoginToCoordinator(swigCPtr, RakString.getCPtr(password), SystemAddress.getCPtr(coordinatorAddress));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetServerPublicIP(RakString ip) {
-    RakNetPINVOKE.UDPProxyServer_SetServerPublicIP(swigCPtr, RakString.getCPtr(ip));
+    RakNetPINVOKE.CSharp_UDPProxyServer_SetServerPublicIP(swigCPtr, RakString.getCPtr(ip));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public UDPForwarder udpForwarder {
     set {
-      RakNetPINVOKE.UDPProxyServer_udpForwarder_set(swigCPtr, UDPForwarder.getCPtr(value));
+      RakNetPINVOKE.CSharp_UDPProxyServer_udpForwarder_set(swigCPtr, UDPForwarder.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.UDPProxyServer_udpForwarder_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_UDPProxyServer_udpForwarder_get(swigCPtr);
       UDPForwarder ret = (cPtr == IntPtr.Zero) ? null : new UDPForwarder(cPtr, false);
       return ret;
     } 

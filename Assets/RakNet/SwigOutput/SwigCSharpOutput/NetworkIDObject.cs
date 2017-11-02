@@ -33,7 +33,7 @@ public class NetworkIDObject : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_NetworkIDObject(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_NetworkIDObject(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -61,27 +61,27 @@ public class NetworkIDObject : IDisposable {
       return swigCPtr.Handle;
   }
 
-  public NetworkIDObject() : this(RakNetPINVOKE.new_NetworkIDObject(), true) {
+  public NetworkIDObject() : this(RakNetPINVOKE.CSharp_new_NetworkIDObject(), true) {
     SwigDirectorConnect();
   }
 
   protected void SetNetworkIDManagerOrig(NetworkIDManager manager) {
-    if (SwigDerivedClassHasMethod("SetNetworkIDManagerOrig", swigMethodTypes0)) RakNetPINVOKE.NetworkIDObject_SetNetworkIDManagerOrigSwigExplicitNetworkIDObject(swigCPtr, NetworkIDManager.getCPtr(manager)); else RakNetPINVOKE.NetworkIDObject_SetNetworkIDManagerOrig(swigCPtr, NetworkIDManager.getCPtr(manager));
+    if (SwigDerivedClassHasMethod("SetNetworkIDManagerOrig", swigMethodTypes0)) RakNetPINVOKE.CSharp_NetworkIDObject_SetNetworkIDManagerOrigSwigExplicitNetworkIDObject(swigCPtr, NetworkIDManager.getCPtr(manager)); else RakNetPINVOKE.CSharp_NetworkIDObject_SetNetworkIDManagerOrig(swigCPtr, NetworkIDManager.getCPtr(manager));
   }
 
   public virtual NetworkIDManager GetNetworkIDManager() {
-    IntPtr cPtr = (SwigDerivedClassHasMethod("GetNetworkIDManager", swigMethodTypes1) ? RakNetPINVOKE.NetworkIDObject_GetNetworkIDManagerSwigExplicitNetworkIDObject(swigCPtr) : RakNetPINVOKE.NetworkIDObject_GetNetworkIDManager(swigCPtr));
+    IntPtr cPtr = (SwigDerivedClassHasMethod("GetNetworkIDManager", swigMethodTypes1) ? RakNetPINVOKE.CSharp_NetworkIDObject_GetNetworkIDManagerSwigExplicitNetworkIDObject(swigCPtr) : RakNetPINVOKE.CSharp_NetworkIDObject_GetNetworkIDManager(swigCPtr));
     NetworkIDManager ret = (cPtr == IntPtr.Zero) ? null : new NetworkIDManager(cPtr, false);
     return ret;
   }
 
   public virtual ulong GetNetworkID() {
-    ulong ret = (SwigDerivedClassHasMethod("GetNetworkID", swigMethodTypes2) ? RakNetPINVOKE.NetworkIDObject_GetNetworkIDSwigExplicitNetworkIDObject(swigCPtr) : RakNetPINVOKE.NetworkIDObject_GetNetworkID(swigCPtr));
+    ulong ret = (SwigDerivedClassHasMethod("GetNetworkID", swigMethodTypes2) ? RakNetPINVOKE.CSharp_NetworkIDObject_GetNetworkIDSwigExplicitNetworkIDObject(swigCPtr) : RakNetPINVOKE.CSharp_NetworkIDObject_GetNetworkID(swigCPtr));
     return ret;
   }
 
   public virtual void SetNetworkID(ulong id) {
-    if (SwigDerivedClassHasMethod("SetNetworkID", swigMethodTypes3)) RakNetPINVOKE.NetworkIDObject_SetNetworkIDSwigExplicitNetworkIDObject(swigCPtr, id); else RakNetPINVOKE.NetworkIDObject_SetNetworkID(swigCPtr, id);
+    if (SwigDerivedClassHasMethod("SetNetworkID", swigMethodTypes3)) RakNetPINVOKE.CSharp_NetworkIDObject_SetNetworkIDSwigExplicitNetworkIDObject(swigCPtr, id); else RakNetPINVOKE.CSharp_NetworkIDObject_SetNetworkID(swigCPtr, id);
   }
 
   private void SwigDirectorConnect() {
@@ -93,7 +93,7 @@ public class NetworkIDObject : IDisposable {
       swigDelegate2 = new SwigDelegateNetworkIDObject_2(SwigDirectorGetNetworkID);
     if (SwigDerivedClassHasMethod("SetNetworkID", swigMethodTypes3))
       swigDelegate3 = new SwigDelegateNetworkIDObject_3(SwigDirectorSetNetworkID);
-    RakNetPINVOKE.NetworkIDObject_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3);
+    RakNetPINVOKE.CSharp_NetworkIDObject_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, Type[] methodTypes) {

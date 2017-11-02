@@ -33,7 +33,7 @@ public class TeamSelection : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_TeamSelection(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_TeamSelection(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,40 +41,40 @@ public class TeamSelection : IDisposable {
     }
   }
 
-  public TeamSelection() : this(RakNetPINVOKE.new_TeamSelection__SWIG_0(), true) {
+  public TeamSelection() : this(RakNetPINVOKE.CSharp_new_TeamSelection__SWIG_0(), true) {
   }
 
-  public TeamSelection(JoinTeamType itt) : this(RakNetPINVOKE.new_TeamSelection__SWIG_1((int)itt), true) {
+  public TeamSelection(JoinTeamType itt) : this(RakNetPINVOKE.CSharp_new_TeamSelection__SWIG_1((int)itt), true) {
   }
 
-  public TeamSelection(JoinTeamType itt, TM_Team param) : this(RakNetPINVOKE.new_TeamSelection__SWIG_2((int)itt, TM_Team.getCPtr(param)), true) {
+  public TeamSelection(JoinTeamType itt, TM_Team param) : this(RakNetPINVOKE.CSharp_new_TeamSelection__SWIG_2((int)itt, TM_Team.getCPtr(param)), true) {
   }
 
-  public TeamSelection(JoinTeamType itt, byte param) : this(RakNetPINVOKE.new_TeamSelection__SWIG_3((int)itt, param), true) {
+  public TeamSelection(JoinTeamType itt, byte param) : this(RakNetPINVOKE.CSharp_new_TeamSelection__SWIG_3((int)itt, param), true) {
   }
 
   public JoinTeamType joinTeamType {
     set {
-      RakNetPINVOKE.TeamSelection_joinTeamType_set(swigCPtr, (int)value);
+      RakNetPINVOKE.CSharp_TeamSelection_joinTeamType_set(swigCPtr, (int)value);
     } 
     get {
-      JoinTeamType ret = (JoinTeamType)RakNetPINVOKE.TeamSelection_joinTeamType_get(swigCPtr);
+      JoinTeamType ret = (JoinTeamType)RakNetPINVOKE.CSharp_TeamSelection_joinTeamType_get(swigCPtr);
       return ret;
     } 
   }
 
   public static TeamSelection AnyAvailable() {
-    TeamSelection ret = new TeamSelection(RakNetPINVOKE.TeamSelection_AnyAvailable(), true);
+    TeamSelection ret = new TeamSelection(RakNetPINVOKE.CSharp_TeamSelection_AnyAvailable(), true);
     return ret;
   }
 
   public static TeamSelection SpecificTeam(TM_Team specificTeamToJoin) {
-    TeamSelection ret = new TeamSelection(RakNetPINVOKE.TeamSelection_SpecificTeam(TM_Team.getCPtr(specificTeamToJoin)), true);
+    TeamSelection ret = new TeamSelection(RakNetPINVOKE.CSharp_TeamSelection_SpecificTeam(TM_Team.getCPtr(specificTeamToJoin)), true);
     return ret;
   }
 
   public static TeamSelection NoTeam(byte noTeamSubcategory) {
-    TeamSelection ret = new TeamSelection(RakNetPINVOKE.TeamSelection_NoTeam(noTeamSubcategory), true);
+    TeamSelection ret = new TeamSelection(RakNetPINVOKE.CSharp_TeamSelection_NoTeam(noTeamSubcategory), true);
     return ret;
   }
 

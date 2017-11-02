@@ -33,7 +33,7 @@ public class SortQuery : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_SortQuery(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_SortQuery(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -43,25 +43,25 @@ public class SortQuery : IDisposable {
 
   public uint columnIndex {
     set {
-      RakNetPINVOKE.SortQuery_columnIndex_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_SortQuery_columnIndex_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.SortQuery_columnIndex_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_SortQuery_columnIndex_get(swigCPtr);
       return ret;
     } 
   }
 
   public Table.SortQueryType operation {
     set {
-      RakNetPINVOKE.SortQuery_operation_set(swigCPtr, (int)value);
+      RakNetPINVOKE.CSharp_SortQuery_operation_set(swigCPtr, (int)value);
     } 
     get {
-      Table.SortQueryType ret = (Table.SortQueryType)RakNetPINVOKE.SortQuery_operation_get(swigCPtr);
+      Table.SortQueryType ret = (Table.SortQueryType)RakNetPINVOKE.CSharp_SortQuery_operation_get(swigCPtr);
       return ret;
     } 
   }
 
-  public SortQuery() : this(RakNetPINVOKE.new_SortQuery(), true) {
+  public SortQuery() : this(RakNetPINVOKE.CSharp_new_SortQuery(), true) {
   }
 
 }

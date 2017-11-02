@@ -33,7 +33,7 @@ public class TM_TeamMember : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_TM_TeamMember(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_TM_TeamMember(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -42,143 +42,143 @@ public class TM_TeamMember : IDisposable {
   }
 
   public static TM_TeamMember GetInstance() {
-    IntPtr cPtr = RakNetPINVOKE.TM_TeamMember_GetInstance();
+    IntPtr cPtr = RakNetPINVOKE.CSharp_TM_TeamMember_GetInstance();
     TM_TeamMember ret = (cPtr == IntPtr.Zero) ? null : new TM_TeamMember(cPtr, false);
     return ret;
   }
 
   public static void DestroyInstance(TM_TeamMember i) {
-    RakNetPINVOKE.TM_TeamMember_DestroyInstance(TM_TeamMember.getCPtr(i));
+    RakNetPINVOKE.CSharp_TM_TeamMember_DestroyInstance(TM_TeamMember.getCPtr(i));
   }
 
-  public TM_TeamMember() : this(RakNetPINVOKE.new_TM_TeamMember(), true) {
+  public TM_TeamMember() : this(RakNetPINVOKE.CSharp_new_TM_TeamMember(), true) {
   }
 
   public bool RequestTeam(TeamSelection teamSelection) {
-    bool ret = RakNetPINVOKE.TM_TeamMember_RequestTeam(swigCPtr, TeamSelection.getCPtr(teamSelection));
+    bool ret = RakNetPINVOKE.CSharp_TM_TeamMember_RequestTeam(swigCPtr, TeamSelection.getCPtr(teamSelection));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool RequestTeamSwitch(TM_Team teamToJoin, TM_Team teamToLeave) {
-    bool ret = RakNetPINVOKE.TM_TeamMember_RequestTeamSwitch(swigCPtr, TM_Team.getCPtr(teamToJoin), TM_Team.getCPtr(teamToLeave));
+    bool ret = RakNetPINVOKE.CSharp_TM_TeamMember_RequestTeamSwitch(swigCPtr, TM_Team.getCPtr(teamToJoin), TM_Team.getCPtr(teamToLeave));
     return ret;
   }
 
   public TeamSelection GetRequestedTeam() {
-    TeamSelection ret = new TeamSelection(RakNetPINVOKE.TM_TeamMember_GetRequestedTeam(swigCPtr), true);
+    TeamSelection ret = new TeamSelection(RakNetPINVOKE.CSharp_TM_TeamMember_GetRequestedTeam(swigCPtr), true);
     return ret;
   }
 
   public void GetRequestedSpecificTeams(SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t requestedTeams) {
-    RakNetPINVOKE.TM_TeamMember_GetRequestedSpecificTeams(swigCPtr, SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t.getCPtr(requestedTeams));
+    RakNetPINVOKE.CSharp_TM_TeamMember_GetRequestedSpecificTeams(swigCPtr, SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t.getCPtr(requestedTeams));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool HasRequestedTeam(TM_Team team) {
-    bool ret = RakNetPINVOKE.TM_TeamMember_HasRequestedTeam(swigCPtr, TM_Team.getCPtr(team));
+    bool ret = RakNetPINVOKE.CSharp_TM_TeamMember_HasRequestedTeam(swigCPtr, TM_Team.getCPtr(team));
     return ret;
   }
 
   public uint GetRequestedTeamIndex(TM_Team team) {
-    uint ret = RakNetPINVOKE.TM_TeamMember_GetRequestedTeamIndex(swigCPtr, TM_Team.getCPtr(team));
+    uint ret = RakNetPINVOKE.CSharp_TM_TeamMember_GetRequestedTeamIndex(swigCPtr, TM_Team.getCPtr(team));
     return ret;
   }
 
   public uint GetRequestedTeamCount() {
-    uint ret = RakNetPINVOKE.TM_TeamMember_GetRequestedTeamCount(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_TM_TeamMember_GetRequestedTeamCount(swigCPtr);
     return ret;
   }
 
   public bool CancelTeamRequest(TM_Team specificTeamToCancel) {
-    bool ret = RakNetPINVOKE.TM_TeamMember_CancelTeamRequest(swigCPtr, TM_Team.getCPtr(specificTeamToCancel));
+    bool ret = RakNetPINVOKE.CSharp_TM_TeamMember_CancelTeamRequest(swigCPtr, TM_Team.getCPtr(specificTeamToCancel));
     return ret;
   }
 
   public bool LeaveTeam(TM_Team team, byte _noTeamSubcategory) {
-    bool ret = RakNetPINVOKE.TM_TeamMember_LeaveTeam(swigCPtr, TM_Team.getCPtr(team), _noTeamSubcategory);
+    bool ret = RakNetPINVOKE.CSharp_TM_TeamMember_LeaveTeam(swigCPtr, TM_Team.getCPtr(team), _noTeamSubcategory);
     return ret;
   }
 
   public bool LeaveAllTeams(byte noTeamSubcategory) {
-    bool ret = RakNetPINVOKE.TM_TeamMember_LeaveAllTeams(swigCPtr, noTeamSubcategory);
+    bool ret = RakNetPINVOKE.CSharp_TM_TeamMember_LeaveAllTeams(swigCPtr, noTeamSubcategory);
     return ret;
   }
 
   public TM_Team GetCurrentTeam() {
-    IntPtr cPtr = RakNetPINVOKE.TM_TeamMember_GetCurrentTeam(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_TM_TeamMember_GetCurrentTeam(swigCPtr);
     TM_Team ret = (cPtr == IntPtr.Zero) ? null : new TM_Team(cPtr, false);
     return ret;
   }
 
   public uint GetCurrentTeamCount() {
-    uint ret = RakNetPINVOKE.TM_TeamMember_GetCurrentTeamCount(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_TM_TeamMember_GetCurrentTeamCount(swigCPtr);
     return ret;
   }
 
   public TM_Team GetCurrentTeamByIndex(uint index) {
-    IntPtr cPtr = RakNetPINVOKE.TM_TeamMember_GetCurrentTeamByIndex(swigCPtr, index);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_TM_TeamMember_GetCurrentTeamByIndex(swigCPtr, index);
     TM_Team ret = (cPtr == IntPtr.Zero) ? null : new TM_Team(cPtr, false);
     return ret;
   }
 
   public void GetCurrentTeams(SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t _teams) {
-    RakNetPINVOKE.TM_TeamMember_GetCurrentTeams(swigCPtr, SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t.getCPtr(_teams));
+    RakNetPINVOKE.CSharp_TM_TeamMember_GetCurrentTeams(swigCPtr, SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t.getCPtr(_teams));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GetLastTeams(SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t _teams) {
-    RakNetPINVOKE.TM_TeamMember_GetLastTeams(swigCPtr, SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t.getCPtr(_teams));
+    RakNetPINVOKE.CSharp_TM_TeamMember_GetLastTeams(swigCPtr, SWIGTYPE_p_DataStructures__ListT_RakNet__TM_Team_p_t.getCPtr(_teams));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool IsOnTeam(TM_Team team) {
-    bool ret = RakNetPINVOKE.TM_TeamMember_IsOnTeam(swigCPtr, TM_Team.getCPtr(team));
+    bool ret = RakNetPINVOKE.CSharp_TM_TeamMember_IsOnTeam(swigCPtr, TM_Team.getCPtr(team));
     return ret;
   }
 
   public ulong GetNetworkID() {
-    ulong ret = RakNetPINVOKE.TM_TeamMember_GetNetworkID(swigCPtr);
+    ulong ret = RakNetPINVOKE.CSharp_TM_TeamMember_GetNetworkID(swigCPtr);
     return ret;
   }
 
   public TM_World GetTM_World() {
-    IntPtr cPtr = RakNetPINVOKE.TM_TeamMember_GetTM_World(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_TM_TeamMember_GetTM_World(swigCPtr);
     TM_World ret = (cPtr == IntPtr.Zero) ? null : new TM_World(cPtr, false);
     return ret;
   }
 
   public void SerializeConstruction(BitStream constructionBitstream) {
-    RakNetPINVOKE.TM_TeamMember_SerializeConstruction(swigCPtr, BitStream.getCPtr(constructionBitstream));
+    RakNetPINVOKE.CSharp_TM_TeamMember_SerializeConstruction(swigCPtr, BitStream.getCPtr(constructionBitstream));
   }
 
   public bool DeserializeConstruction(TeamManager teamManager, BitStream constructionBitstream) {
-    bool ret = RakNetPINVOKE.TM_TeamMember_DeserializeConstruction(swigCPtr, TeamManager.getCPtr(teamManager), BitStream.getCPtr(constructionBitstream));
+    bool ret = RakNetPINVOKE.CSharp_TM_TeamMember_DeserializeConstruction(swigCPtr, TeamManager.getCPtr(teamManager), BitStream.getCPtr(constructionBitstream));
     return ret;
   }
 
   public void SetOwner(SWIGTYPE_p_void o) {
-    RakNetPINVOKE.TM_TeamMember_SetOwner(swigCPtr, SWIGTYPE_p_void.getCPtr(o));
+    RakNetPINVOKE.CSharp_TM_TeamMember_SetOwner(swigCPtr, SWIGTYPE_p_void.getCPtr(o));
   }
 
   public SWIGTYPE_p_void GetOwner() {
-    IntPtr cPtr = RakNetPINVOKE.TM_TeamMember_GetOwner(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_TM_TeamMember_GetOwner(swigCPtr);
     SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
     return ret;
   }
 
   public byte GetNoTeamId() {
-    byte ret = RakNetPINVOKE.TM_TeamMember_GetNoTeamId(swigCPtr);
+    byte ret = RakNetPINVOKE.CSharp_TM_TeamMember_GetNoTeamId(swigCPtr);
     return ret;
   }
 
   public uint GetWorldIndex() {
-    uint ret = RakNetPINVOKE.TM_TeamMember_GetWorldIndex(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_TM_TeamMember_GetWorldIndex(swigCPtr);
     return ret;
   }
 
   public static uint ToUint32(ulong g) {
-    uint ret = RakNetPINVOKE.TM_TeamMember_ToUint32(g);
+    uint ret = RakNetPINVOKE.CSharp_TM_TeamMember_ToUint32(g);
     return ret;
   }
 

@@ -33,7 +33,7 @@ public class NatPunchthroughDebugInterface : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_NatPunchthroughDebugInterface(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_NatPunchthroughDebugInterface(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,18 +41,18 @@ public class NatPunchthroughDebugInterface : IDisposable {
     }
   }
 
-  public NatPunchthroughDebugInterface() : this(RakNetPINVOKE.new_NatPunchthroughDebugInterface(), true) {
+  public NatPunchthroughDebugInterface() : this(RakNetPINVOKE.CSharp_new_NatPunchthroughDebugInterface(), true) {
     SwigDirectorConnect();
   }
 
   public virtual void OnClientMessage(string msg) {
-    RakNetPINVOKE.NatPunchthroughDebugInterface_OnClientMessage(swigCPtr, msg);
+    RakNetPINVOKE.CSharp_NatPunchthroughDebugInterface_OnClientMessage(swigCPtr, msg);
   }
 
   private void SwigDirectorConnect() {
     if (SwigDerivedClassHasMethod("OnClientMessage", swigMethodTypes0))
       swigDelegate0 = new SwigDelegateNatPunchthroughDebugInterface_0(SwigDirectorOnClientMessage);
-    RakNetPINVOKE.NatPunchthroughDebugInterface_director_connect(swigCPtr, swigDelegate0);
+    RakNetPINVOKE.CSharp_NatPunchthroughDebugInterface_director_connect(swigCPtr, swigDelegate0);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, Type[] methodTypes) {

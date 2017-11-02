@@ -33,7 +33,7 @@ public class FileListTransferCBInterface : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_FileListTransferCBInterface(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_FileListTransferCBInterface(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,31 +41,31 @@ public class FileListTransferCBInterface : IDisposable {
     }
   }
 
-  public FileListTransferCBInterface() : this(RakNetPINVOKE.new_FileListTransferCBInterface(), true) {
+  public FileListTransferCBInterface() : this(RakNetPINVOKE.CSharp_new_FileListTransferCBInterface(), true) {
     SwigDirectorConnect();
   }
 
   public virtual bool OnFile(OnFileStruct onFileStruct) {
-    bool ret = RakNetPINVOKE.FileListTransferCBInterface_OnFile(swigCPtr, OnFileStruct.getCPtr(onFileStruct));
+    bool ret = RakNetPINVOKE.CSharp_FileListTransferCBInterface_OnFile(swigCPtr, OnFileStruct.getCPtr(onFileStruct));
     return ret;
   }
 
   public virtual void OnFileProgress(FileProgressStruct fps) {
-    RakNetPINVOKE.FileListTransferCBInterface_OnFileProgress(swigCPtr, FileProgressStruct.getCPtr(fps));
+    RakNetPINVOKE.CSharp_FileListTransferCBInterface_OnFileProgress(swigCPtr, FileProgressStruct.getCPtr(fps));
   }
 
   public virtual bool Update() {
-    bool ret = (SwigDerivedClassHasMethod("Update", swigMethodTypes2) ? RakNetPINVOKE.FileListTransferCBInterface_UpdateSwigExplicitFileListTransferCBInterface(swigCPtr) : RakNetPINVOKE.FileListTransferCBInterface_Update(swigCPtr));
+    bool ret = (SwigDerivedClassHasMethod("Update", swigMethodTypes2) ? RakNetPINVOKE.CSharp_FileListTransferCBInterface_UpdateSwigExplicitFileListTransferCBInterface(swigCPtr) : RakNetPINVOKE.CSharp_FileListTransferCBInterface_Update(swigCPtr));
     return ret;
   }
 
   public virtual bool OnDownloadComplete(DownloadCompleteStruct dcs) {
-    bool ret = (SwigDerivedClassHasMethod("OnDownloadComplete", swigMethodTypes3) ? RakNetPINVOKE.FileListTransferCBInterface_OnDownloadCompleteSwigExplicitFileListTransferCBInterface(swigCPtr, DownloadCompleteStruct.getCPtr(dcs)) : RakNetPINVOKE.FileListTransferCBInterface_OnDownloadComplete(swigCPtr, DownloadCompleteStruct.getCPtr(dcs)));
+    bool ret = (SwigDerivedClassHasMethod("OnDownloadComplete", swigMethodTypes3) ? RakNetPINVOKE.CSharp_FileListTransferCBInterface_OnDownloadCompleteSwigExplicitFileListTransferCBInterface(swigCPtr, DownloadCompleteStruct.getCPtr(dcs)) : RakNetPINVOKE.CSharp_FileListTransferCBInterface_OnDownloadComplete(swigCPtr, DownloadCompleteStruct.getCPtr(dcs)));
     return ret;
   }
 
   public virtual void OnDereference() {
-    if (SwigDerivedClassHasMethod("OnDereference", swigMethodTypes4)) RakNetPINVOKE.FileListTransferCBInterface_OnDereferenceSwigExplicitFileListTransferCBInterface(swigCPtr); else RakNetPINVOKE.FileListTransferCBInterface_OnDereference(swigCPtr);
+    if (SwigDerivedClassHasMethod("OnDereference", swigMethodTypes4)) RakNetPINVOKE.CSharp_FileListTransferCBInterface_OnDereferenceSwigExplicitFileListTransferCBInterface(swigCPtr); else RakNetPINVOKE.CSharp_FileListTransferCBInterface_OnDereference(swigCPtr);
   }
 
   private void SwigDirectorConnect() {
@@ -79,7 +79,7 @@ public class FileListTransferCBInterface : IDisposable {
       swigDelegate3 = new SwigDelegateFileListTransferCBInterface_3(SwigDirectorOnDownloadComplete);
     if (SwigDerivedClassHasMethod("OnDereference", swigMethodTypes4))
       swigDelegate4 = new SwigDelegateFileListTransferCBInterface_4(SwigDirectorOnDereference);
-    RakNetPINVOKE.FileListTransferCBInterface_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4);
+    RakNetPINVOKE.CSharp_FileListTransferCBInterface_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, Type[] methodTypes) {

@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class NatPunchthroughServerDebugInterface_Printf : NatPunchthroughServerDebugInterface {
   private HandleRef swigCPtr;
 
-  internal NatPunchthroughServerDebugInterface_Printf(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.NatPunchthroughServerDebugInterface_Printf_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal NatPunchthroughServerDebugInterface_Printf(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_NatPunchthroughServerDebugInterface_Printf_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class NatPunchthroughServerDebugInterface_Printf : NatPunchthroughServerD
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_NatPunchthroughServerDebugInterface_Printf(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_NatPunchthroughServerDebugInterface_Printf(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,10 +41,10 @@ public class NatPunchthroughServerDebugInterface_Printf : NatPunchthroughServerD
   }
 
   public override void OnServerMessage(string msg) {
-    RakNetPINVOKE.NatPunchthroughServerDebugInterface_Printf_OnServerMessage(swigCPtr, msg);
+    RakNetPINVOKE.CSharp_NatPunchthroughServerDebugInterface_Printf_OnServerMessage(swigCPtr, msg);
   }
 
-  public NatPunchthroughServerDebugInterface_Printf() : this(RakNetPINVOKE.new_NatPunchthroughServerDebugInterface_Printf(), true) {
+  public NatPunchthroughServerDebugInterface_Printf() : this(RakNetPINVOKE.CSharp_new_NatPunchthroughServerDebugInterface_Printf(), true) {
   }
 
 }

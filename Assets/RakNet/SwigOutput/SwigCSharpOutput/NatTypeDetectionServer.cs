@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class NatTypeDetectionServer : PluginInterface2 {
   private HandleRef swigCPtr;
 
-  internal NatTypeDetectionServer(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.NatTypeDetectionServer_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal NatTypeDetectionServer(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_NatTypeDetectionServer_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class NatTypeDetectionServer : PluginInterface2 {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_NatTypeDetectionServer(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_NatTypeDetectionServer(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,36 +41,36 @@ public class NatTypeDetectionServer : PluginInterface2 {
   }
 
   public static NatTypeDetectionServer GetInstance() {
-    IntPtr cPtr = RakNetPINVOKE.NatTypeDetectionServer_GetInstance();
+    IntPtr cPtr = RakNetPINVOKE.CSharp_NatTypeDetectionServer_GetInstance();
     NatTypeDetectionServer ret = (cPtr == IntPtr.Zero) ? null : new NatTypeDetectionServer(cPtr, false);
     return ret;
   }
 
   public static void DestroyInstance(NatTypeDetectionServer i) {
-    RakNetPINVOKE.NatTypeDetectionServer_DestroyInstance(NatTypeDetectionServer.getCPtr(i));
+    RakNetPINVOKE.CSharp_NatTypeDetectionServer_DestroyInstance(NatTypeDetectionServer.getCPtr(i));
   }
 
-  public NatTypeDetectionServer() : this(RakNetPINVOKE.new_NatTypeDetectionServer(), true) {
+  public NatTypeDetectionServer() : this(RakNetPINVOKE.CSharp_new_NatTypeDetectionServer(), true) {
   }
 
   public void Startup(string nonRakNetIP2, string nonRakNetIP3, string nonRakNetIP4) {
-    RakNetPINVOKE.NatTypeDetectionServer_Startup(swigCPtr, nonRakNetIP2, nonRakNetIP3, nonRakNetIP4);
+    RakNetPINVOKE.CSharp_NatTypeDetectionServer_Startup(swigCPtr, nonRakNetIP2, nonRakNetIP3, nonRakNetIP4);
   }
 
   public void Shutdown() {
-    RakNetPINVOKE.NatTypeDetectionServer_Shutdown(swigCPtr);
+    RakNetPINVOKE.CSharp_NatTypeDetectionServer_Shutdown(swigCPtr);
   }
 
   public virtual void OnRNS2Recv(SWIGTYPE_p_RNS2RecvStruct recvStruct) {
-    RakNetPINVOKE.NatTypeDetectionServer_OnRNS2Recv(swigCPtr, SWIGTYPE_p_RNS2RecvStruct.getCPtr(recvStruct));
+    RakNetPINVOKE.CSharp_NatTypeDetectionServer_OnRNS2Recv(swigCPtr, SWIGTYPE_p_RNS2RecvStruct.getCPtr(recvStruct));
   }
 
   public virtual void DeallocRNS2RecvStruct(SWIGTYPE_p_RNS2RecvStruct s, string file, uint line) {
-    RakNetPINVOKE.NatTypeDetectionServer_DeallocRNS2RecvStruct(swigCPtr, SWIGTYPE_p_RNS2RecvStruct.getCPtr(s), file, line);
+    RakNetPINVOKE.CSharp_NatTypeDetectionServer_DeallocRNS2RecvStruct(swigCPtr, SWIGTYPE_p_RNS2RecvStruct.getCPtr(s), file, line);
   }
 
   public virtual SWIGTYPE_p_RNS2RecvStruct AllocRNS2RecvStruct(string file, uint line) {
-    IntPtr cPtr = RakNetPINVOKE.NatTypeDetectionServer_AllocRNS2RecvStruct(swigCPtr, file, line);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_NatTypeDetectionServer_AllocRNS2RecvStruct(swigCPtr, file, line);
     SWIGTYPE_p_RNS2RecvStruct ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_RNS2RecvStruct(cPtr, false);
     return ret;
   }

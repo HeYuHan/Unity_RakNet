@@ -33,7 +33,7 @@ public class ByteQueue : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_ByteQueue(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_ByteQueue(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -46,42 +46,42 @@ public class ByteQueue : IDisposable {
 		return PeekContiguousBytesHelper(out outLength);
 	}
 
-  public ByteQueue() : this(RakNetPINVOKE.new_ByteQueue(), true) {
+  public ByteQueue() : this(RakNetPINVOKE.CSharp_new_ByteQueue(), true) {
   }
 
   public uint GetBytesWritten() {
-    uint ret = RakNetPINVOKE.ByteQueue_GetBytesWritten(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_ByteQueue_GetBytesWritten(swigCPtr);
     return ret;
   }
 
   public void IncrementReadOffset(uint length) {
-    RakNetPINVOKE.ByteQueue_IncrementReadOffset(swigCPtr, length);
+    RakNetPINVOKE.CSharp_ByteQueue_IncrementReadOffset(swigCPtr, length);
   }
 
   public void DecrementReadOffset(uint length) {
-    RakNetPINVOKE.ByteQueue_DecrementReadOffset(swigCPtr, length);
+    RakNetPINVOKE.CSharp_ByteQueue_DecrementReadOffset(swigCPtr, length);
   }
 
   public void Clear(string file, uint line) {
-    RakNetPINVOKE.ByteQueue_Clear(swigCPtr, file, line);
+    RakNetPINVOKE.CSharp_ByteQueue_Clear(swigCPtr, file, line);
   }
 
   public void Print() {
-    RakNetPINVOKE.ByteQueue_Print(swigCPtr);
+    RakNetPINVOKE.CSharp_ByteQueue_Print(swigCPtr);
   }
 
   public void WriteBytes(byte[] inByteArray, uint length, string file, uint line) {
-    RakNetPINVOKE.ByteQueue_WriteBytes(swigCPtr, inByteArray, length, file, line);
+    RakNetPINVOKE.CSharp_ByteQueue_WriteBytes(swigCPtr, inByteArray, length, file, line);
   }
 
   public bool ReadBytes(byte[] inOutByteArray, uint maxLengthToRead, bool peek) {
-    bool ret = RakNetPINVOKE.ByteQueue_ReadBytes(swigCPtr, inOutByteArray, maxLengthToRead, peek);
+    bool ret = RakNetPINVOKE.CSharp_ByteQueue_ReadBytes(swigCPtr, inOutByteArray, maxLengthToRead, peek);
     return ret;
   }
 
   private byte[] PeekContiguousBytesHelper(out uint outLength) 
   {
-      IntPtr cPtr = RakNetPINVOKE.ByteQueue_PeekContiguousBytesHelper(swigCPtr, out outLength);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_ByteQueue_PeekContiguousBytesHelper(swigCPtr, out outLength);
       int len = (int)outLength;
       if (len <= 0)
       {

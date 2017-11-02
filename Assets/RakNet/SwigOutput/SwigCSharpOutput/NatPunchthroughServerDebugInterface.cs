@@ -33,7 +33,7 @@ public class NatPunchthroughServerDebugInterface : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_NatPunchthroughServerDebugInterface(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_NatPunchthroughServerDebugInterface(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -42,7 +42,7 @@ public class NatPunchthroughServerDebugInterface : IDisposable {
   }
 
   public virtual void OnServerMessage(string msg) {
-    RakNetPINVOKE.NatPunchthroughServerDebugInterface_OnServerMessage(swigCPtr, msg);
+    RakNetPINVOKE.CSharp_NatPunchthroughServerDebugInterface_OnServerMessage(swigCPtr, msg);
   }
 
 }

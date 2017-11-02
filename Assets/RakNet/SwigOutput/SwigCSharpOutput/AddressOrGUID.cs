@@ -33,7 +33,7 @@ public class AddressOrGUID : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_AddressOrGUID(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_AddressOrGUID(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -55,10 +55,10 @@ public class AddressOrGUID : IDisposable {
 
   public RakNetGUID rakNetGuid {
     set {
-      RakNetPINVOKE.AddressOrGUID_rakNetGuid_set(swigCPtr, RakNetGUID.getCPtr(value));
+      RakNetPINVOKE.CSharp_AddressOrGUID_rakNetGuid_set(swigCPtr, RakNetGUID.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.AddressOrGUID_rakNetGuid_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_AddressOrGUID_rakNetGuid_get(swigCPtr);
       RakNetGUID ret = (cPtr == IntPtr.Zero) ? null : new RakNetGUID(cPtr, false);
       return ret;
     } 
@@ -66,78 +66,78 @@ public class AddressOrGUID : IDisposable {
 
   public SystemAddress systemAddress {
     set {
-      RakNetPINVOKE.AddressOrGUID_systemAddress_set(swigCPtr, SystemAddress.getCPtr(value));
+      RakNetPINVOKE.CSharp_AddressOrGUID_systemAddress_set(swigCPtr, SystemAddress.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.AddressOrGUID_systemAddress_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_AddressOrGUID_systemAddress_get(swigCPtr);
       SystemAddress ret = (cPtr == IntPtr.Zero) ? null : new SystemAddress(cPtr, false);
       return ret;
     } 
   }
 
   public ushort GetSystemIndex() {
-    ushort ret = RakNetPINVOKE.AddressOrGUID_GetSystemIndex(swigCPtr);
+    ushort ret = RakNetPINVOKE.CSharp_AddressOrGUID_GetSystemIndex(swigCPtr);
     return ret;
   }
 
   public bool IsUndefined() {
-    bool ret = RakNetPINVOKE.AddressOrGUID_IsUndefined(swigCPtr);
+    bool ret = RakNetPINVOKE.CSharp_AddressOrGUID_IsUndefined(swigCPtr);
     return ret;
   }
 
   public void SetUndefined() {
-    RakNetPINVOKE.AddressOrGUID_SetUndefined(swigCPtr);
+    RakNetPINVOKE.CSharp_AddressOrGUID_SetUndefined(swigCPtr);
   }
 
   public static uint ToInteger(AddressOrGUID aog) {
-    uint ret = RakNetPINVOKE.AddressOrGUID_ToInteger(AddressOrGUID.getCPtr(aog));
+    uint ret = RakNetPINVOKE.CSharp_AddressOrGUID_ToInteger(AddressOrGUID.getCPtr(aog));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public string ToString(bool writePort) {
-    string ret = RakNetPINVOKE.AddressOrGUID_ToString(swigCPtr, writePort);
+    string ret = RakNetPINVOKE.CSharp_AddressOrGUID_ToString(swigCPtr, writePort);
     return ret;
   }
 
-  public AddressOrGUID() : this(RakNetPINVOKE.new_AddressOrGUID__SWIG_0(), true) {
+  public AddressOrGUID() : this(RakNetPINVOKE.CSharp_new_AddressOrGUID__SWIG_0(), true) {
   }
 
-  public AddressOrGUID(AddressOrGUID input) : this(RakNetPINVOKE.new_AddressOrGUID__SWIG_1(AddressOrGUID.getCPtr(input)), true) {
+  public AddressOrGUID(AddressOrGUID input) : this(RakNetPINVOKE.CSharp_new_AddressOrGUID__SWIG_1(AddressOrGUID.getCPtr(input)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public AddressOrGUID(SystemAddress input) : this(RakNetPINVOKE.new_AddressOrGUID__SWIG_2(SystemAddress.getCPtr(input)), true) {
+  public AddressOrGUID(SystemAddress input) : this(RakNetPINVOKE.CSharp_new_AddressOrGUID__SWIG_2(SystemAddress.getCPtr(input)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public AddressOrGUID(Packet packet) : this(RakNetPINVOKE.new_AddressOrGUID__SWIG_3(Packet.getCPtr(packet)), true) {
+  public AddressOrGUID(Packet packet) : this(RakNetPINVOKE.CSharp_new_AddressOrGUID__SWIG_3(Packet.getCPtr(packet)), true) {
   }
 
-  public AddressOrGUID(RakNetGUID input) : this(RakNetPINVOKE.new_AddressOrGUID__SWIG_4(RakNetGUID.getCPtr(input)), true) {
+  public AddressOrGUID(RakNetGUID input) : this(RakNetPINVOKE.CSharp_new_AddressOrGUID__SWIG_4(RakNetGUID.getCPtr(input)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public AddressOrGUID CopyData(AddressOrGUID input) {
-    AddressOrGUID ret = new AddressOrGUID(RakNetPINVOKE.AddressOrGUID_CopyData__SWIG_0(swigCPtr, AddressOrGUID.getCPtr(input)), false);
+    AddressOrGUID ret = new AddressOrGUID(RakNetPINVOKE.CSharp_AddressOrGUID_CopyData__SWIG_0(swigCPtr, AddressOrGUID.getCPtr(input)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public AddressOrGUID CopyData(SystemAddress input) {
-    AddressOrGUID ret = new AddressOrGUID(RakNetPINVOKE.AddressOrGUID_CopyData__SWIG_1(swigCPtr, SystemAddress.getCPtr(input)), false);
+    AddressOrGUID ret = new AddressOrGUID(RakNetPINVOKE.CSharp_AddressOrGUID_CopyData__SWIG_1(swigCPtr, SystemAddress.getCPtr(input)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public AddressOrGUID CopyData(RakNetGUID input) {
-    AddressOrGUID ret = new AddressOrGUID(RakNetPINVOKE.AddressOrGUID_CopyData__SWIG_2(swigCPtr, RakNetGUID.getCPtr(input)), false);
+    AddressOrGUID ret = new AddressOrGUID(RakNetPINVOKE.CSharp_AddressOrGUID_CopyData__SWIG_2(swigCPtr, RakNetGUID.getCPtr(input)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Equals(AddressOrGUID right) {
-    bool ret = RakNetPINVOKE.AddressOrGUID_Equals(swigCPtr, AddressOrGUID.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_AddressOrGUID_Equals(swigCPtr, AddressOrGUID.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

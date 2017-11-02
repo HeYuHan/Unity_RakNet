@@ -34,7 +34,7 @@ public class NetworkIDManager : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_NetworkIDManager(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_NetworkIDManager(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -51,24 +51,24 @@ public class NetworkIDManager : IDisposable {
 
 
   public static NetworkIDManager GetInstance() {
-    IntPtr cPtr = RakNetPINVOKE.NetworkIDManager_GetInstance();
+    IntPtr cPtr = RakNetPINVOKE.CSharp_NetworkIDManager_GetInstance();
     NetworkIDManager ret = (cPtr == IntPtr.Zero) ? null : new NetworkIDManager(cPtr, false);
     return ret;
   }
 
   public static void DestroyInstance(NetworkIDManager i) {
-    RakNetPINVOKE.NetworkIDManager_DestroyInstance(NetworkIDManager.getCPtr(i));
+    RakNetPINVOKE.CSharp_NetworkIDManager_DestroyInstance(NetworkIDManager.getCPtr(i));
   }
 
-  public NetworkIDManager() : this(RakNetPINVOKE.new_NetworkIDManager(), true) {
+  public NetworkIDManager() : this(RakNetPINVOKE.CSharp_new_NetworkIDManager(), true) {
   }
 
   public void Clear() {
-    RakNetPINVOKE.NetworkIDManager_Clear(swigCPtr);
+    RakNetPINVOKE.CSharp_NetworkIDManager_Clear(swigCPtr);
   }
 
   protected NetworkIDObject GET_BASE_OBJECT_FROM_IDORIG(ulong x) {
-    IntPtr cPtr = RakNetPINVOKE.NetworkIDManager_GET_BASE_OBJECT_FROM_IDORIG(swigCPtr, x);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_NetworkIDManager_GET_BASE_OBJECT_FROM_IDORIG(swigCPtr, x);
     NetworkIDObject ret = (cPtr == IntPtr.Zero) ? null : new NetworkIDObject(cPtr, false);
     return ret;
   }

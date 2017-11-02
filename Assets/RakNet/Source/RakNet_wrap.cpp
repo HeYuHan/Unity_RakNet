@@ -107,12 +107,12 @@ template <typename T> T SwigValueInit() {
 #    define GCC_HASCLASSVISIBILITY
 #  endif
 #endif
-
 #ifndef SWIGEXPORT
 # if defined(_WIN32) || defined(__WIN32__) || defined(__CYGWIN__)
 #   if defined(STATIC_LINKED)
 #     define SWIGEXPORT
 #   else
+		
 #     define SWIGEXPORT __declspec(dllexport)
 #   endif
 # else
@@ -336,7 +336,7 @@ namespace Swig {
 #define _WIN32
 #define _DEBUG
 #define _RAKNET_DLL
-#endif SWIGWIN
+#endif
 //TypeDefs
 typedef int int32_t;
 typedef unsigned int uint32_t;

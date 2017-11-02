@@ -33,7 +33,7 @@ public class SimpleMutex : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_SimpleMutex(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_SimpleMutex(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class SimpleMutex : IDisposable {
     }
   }
 
-  public SimpleMutex() : this(RakNetPINVOKE.new_SimpleMutex(), true) {
+  public SimpleMutex() : this(RakNetPINVOKE.CSharp_new_SimpleMutex(), true) {
   }
 
   public void Lock() {
-    RakNetPINVOKE.SimpleMutex_Lock(swigCPtr);
+    RakNetPINVOKE.CSharp_SimpleMutex_Lock(swigCPtr);
   }
 
   public void Unlock() {
-    RakNetPINVOKE.SimpleMutex_Unlock(swigCPtr);
+    RakNetPINVOKE.CSharp_SimpleMutex_Unlock(swigCPtr);
   }
 
 }

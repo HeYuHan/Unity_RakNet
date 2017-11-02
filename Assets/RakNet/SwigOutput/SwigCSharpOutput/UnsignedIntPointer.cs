@@ -33,7 +33,7 @@ public class UnsignedIntPointer : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_UnsignedIntPointer(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_UnsignedIntPointer(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,26 +41,26 @@ public class UnsignedIntPointer : IDisposable {
     }
   }
 
-  public UnsignedIntPointer() : this(RakNetPINVOKE.new_UnsignedIntPointer(), true) {
+  public UnsignedIntPointer() : this(RakNetPINVOKE.CSharp_new_UnsignedIntPointer(), true) {
   }
 
   public void assign(uint value) {
-    RakNetPINVOKE.UnsignedIntPointer_assign(swigCPtr, value);
+    RakNetPINVOKE.CSharp_UnsignedIntPointer_assign(swigCPtr, value);
   }
 
   public uint value() {
-    uint ret = RakNetPINVOKE.UnsignedIntPointer_value(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_UnsignedIntPointer_value(swigCPtr);
     return ret;
   }
 
   public SWIGTYPE_p_unsigned_int cast() {
-    IntPtr cPtr = RakNetPINVOKE.UnsignedIntPointer_cast(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_UnsignedIntPointer_cast(swigCPtr);
     SWIGTYPE_p_unsigned_int ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_int(cPtr, false);
     return ret;
   }
 
   public static UnsignedIntPointer frompointer(SWIGTYPE_p_unsigned_int t) {
-    IntPtr cPtr = RakNetPINVOKE.UnsignedIntPointer_frompointer(SWIGTYPE_p_unsigned_int.getCPtr(t));
+    IntPtr cPtr = RakNetPINVOKE.CSharp_UnsignedIntPointer_frompointer(SWIGTYPE_p_unsigned_int.getCPtr(t));
     UnsignedIntPointer ret = (cPtr == IntPtr.Zero) ? null : new UnsignedIntPointer(cPtr, false);
     return ret;
   }

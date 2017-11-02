@@ -33,7 +33,7 @@ public class RakNetPageRow : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetPageRow(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetPageRow(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -43,30 +43,30 @@ public class RakNetPageRow : IDisposable {
 
   public bool isLeaf {
     set {
-      RakNetPINVOKE.RakNetPageRow_isLeaf_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetPageRow_isLeaf_set(swigCPtr, value);
     } 
     get {
-      bool ret = RakNetPINVOKE.RakNetPageRow_isLeaf_get(swigCPtr);
+      bool ret = RakNetPINVOKE.CSharp_RakNetPageRow_isLeaf_get(swigCPtr);
       return ret;
     } 
   }
 
   public int size {
     set {
-      RakNetPINVOKE.RakNetPageRow_size_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetPageRow_size_set(swigCPtr, value);
     } 
     get {
-      int ret = RakNetPINVOKE.RakNetPageRow_size_get(swigCPtr);
+      int ret = RakNetPINVOKE.CSharp_RakNetPageRow_size_get(swigCPtr);
       return ret;
     } 
   }
 
   public RakNetPageRow next {
     set {
-      RakNetPINVOKE.RakNetPageRow_next_set(swigCPtr, RakNetPageRow.getCPtr(value));
+      RakNetPINVOKE.CSharp_RakNetPageRow_next_set(swigCPtr, RakNetPageRow.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.RakNetPageRow_next_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_RakNetPageRow_next_get(swigCPtr);
       RakNetPageRow ret = (cPtr == IntPtr.Zero) ? null : new RakNetPageRow(cPtr, false);
       return ret;
     } 
@@ -74,16 +74,16 @@ public class RakNetPageRow : IDisposable {
 
   public RakNetPageRow previous {
     set {
-      RakNetPINVOKE.RakNetPageRow_previous_set(swigCPtr, RakNetPageRow.getCPtr(value));
+      RakNetPINVOKE.CSharp_RakNetPageRow_previous_set(swigCPtr, RakNetPageRow.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.RakNetPageRow_previous_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_RakNetPageRow_previous_get(swigCPtr);
       RakNetPageRow ret = (cPtr == IntPtr.Zero) ? null : new RakNetPageRow(cPtr, false);
       return ret;
     } 
   }
 
-  public RakNetPageRow() : this(RakNetPINVOKE.new_RakNetPageRow(), true) {
+  public RakNetPageRow() : this(RakNetPINVOKE.CSharp_new_RakNetPageRow(), true) {
   }
 
 }

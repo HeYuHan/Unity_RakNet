@@ -33,7 +33,7 @@ public class RakNetListColumnDescriptor : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetListColumnDescriptor(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetListColumnDescriptor(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -53,85 +53,85 @@ public class RakNetListColumnDescriptor : IDisposable {
         }  
     } 
 
-  public RakNetListColumnDescriptor() : this(RakNetPINVOKE.new_RakNetListColumnDescriptor__SWIG_0(), true) {
+  public RakNetListColumnDescriptor() : this(RakNetPINVOKE.CSharp_new_RakNetListColumnDescriptor__SWIG_0(), true) {
   }
 
-  public RakNetListColumnDescriptor(RakNetListColumnDescriptor original_copy) : this(RakNetPINVOKE.new_RakNetListColumnDescriptor__SWIG_1(RakNetListColumnDescriptor.getCPtr(original_copy)), true) {
+  public RakNetListColumnDescriptor(RakNetListColumnDescriptor original_copy) : this(RakNetPINVOKE.CSharp_new_RakNetListColumnDescriptor__SWIG_1(RakNetListColumnDescriptor.getCPtr(original_copy)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public RakNetListColumnDescriptor CopyData(RakNetListColumnDescriptor original_copy) {
-    RakNetListColumnDescriptor ret = new RakNetListColumnDescriptor(RakNetPINVOKE.RakNetListColumnDescriptor_CopyData(swigCPtr, RakNetListColumnDescriptor.getCPtr(original_copy)), false);
+    RakNetListColumnDescriptor ret = new RakNetListColumnDescriptor(RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_CopyData(swigCPtr, RakNetListColumnDescriptor.getCPtr(original_copy)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ColumnDescriptor Get(uint position) {
-    ColumnDescriptor ret = new ColumnDescriptor(RakNetPINVOKE.RakNetListColumnDescriptor_Get(swigCPtr, position), false);
+    ColumnDescriptor ret = new ColumnDescriptor(RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Get(swigCPtr, position), false);
     return ret;
   }
 
   public void Push(ColumnDescriptor input, string file, uint line) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_Push(swigCPtr, ColumnDescriptor.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Push(swigCPtr, ColumnDescriptor.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ColumnDescriptor Pop() {
-    ColumnDescriptor ret = new ColumnDescriptor(RakNetPINVOKE.RakNetListColumnDescriptor_Pop(swigCPtr), false);
+    ColumnDescriptor ret = new ColumnDescriptor(RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Pop(swigCPtr), false);
     return ret;
   }
 
   public void Insert(ColumnDescriptor input, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_Insert__SWIG_0(swigCPtr, ColumnDescriptor.getCPtr(input), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Insert__SWIG_0(swigCPtr, ColumnDescriptor.getCPtr(input), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Insert(ColumnDescriptor input, string file, uint line) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_Insert__SWIG_1(swigCPtr, ColumnDescriptor.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Insert__SWIG_1(swigCPtr, ColumnDescriptor.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(ColumnDescriptor input, ColumnDescriptor filler, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_Replace__SWIG_0(swigCPtr, ColumnDescriptor.getCPtr(input), ColumnDescriptor.getCPtr(filler), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Replace__SWIG_0(swigCPtr, ColumnDescriptor.getCPtr(input), ColumnDescriptor.getCPtr(filler), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(ColumnDescriptor input) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_Replace__SWIG_1(swigCPtr, ColumnDescriptor.getCPtr(input));
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Replace__SWIG_1(swigCPtr, ColumnDescriptor.getCPtr(input));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAtIndex(uint position) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_RemoveAtIndex(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_RemoveAtIndex(swigCPtr, position);
   }
 
   public void RemoveAtIndexFast(uint position) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_RemoveAtIndexFast(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_RemoveAtIndexFast(swigCPtr, position);
   }
 
   public void RemoveFromEnd(uint num) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_RemoveFromEnd__SWIG_0(swigCPtr, num);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_RemoveFromEnd__SWIG_0(swigCPtr, num);
   }
 
   public void RemoveFromEnd() {
-    RakNetPINVOKE.RakNetListColumnDescriptor_RemoveFromEnd__SWIG_1(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_RemoveFromEnd__SWIG_1(swigCPtr);
   }
 
   public uint Size() {
-    uint ret = RakNetPINVOKE.RakNetListColumnDescriptor_Size(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Size(swigCPtr);
     return ret;
   }
 
   public void Clear(bool doNotDeallocateSmallBlocks, string file, uint line) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
   }
 
   public void Preallocate(uint countNeeded, string file, uint line) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_Preallocate(swigCPtr, countNeeded, file, line);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Preallocate(swigCPtr, countNeeded, file, line);
   }
 
   public void Compress(string file, uint line) {
-    RakNetPINVOKE.RakNetListColumnDescriptor_Compress(swigCPtr, file, line);
+    RakNetPINVOKE.CSharp_RakNetListColumnDescriptor_Compress(swigCPtr, file, line);
   }
 
 }

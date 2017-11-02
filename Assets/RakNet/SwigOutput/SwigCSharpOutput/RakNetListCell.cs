@@ -33,7 +33,7 @@ public class RakNetListCell : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetListCell(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetListCell(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -53,85 +53,85 @@ public class RakNetListCell : IDisposable {
         }  
     } 
 
-  public RakNetListCell() : this(RakNetPINVOKE.new_RakNetListCell__SWIG_0(), true) {
+  public RakNetListCell() : this(RakNetPINVOKE.CSharp_new_RakNetListCell__SWIG_0(), true) {
   }
 
-  public RakNetListCell(RakNetListCell original_copy) : this(RakNetPINVOKE.new_RakNetListCell__SWIG_1(RakNetListCell.getCPtr(original_copy)), true) {
+  public RakNetListCell(RakNetListCell original_copy) : this(RakNetPINVOKE.CSharp_new_RakNetListCell__SWIG_1(RakNetListCell.getCPtr(original_copy)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public RakNetListCell CopyData(RakNetListCell original_copy) {
-    RakNetListCell ret = new RakNetListCell(RakNetPINVOKE.RakNetListCell_CopyData(swigCPtr, RakNetListCell.getCPtr(original_copy)), false);
+    RakNetListCell ret = new RakNetListCell(RakNetPINVOKE.CSharp_RakNetListCell_CopyData(swigCPtr, RakNetListCell.getCPtr(original_copy)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Cell Get(uint position) {
-    Cell ret = new Cell(RakNetPINVOKE.RakNetListCell_Get(swigCPtr, position), false);
+    Cell ret = new Cell(RakNetPINVOKE.CSharp_RakNetListCell_Get(swigCPtr, position), false);
     return ret;
   }
 
   public void Push(Cell input, string file, uint line) {
-    RakNetPINVOKE.RakNetListCell_Push(swigCPtr, Cell.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListCell_Push(swigCPtr, Cell.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public Cell Pop() {
-    Cell ret = new Cell(RakNetPINVOKE.RakNetListCell_Pop(swigCPtr), false);
+    Cell ret = new Cell(RakNetPINVOKE.CSharp_RakNetListCell_Pop(swigCPtr), false);
     return ret;
   }
 
   public void Insert(Cell input, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListCell_Insert__SWIG_0(swigCPtr, Cell.getCPtr(input), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListCell_Insert__SWIG_0(swigCPtr, Cell.getCPtr(input), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Insert(Cell input, string file, uint line) {
-    RakNetPINVOKE.RakNetListCell_Insert__SWIG_1(swigCPtr, Cell.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListCell_Insert__SWIG_1(swigCPtr, Cell.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(Cell input, Cell filler, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListCell_Replace__SWIG_0(swigCPtr, Cell.getCPtr(input), Cell.getCPtr(filler), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListCell_Replace__SWIG_0(swigCPtr, Cell.getCPtr(input), Cell.getCPtr(filler), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(Cell input) {
-    RakNetPINVOKE.RakNetListCell_Replace__SWIG_1(swigCPtr, Cell.getCPtr(input));
+    RakNetPINVOKE.CSharp_RakNetListCell_Replace__SWIG_1(swigCPtr, Cell.getCPtr(input));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAtIndex(uint position) {
-    RakNetPINVOKE.RakNetListCell_RemoveAtIndex(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListCell_RemoveAtIndex(swigCPtr, position);
   }
 
   public void RemoveAtIndexFast(uint position) {
-    RakNetPINVOKE.RakNetListCell_RemoveAtIndexFast(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListCell_RemoveAtIndexFast(swigCPtr, position);
   }
 
   public void RemoveFromEnd(uint num) {
-    RakNetPINVOKE.RakNetListCell_RemoveFromEnd__SWIG_0(swigCPtr, num);
+    RakNetPINVOKE.CSharp_RakNetListCell_RemoveFromEnd__SWIG_0(swigCPtr, num);
   }
 
   public void RemoveFromEnd() {
-    RakNetPINVOKE.RakNetListCell_RemoveFromEnd__SWIG_1(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetListCell_RemoveFromEnd__SWIG_1(swigCPtr);
   }
 
   public uint Size() {
-    uint ret = RakNetPINVOKE.RakNetListCell_Size(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakNetListCell_Size(swigCPtr);
     return ret;
   }
 
   public void Clear(bool doNotDeallocateSmallBlocks, string file, uint line) {
-    RakNetPINVOKE.RakNetListCell_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
+    RakNetPINVOKE.CSharp_RakNetListCell_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
   }
 
   public void Preallocate(uint countNeeded, string file, uint line) {
-    RakNetPINVOKE.RakNetListCell_Preallocate(swigCPtr, countNeeded, file, line);
+    RakNetPINVOKE.CSharp_RakNetListCell_Preallocate(swigCPtr, countNeeded, file, line);
   }
 
   public void Compress(string file, uint line) {
-    RakNetPINVOKE.RakNetListCell_Compress(swigCPtr, file, line);
+    RakNetPINVOKE.CSharp_RakNetListCell_Compress(swigCPtr, file, line);
   }
 
 }

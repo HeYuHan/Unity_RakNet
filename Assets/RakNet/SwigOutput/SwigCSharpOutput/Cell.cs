@@ -33,7 +33,7 @@ public class Cell : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_Cell(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_Cell(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -47,87 +47,87 @@ public class Cell : IDisposable {
  		output=GetHelper(temp);
  	}
  
-  public Cell() : this(RakNetPINVOKE.new_Cell__SWIG_0(), true) {
+  public Cell() : this(RakNetPINVOKE.CSharp_new_Cell__SWIG_0(), true) {
   }
 
   public void Clear() {
-    RakNetPINVOKE.Cell_Clear(swigCPtr);
+    RakNetPINVOKE.CSharp_Cell_Clear(swigCPtr);
   }
 
   public void Set(int input) {
-    RakNetPINVOKE.Cell_Set__SWIG_0(swigCPtr, input);
+    RakNetPINVOKE.CSharp_Cell_Set__SWIG_0(swigCPtr, input);
   }
 
   public void Set(uint input) {
-    RakNetPINVOKE.Cell_Set__SWIG_1(swigCPtr, input);
+    RakNetPINVOKE.CSharp_Cell_Set__SWIG_1(swigCPtr, input);
   }
 
   public void Set(double input) {
-    RakNetPINVOKE.Cell_Set__SWIG_2(swigCPtr, input);
+    RakNetPINVOKE.CSharp_Cell_Set__SWIG_2(swigCPtr, input);
   }
 
   public void Set(string input) {
-    RakNetPINVOKE.Cell_Set__SWIG_3(swigCPtr, input);
+    RakNetPINVOKE.CSharp_Cell_Set__SWIG_3(swigCPtr, input);
   }
 
   public void Get(out int output) {
-    RakNetPINVOKE.Cell_Get__SWIG_0(swigCPtr, out output);
+    RakNetPINVOKE.CSharp_Cell_Get__SWIG_0(swigCPtr, out output);
   }
 
   public void Get(out double output) {
-    RakNetPINVOKE.Cell_Get__SWIG_1(swigCPtr, out output);
+    RakNetPINVOKE.CSharp_Cell_Get__SWIG_1(swigCPtr, out output);
   }
 
   public RakString ToString(Table.ColumnType columnType) {
-    RakString ret = new RakString(RakNetPINVOKE.Cell_ToString(swigCPtr, (int)columnType), true);
+    RakString ret = new RakString(RakNetPINVOKE.CSharp_Cell_ToString(swigCPtr, (int)columnType), true);
     return ret;
   }
 
   public Cell CopyData(Cell input) {
-    Cell ret = new Cell(RakNetPINVOKE.Cell_CopyData(swigCPtr, Cell.getCPtr(input)), false);
+    Cell ret = new Cell(RakNetPINVOKE.CSharp_Cell_CopyData(swigCPtr, Cell.getCPtr(input)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Cell(Cell input) : this(RakNetPINVOKE.new_Cell__SWIG_1(Cell.getCPtr(input)), true) {
+  public Cell(Cell input) : this(RakNetPINVOKE.CSharp_new_Cell__SWIG_1(Cell.getCPtr(input)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public Table.ColumnType EstimateColumnType() {
-    Table.ColumnType ret = (Table.ColumnType)RakNetPINVOKE.Cell_EstimateColumnType(swigCPtr);
+    Table.ColumnType ret = (Table.ColumnType)RakNetPINVOKE.CSharp_Cell_EstimateColumnType(swigCPtr);
     return ret;
   }
 
   public bool isEmpty {
     set {
-      RakNetPINVOKE.Cell_isEmpty_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_Cell_isEmpty_set(swigCPtr, value);
     } 
     get {
-      bool ret = RakNetPINVOKE.Cell_isEmpty_get(swigCPtr);
+      bool ret = RakNetPINVOKE.CSharp_Cell_isEmpty_get(swigCPtr);
       return ret;
     } 
   }
 
   public double i {
     set {
-      RakNetPINVOKE.Cell_i_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_Cell_i_set(swigCPtr, value);
     } 
     get {
-      double ret = RakNetPINVOKE.Cell_i_get(swigCPtr);
+      double ret = RakNetPINVOKE.CSharp_Cell_i_get(swigCPtr);
       return ret;
     } 
   }
 
   public void Set(byte[] inByteArray, int inputLength) {
-    RakNetPINVOKE.Cell_Set__SWIG_4(swigCPtr, inByteArray, inputLength);
+    RakNetPINVOKE.CSharp_Cell_Set__SWIG_4(swigCPtr, inByteArray, inputLength);
   }
 
   public void Get(byte[] inOutByteArray, out int outputLength) {
-    RakNetPINVOKE.Cell_Get__SWIG_2(swigCPtr, inOutByteArray, out outputLength);
+    RakNetPINVOKE.CSharp_Cell_Get__SWIG_2(swigCPtr, inOutByteArray, out outputLength);
   }
 
   private string GetHelper(string output) {
-    string ret = RakNetPINVOKE.Cell_GetHelper(swigCPtr, output);
+    string ret = RakNetPINVOKE.CSharp_Cell_GetHelper(swigCPtr, output);
     return ret;
   }
 

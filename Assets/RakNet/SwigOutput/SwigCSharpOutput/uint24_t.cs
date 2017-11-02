@@ -34,7 +34,7 @@ public class uint24_t : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_uint24_t(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_uint24_t(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -177,130 +177,130 @@ public class uint24_t : IDisposable {
 
   public uint val {
     set {
-      RakNetPINVOKE.uint24_t_val_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_uint24_t_val_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.uint24_t_val_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_uint24_t_val_get(swigCPtr);
       return ret;
     } 
   }
 
-  public uint24_t() : this(RakNetPINVOKE.new_uint24_t__SWIG_0(), true) {
+  public uint24_t() : this(RakNetPINVOKE.CSharp_new_uint24_t__SWIG_0(), true) {
   }
 
-  public uint24_t(uint24_t a) : this(RakNetPINVOKE.new_uint24_t__SWIG_1(uint24_t.getCPtr(a)), true) {
+  public uint24_t(uint24_t a) : this(RakNetPINVOKE.CSharp_new_uint24_t__SWIG_1(uint24_t.getCPtr(a)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint24_t OpPlusPlus() {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpPlusPlus(swigCPtr), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpPlusPlus(swigCPtr), true);
     return ret;
   }
 
   private uint24_t OpMinusMinus() {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpMinusMinus(swigCPtr), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpMinusMinus(swigCPtr), true);
     return ret;
   }
 
   public uint24_t CopyData(uint24_t a) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_CopyData__SWIG_0(swigCPtr, uint24_t.getCPtr(a)), false);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_CopyData__SWIG_0(swigCPtr, uint24_t.getCPtr(a)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Equals(uint24_t right) {
-    bool ret = RakNetPINVOKE.uint24_t_Equals__SWIG_0(swigCPtr, uint24_t.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_uint24_t_Equals__SWIG_0(swigCPtr, uint24_t.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpNotEqual(uint24_t right) {
-    bool ret = RakNetPINVOKE.uint24_t_OpNotEqual__SWIG_0(swigCPtr, uint24_t.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_uint24_t_OpNotEqual__SWIG_0(swigCPtr, uint24_t.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpGreater(uint24_t right) {
-    bool ret = RakNetPINVOKE.uint24_t_OpGreater__SWIG_0(swigCPtr, uint24_t.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_uint24_t_OpGreater__SWIG_0(swigCPtr, uint24_t.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool OpLess(uint24_t right) {
-    bool ret = RakNetPINVOKE.uint24_t_OpLess__SWIG_0(swigCPtr, uint24_t.getCPtr(right));
+    bool ret = RakNetPINVOKE.CSharp_uint24_t_OpLess__SWIG_0(swigCPtr, uint24_t.getCPtr(right));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint24_t OpPlus(uint24_t other) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpPlus__SWIG_0(swigCPtr, uint24_t.getCPtr(other)), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpPlus__SWIG_0(swigCPtr, uint24_t.getCPtr(other)), true);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint24_t OpMinus(uint24_t other) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpMinus__SWIG_0(swigCPtr, uint24_t.getCPtr(other)), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpMinus__SWIG_0(swigCPtr, uint24_t.getCPtr(other)), true);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint24_t OpDivide(uint24_t other) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpDivide__SWIG_0(swigCPtr, uint24_t.getCPtr(other)), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpDivide__SWIG_0(swigCPtr, uint24_t.getCPtr(other)), true);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint24_t OpMultiply(uint24_t other) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpMultiply__SWIG_0(swigCPtr, uint24_t.getCPtr(other)), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpMultiply__SWIG_0(swigCPtr, uint24_t.getCPtr(other)), true);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public uint24_t(uint a) : this(RakNetPINVOKE.new_uint24_t__SWIG_2(a), true) {
+  public uint24_t(uint a) : this(RakNetPINVOKE.CSharp_new_uint24_t__SWIG_2(a), true) {
   }
 
   public uint24_t CopyData(uint a) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_CopyData__SWIG_1(swigCPtr, a), false);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_CopyData__SWIG_1(swigCPtr, a), false);
     return ret;
   }
 
   public bool Equals(uint right) {
-    bool ret = RakNetPINVOKE.uint24_t_Equals__SWIG_1(swigCPtr, right);
+    bool ret = RakNetPINVOKE.CSharp_uint24_t_Equals__SWIG_1(swigCPtr, right);
     return ret;
   }
 
   private bool OpNotEqual(uint right) {
-    bool ret = RakNetPINVOKE.uint24_t_OpNotEqual__SWIG_1(swigCPtr, right);
+    bool ret = RakNetPINVOKE.CSharp_uint24_t_OpNotEqual__SWIG_1(swigCPtr, right);
     return ret;
   }
 
   private bool OpGreater(uint right) {
-    bool ret = RakNetPINVOKE.uint24_t_OpGreater__SWIG_1(swigCPtr, right);
+    bool ret = RakNetPINVOKE.CSharp_uint24_t_OpGreater__SWIG_1(swigCPtr, right);
     return ret;
   }
 
   private bool OpLess(uint right) {
-    bool ret = RakNetPINVOKE.uint24_t_OpLess__SWIG_1(swigCPtr, right);
+    bool ret = RakNetPINVOKE.CSharp_uint24_t_OpLess__SWIG_1(swigCPtr, right);
     return ret;
   }
 
   private uint24_t OpPlus(uint other) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpPlus__SWIG_1(swigCPtr, other), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpPlus__SWIG_1(swigCPtr, other), true);
     return ret;
   }
 
   private uint24_t OpMinus(uint other) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpMinus__SWIG_1(swigCPtr, other), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpMinus__SWIG_1(swigCPtr, other), true);
     return ret;
   }
 
   private uint24_t OpDivide(uint other) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpDivide__SWIG_1(swigCPtr, other), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpDivide__SWIG_1(swigCPtr, other), true);
     return ret;
   }
 
   private uint24_t OpMultiply(uint other) {
-    uint24_t ret = new uint24_t(RakNetPINVOKE.uint24_t_OpMultiply__SWIG_1(swigCPtr, other), true);
+    uint24_t ret = new uint24_t(RakNetPINVOKE.CSharp_uint24_t_OpMultiply__SWIG_1(swigCPtr, other), true);
     return ret;
   }
 

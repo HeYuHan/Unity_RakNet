@@ -33,7 +33,7 @@ public class RakNetListSortQuery : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetListSortQuery(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetListSortQuery(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -53,85 +53,85 @@ public class RakNetListSortQuery : IDisposable {
         }  
     } 
 
-  public RakNetListSortQuery() : this(RakNetPINVOKE.new_RakNetListSortQuery__SWIG_0(), true) {
+  public RakNetListSortQuery() : this(RakNetPINVOKE.CSharp_new_RakNetListSortQuery__SWIG_0(), true) {
   }
 
-  public RakNetListSortQuery(RakNetListSortQuery original_copy) : this(RakNetPINVOKE.new_RakNetListSortQuery__SWIG_1(RakNetListSortQuery.getCPtr(original_copy)), true) {
+  public RakNetListSortQuery(RakNetListSortQuery original_copy) : this(RakNetPINVOKE.CSharp_new_RakNetListSortQuery__SWIG_1(RakNetListSortQuery.getCPtr(original_copy)), true) {
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public RakNetListSortQuery CopyData(RakNetListSortQuery original_copy) {
-    RakNetListSortQuery ret = new RakNetListSortQuery(RakNetPINVOKE.RakNetListSortQuery_CopyData(swigCPtr, RakNetListSortQuery.getCPtr(original_copy)), false);
+    RakNetListSortQuery ret = new RakNetListSortQuery(RakNetPINVOKE.CSharp_RakNetListSortQuery_CopyData(swigCPtr, RakNetListSortQuery.getCPtr(original_copy)), false);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SortQuery Get(uint position) {
-    SortQuery ret = new SortQuery(RakNetPINVOKE.RakNetListSortQuery_Get(swigCPtr, position), false);
+    SortQuery ret = new SortQuery(RakNetPINVOKE.CSharp_RakNetListSortQuery_Get(swigCPtr, position), false);
     return ret;
   }
 
   public void Push(SortQuery input, string file, uint line) {
-    RakNetPINVOKE.RakNetListSortQuery_Push(swigCPtr, SortQuery.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_Push(swigCPtr, SortQuery.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public SortQuery Pop() {
-    SortQuery ret = new SortQuery(RakNetPINVOKE.RakNetListSortQuery_Pop(swigCPtr), false);
+    SortQuery ret = new SortQuery(RakNetPINVOKE.CSharp_RakNetListSortQuery_Pop(swigCPtr), false);
     return ret;
   }
 
   public void Insert(SortQuery input, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListSortQuery_Insert__SWIG_0(swigCPtr, SortQuery.getCPtr(input), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_Insert__SWIG_0(swigCPtr, SortQuery.getCPtr(input), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Insert(SortQuery input, string file, uint line) {
-    RakNetPINVOKE.RakNetListSortQuery_Insert__SWIG_1(swigCPtr, SortQuery.getCPtr(input), file, line);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_Insert__SWIG_1(swigCPtr, SortQuery.getCPtr(input), file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(SortQuery input, SortQuery filler, uint position, string file, uint line) {
-    RakNetPINVOKE.RakNetListSortQuery_Replace__SWIG_0(swigCPtr, SortQuery.getCPtr(input), SortQuery.getCPtr(filler), position, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_Replace__SWIG_0(swigCPtr, SortQuery.getCPtr(input), SortQuery.getCPtr(filler), position, file, line);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Replace(SortQuery input) {
-    RakNetPINVOKE.RakNetListSortQuery_Replace__SWIG_1(swigCPtr, SortQuery.getCPtr(input));
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_Replace__SWIG_1(swigCPtr, SortQuery.getCPtr(input));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAtIndex(uint position) {
-    RakNetPINVOKE.RakNetListSortQuery_RemoveAtIndex(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_RemoveAtIndex(swigCPtr, position);
   }
 
   public void RemoveAtIndexFast(uint position) {
-    RakNetPINVOKE.RakNetListSortQuery_RemoveAtIndexFast(swigCPtr, position);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_RemoveAtIndexFast(swigCPtr, position);
   }
 
   public void RemoveFromEnd(uint num) {
-    RakNetPINVOKE.RakNetListSortQuery_RemoveFromEnd__SWIG_0(swigCPtr, num);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_RemoveFromEnd__SWIG_0(swigCPtr, num);
   }
 
   public void RemoveFromEnd() {
-    RakNetPINVOKE.RakNetListSortQuery_RemoveFromEnd__SWIG_1(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_RemoveFromEnd__SWIG_1(swigCPtr);
   }
 
   public uint Size() {
-    uint ret = RakNetPINVOKE.RakNetListSortQuery_Size(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakNetListSortQuery_Size(swigCPtr);
     return ret;
   }
 
   public void Clear(bool doNotDeallocateSmallBlocks, string file, uint line) {
-    RakNetPINVOKE.RakNetListSortQuery_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_Clear(swigCPtr, doNotDeallocateSmallBlocks, file, line);
   }
 
   public void Preallocate(uint countNeeded, string file, uint line) {
-    RakNetPINVOKE.RakNetListSortQuery_Preallocate(swigCPtr, countNeeded, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_Preallocate(swigCPtr, countNeeded, file, line);
   }
 
   public void Compress(string file, uint line) {
-    RakNetPINVOKE.RakNetListSortQuery_Compress(swigCPtr, file, line);
+    RakNetPINVOKE.CSharp_RakNetListSortQuery_Compress(swigCPtr, file, line);
   }
 
 }

@@ -58,7 +58,7 @@ public class RakNetStatistics : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetStatistics(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetStatistics(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -89,7 +89,7 @@ public class RakNetStatistics : IDisposable {
             ulong[] returnArray;
             if (!valueOverLastSecondIsCached)
             {
-                IntPtr cPtr = RakNetPINVOKE.RakNetStatistics_valueOverLastSecond_get (swigCPtr);
+                IntPtr cPtr = RakNetPINVOKE.CSharp_RakNetStatistics_valueOverLastSecond_get (swigCPtr);
                 int len = (int) RNSPerSecondMetrics.RNS_PER_SECOND_METRICS_COUNT;
 		if (len<=0)
 		{
@@ -127,7 +127,7 @@ public class RakNetStatistics : IDisposable {
             ulong[] returnArray;
             if (!runningTotalIsCached)
             {
-                IntPtr cPtr = RakNetPINVOKE.RakNetStatistics_runningTotal_get (swigCPtr);
+                IntPtr cPtr = RakNetPINVOKE.CSharp_RakNetStatistics_runningTotal_get (swigCPtr);
                 int len = (int) RNSPerSecondMetrics.RNS_PER_SECOND_METRICS_COUNT;
 		if (len<=0)
 		{
@@ -154,50 +154,50 @@ public class RakNetStatistics : IDisposable {
 
   public ulong connectionStartTime {
     set {
-      RakNetPINVOKE.RakNetStatistics_connectionStartTime_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_connectionStartTime_set(swigCPtr, value);
     } 
     get {
-      ulong ret = RakNetPINVOKE.RakNetStatistics_connectionStartTime_get(swigCPtr);
+      ulong ret = RakNetPINVOKE.CSharp_RakNetStatistics_connectionStartTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public bool isLimitedByCongestionControl {
     set {
-      RakNetPINVOKE.RakNetStatistics_isLimitedByCongestionControl_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_isLimitedByCongestionControl_set(swigCPtr, value);
     } 
     get {
-      bool ret = RakNetPINVOKE.RakNetStatistics_isLimitedByCongestionControl_get(swigCPtr);
+      bool ret = RakNetPINVOKE.CSharp_RakNetStatistics_isLimitedByCongestionControl_get(swigCPtr);
       return ret;
     } 
   }
 
   public ulong BPSLimitByCongestionControl {
     set {
-      RakNetPINVOKE.RakNetStatistics_BPSLimitByCongestionControl_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_BPSLimitByCongestionControl_set(swigCPtr, value);
     } 
     get {
-      ulong ret = RakNetPINVOKE.RakNetStatistics_BPSLimitByCongestionControl_get(swigCPtr);
+      ulong ret = RakNetPINVOKE.CSharp_RakNetStatistics_BPSLimitByCongestionControl_get(swigCPtr);
       return ret;
     } 
   }
 
   public bool isLimitedByOutgoingBandwidthLimit {
     set {
-      RakNetPINVOKE.RakNetStatistics_isLimitedByOutgoingBandwidthLimit_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_isLimitedByOutgoingBandwidthLimit_set(swigCPtr, value);
     } 
     get {
-      bool ret = RakNetPINVOKE.RakNetStatistics_isLimitedByOutgoingBandwidthLimit_get(swigCPtr);
+      bool ret = RakNetPINVOKE.CSharp_RakNetStatistics_isLimitedByOutgoingBandwidthLimit_get(swigCPtr);
       return ret;
     } 
   }
 
   public ulong BPSLimitByOutgoingBandwidthLimit {
     set {
-      RakNetPINVOKE.RakNetStatistics_BPSLimitByOutgoingBandwidthLimit_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_BPSLimitByOutgoingBandwidthLimit_set(swigCPtr, value);
     } 
     get {
-      ulong ret = RakNetPINVOKE.RakNetStatistics_BPSLimitByOutgoingBandwidthLimit_get(swigCPtr);
+      ulong ret = RakNetPINVOKE.CSharp_RakNetStatistics_BPSLimitByOutgoingBandwidthLimit_get(swigCPtr);
       return ret;
     } 
   }
@@ -215,7 +215,7 @@ public class RakNetStatistics : IDisposable {
             uint[] returnArray;
             if (!messageInSendBufferIsCached)
             {
-                IntPtr cPtr = RakNetPINVOKE.RakNetStatistics_messageInSendBuffer_get (swigCPtr);
+                IntPtr cPtr = RakNetPINVOKE.CSharp_RakNetStatistics_messageInSendBuffer_get (swigCPtr);
                 int len = (int) PacketPriority.NUMBER_OF_PRIORITIES;
 		if (len<=0)
 		{
@@ -253,7 +253,7 @@ public class RakNetStatistics : IDisposable {
             double[] returnArray;
             if (!bytesInSendBufferIsCached)
             {
-                IntPtr cPtr = RakNetPINVOKE.RakNetStatistics_bytesInSendBuffer_get (swigCPtr);
+                IntPtr cPtr = RakNetPINVOKE.CSharp_RakNetStatistics_bytesInSendBuffer_get (swigCPtr);
                 int len = (int) PacketPriority.NUMBER_OF_PRIORITIES;
 		if (len<=0)
 		{
@@ -280,61 +280,61 @@ public class RakNetStatistics : IDisposable {
 
   public uint messagesInResendBuffer {
     set {
-      RakNetPINVOKE.RakNetStatistics_messagesInResendBuffer_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_messagesInResendBuffer_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.RakNetStatistics_messagesInResendBuffer_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_RakNetStatistics_messagesInResendBuffer_get(swigCPtr);
       return ret;
     } 
   }
 
   public ulong bytesInResendBuffer {
     set {
-      RakNetPINVOKE.RakNetStatistics_bytesInResendBuffer_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_bytesInResendBuffer_set(swigCPtr, value);
     } 
     get {
-      ulong ret = RakNetPINVOKE.RakNetStatistics_bytesInResendBuffer_get(swigCPtr);
+      ulong ret = RakNetPINVOKE.CSharp_RakNetStatistics_bytesInResendBuffer_get(swigCPtr);
       return ret;
     } 
   }
 
   public float packetlossLastSecond {
     set {
-      RakNetPINVOKE.RakNetStatistics_packetlossLastSecond_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_packetlossLastSecond_set(swigCPtr, value);
     } 
     get {
-      float ret = RakNetPINVOKE.RakNetStatistics_packetlossLastSecond_get(swigCPtr);
+      float ret = RakNetPINVOKE.CSharp_RakNetStatistics_packetlossLastSecond_get(swigCPtr);
       return ret;
     } 
   }
 
   public float packetlossTotal {
     set {
-      RakNetPINVOKE.RakNetStatistics_packetlossTotal_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_RakNetStatistics_packetlossTotal_set(swigCPtr, value);
     } 
     get {
-      float ret = RakNetPINVOKE.RakNetStatistics_packetlossTotal_get(swigCPtr);
+      float ret = RakNetPINVOKE.CSharp_RakNetStatistics_packetlossTotal_get(swigCPtr);
       return ret;
     } 
   }
 
   public void SetBytesInSendBuffer(double[] inDoubleArray, int numDoubles) {
-    RakNetPINVOKE.RakNetStatistics_SetBytesInSendBuffer(swigCPtr, inDoubleArray, numDoubles);
+    RakNetPINVOKE.CSharp_RakNetStatistics_SetBytesInSendBuffer(swigCPtr, inDoubleArray, numDoubles);
   }
 
   public void SetMessageInSendBuffer(uint[] inUnsignedIntArray, int numInts) {
-    RakNetPINVOKE.RakNetStatistics_SetMessageInSendBuffer(swigCPtr, inUnsignedIntArray, numInts);
+    RakNetPINVOKE.CSharp_RakNetStatistics_SetMessageInSendBuffer(swigCPtr, inUnsignedIntArray, numInts);
   }
 
   public void SetRunningTotal(ulong[] inUint64Array, int numUint64) {
-    RakNetPINVOKE.RakNetStatistics_SetRunningTotal(swigCPtr, inUint64Array, numUint64);
+    RakNetPINVOKE.CSharp_RakNetStatistics_SetRunningTotal(swigCPtr, inUint64Array, numUint64);
   }
 
   public void SetValueOverLastSecond(ulong[] inUint64Array, int numUint64) {
-    RakNetPINVOKE.RakNetStatistics_SetValueOverLastSecond(swigCPtr, inUint64Array, numUint64);
+    RakNetPINVOKE.CSharp_RakNetStatistics_SetValueOverLastSecond(swigCPtr, inUint64Array, numUint64);
   }
 
-  public RakNetStatistics() : this(RakNetPINVOKE.new_RakNetStatistics(), true) {
+  public RakNetStatistics() : this(RakNetPINVOKE.CSharp_new_RakNetStatistics(), true) {
   }
 
 }

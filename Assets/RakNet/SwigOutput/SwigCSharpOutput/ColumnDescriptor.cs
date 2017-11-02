@@ -33,7 +33,7 @@ public class ColumnDescriptor : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_ColumnDescriptor(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_ColumnDescriptor(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,28 +41,28 @@ public class ColumnDescriptor : IDisposable {
     }
   }
 
-  public ColumnDescriptor() : this(RakNetPINVOKE.new_ColumnDescriptor__SWIG_0(), true) {
+  public ColumnDescriptor() : this(RakNetPINVOKE.CSharp_new_ColumnDescriptor__SWIG_0(), true) {
   }
 
-  public ColumnDescriptor(string cn, Table.ColumnType ct) : this(RakNetPINVOKE.new_ColumnDescriptor__SWIG_1(cn, (int)ct), true) {
+  public ColumnDescriptor(string cn, Table.ColumnType ct) : this(RakNetPINVOKE.CSharp_new_ColumnDescriptor__SWIG_1(cn, (int)ct), true) {
   }
 
   public string columnName {
     set {
-      RakNetPINVOKE.ColumnDescriptor_columnName_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_ColumnDescriptor_columnName_set(swigCPtr, value);
     } 
     get {
-      string ret = RakNetPINVOKE.ColumnDescriptor_columnName_get(swigCPtr);
+      string ret = RakNetPINVOKE.CSharp_ColumnDescriptor_columnName_get(swigCPtr);
       return ret;
     } 
   }
 
   public Table.ColumnType columnType {
     set {
-      RakNetPINVOKE.ColumnDescriptor_columnType_set(swigCPtr, (int)value);
+      RakNetPINVOKE.CSharp_ColumnDescriptor_columnType_set(swigCPtr, (int)value);
     } 
     get {
-      Table.ColumnType ret = (Table.ColumnType)RakNetPINVOKE.ColumnDescriptor_columnType_get(swigCPtr);
+      Table.ColumnType ret = (Table.ColumnType)RakNetPINVOKE.CSharp_ColumnDescriptor_columnType_get(swigCPtr);
       return ret;
     } 
   }

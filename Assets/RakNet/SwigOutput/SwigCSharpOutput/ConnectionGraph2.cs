@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class ConnectionGraph2 : PluginInterface2 {
   private HandleRef swigCPtr;
 
-  internal ConnectionGraph2(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.ConnectionGraph2_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ConnectionGraph2(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_ConnectionGraph2_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class ConnectionGraph2 : PluginInterface2 {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_ConnectionGraph2(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_ConnectionGraph2(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -77,63 +77,63 @@ public class ConnectionGraph2 : PluginInterface2 {
 
 
   public static ConnectionGraph2 GetInstance() {
-    IntPtr cPtr = RakNetPINVOKE.ConnectionGraph2_GetInstance();
+    IntPtr cPtr = RakNetPINVOKE.CSharp_ConnectionGraph2_GetInstance();
     ConnectionGraph2 ret = (cPtr == IntPtr.Zero) ? null : new ConnectionGraph2(cPtr, false);
     return ret;
   }
 
   public static void DestroyInstance(ConnectionGraph2 i) {
-    RakNetPINVOKE.ConnectionGraph2_DestroyInstance(ConnectionGraph2.getCPtr(i));
+    RakNetPINVOKE.CSharp_ConnectionGraph2_DestroyInstance(ConnectionGraph2.getCPtr(i));
   }
 
-  public ConnectionGraph2() : this(RakNetPINVOKE.new_ConnectionGraph2(), true) {
+  public ConnectionGraph2() : this(RakNetPINVOKE.CSharp_new_ConnectionGraph2(), true) {
   }
 
   public bool GetConnectionListForRemoteSystem(RakNetGUID remoteSystemGuid, SystemAddress saOut, RakNetGUID guidOut, out uint outLength) {
-    bool ret = RakNetPINVOKE.ConnectionGraph2_GetConnectionListForRemoteSystem(swigCPtr, RakNetGUID.getCPtr(remoteSystemGuid), SystemAddress.getCPtr(saOut), RakNetGUID.getCPtr(guidOut), out outLength);
+    bool ret = RakNetPINVOKE.CSharp_ConnectionGraph2_GetConnectionListForRemoteSystem(swigCPtr, RakNetGUID.getCPtr(remoteSystemGuid), SystemAddress.getCPtr(saOut), RakNetGUID.getCPtr(guidOut), out outLength);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool ConnectionExists(RakNetGUID g1, RakNetGUID g2) {
-    bool ret = RakNetPINVOKE.ConnectionGraph2_ConnectionExists(swigCPtr, RakNetGUID.getCPtr(g1), RakNetGUID.getCPtr(g2));
+    bool ret = RakNetPINVOKE.CSharp_ConnectionGraph2_ConnectionExists(swigCPtr, RakNetGUID.getCPtr(g1), RakNetGUID.getCPtr(g2));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ushort GetPingBetweenSystems(RakNetGUID g1, RakNetGUID g2) {
-    ushort ret = RakNetPINVOKE.ConnectionGraph2_GetPingBetweenSystems(swigCPtr, RakNetGUID.getCPtr(g1), RakNetGUID.getCPtr(g2));
+    ushort ret = RakNetPINVOKE.CSharp_ConnectionGraph2_GetPingBetweenSystems(swigCPtr, RakNetGUID.getCPtr(g1), RakNetGUID.getCPtr(g2));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public RakNetGUID GetLowestAveragePingSystem() {
-    RakNetGUID ret = new RakNetGUID(RakNetPINVOKE.ConnectionGraph2_GetLowestAveragePingSystem(swigCPtr), true);
+    RakNetGUID ret = new RakNetGUID(RakNetPINVOKE.CSharp_ConnectionGraph2_GetLowestAveragePingSystem(swigCPtr), true);
     return ret;
   }
 
   public void SetAutoProcessNewConnections(bool b) {
-    RakNetPINVOKE.ConnectionGraph2_SetAutoProcessNewConnections(swigCPtr, b);
+    RakNetPINVOKE.CSharp_ConnectionGraph2_SetAutoProcessNewConnections(swigCPtr, b);
   }
 
   public bool GetAutoProcessNewConnections() {
-    bool ret = RakNetPINVOKE.ConnectionGraph2_GetAutoProcessNewConnections(swigCPtr);
+    bool ret = RakNetPINVOKE.CSharp_ConnectionGraph2_GetAutoProcessNewConnections(swigCPtr);
     return ret;
   }
 
   public void AddParticipant(SystemAddress systemAddress, RakNetGUID rakNetGUID) {
-    RakNetPINVOKE.ConnectionGraph2_AddParticipant(swigCPtr, SystemAddress.getCPtr(systemAddress), RakNetGUID.getCPtr(rakNetGUID));
+    RakNetPINVOKE.CSharp_ConnectionGraph2_AddParticipant(swigCPtr, SystemAddress.getCPtr(systemAddress), RakNetGUID.getCPtr(rakNetGUID));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private bool GetConnectionListForRemoteSystemHelper(RakNetGUID remoteSystemGuid, RakNetListSystemAddress saOut, RakNetListRakNetGUID guidOut, ref uint inOutLength) {
-    bool ret = RakNetPINVOKE.ConnectionGraph2_GetConnectionListForRemoteSystemHelper(swigCPtr, RakNetGUID.getCPtr(remoteSystemGuid), RakNetListSystemAddress.getCPtr(saOut), RakNetListRakNetGUID.getCPtr(guidOut), ref inOutLength);
+    bool ret = RakNetPINVOKE.CSharp_ConnectionGraph2_GetConnectionListForRemoteSystemHelper(swigCPtr, RakNetGUID.getCPtr(remoteSystemGuid), RakNetListSystemAddress.getCPtr(saOut), RakNetListRakNetGUID.getCPtr(guidOut), ref inOutLength);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void GetParticipantListHelper(RakNetListRakNetGUID guidOut) {
-    RakNetPINVOKE.ConnectionGraph2_GetParticipantListHelper(swigCPtr, RakNetListRakNetGUID.getCPtr(guidOut));
+    RakNetPINVOKE.CSharp_ConnectionGraph2_GetParticipantListHelper(swigCPtr, RakNetListRakNetGUID.getCPtr(guidOut));
   }
 
 }

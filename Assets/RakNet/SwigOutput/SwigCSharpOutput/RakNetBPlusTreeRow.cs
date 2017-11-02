@@ -33,7 +33,7 @@ public class RakNetBPlusTreeRow : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_RakNetBPlusTreeRow(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_RakNetBPlusTreeRow(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,50 +41,50 @@ public class RakNetBPlusTreeRow : IDisposable {
     }
   }
 
-  public RakNetBPlusTreeRow() : this(RakNetPINVOKE.new_RakNetBPlusTreeRow(), true) {
+  public RakNetBPlusTreeRow() : this(RakNetPINVOKE.CSharp_new_RakNetBPlusTreeRow(), true) {
   }
 
   public void SetPoolPageSize(int size) {
-    RakNetPINVOKE.RakNetBPlusTreeRow_SetPoolPageSize(swigCPtr, size);
+    RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_SetPoolPageSize(swigCPtr, size);
   }
 
   public bool Insert(uint key, Row data) {
-    bool ret = RakNetPINVOKE.RakNetBPlusTreeRow_Insert(swigCPtr, key, Row.getCPtr(data));
+    bool ret = RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_Insert(swigCPtr, key, Row.getCPtr(data));
     return ret;
   }
 
   public void Clear() {
-    RakNetPINVOKE.RakNetBPlusTreeRow_Clear(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_Clear(swigCPtr);
   }
 
   public uint Size() {
-    uint ret = RakNetPINVOKE.RakNetBPlusTreeRow_Size(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_Size(swigCPtr);
     return ret;
   }
 
   public bool IsEmpty() {
-    bool ret = RakNetPINVOKE.RakNetBPlusTreeRow_IsEmpty(swigCPtr);
+    bool ret = RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_IsEmpty(swigCPtr);
     return ret;
   }
 
   public RakNetPageRow GetListHead() {
-    IntPtr cPtr = RakNetPINVOKE.RakNetBPlusTreeRow_GetListHead(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_GetListHead(swigCPtr);
     RakNetPageRow ret = (cPtr == IntPtr.Zero) ? null : new RakNetPageRow(cPtr, false);
     return ret;
   }
 
   public Row GetDataHead() {
-    IntPtr cPtr = RakNetPINVOKE.RakNetBPlusTreeRow_GetDataHead(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_GetDataHead(swigCPtr);
     Row ret = (cPtr == IntPtr.Zero) ? null : new Row(cPtr, false);
     return ret;
   }
 
   public void PrintLeaves() {
-    RakNetPINVOKE.RakNetBPlusTreeRow_PrintLeaves(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_PrintLeaves(swigCPtr);
   }
 
   public void PrintGraph() {
-    RakNetPINVOKE.RakNetBPlusTreeRow_PrintGraph(swigCPtr);
+    RakNetPINVOKE.CSharp_RakNetBPlusTreeRow_PrintGraph(swigCPtr);
   }
 
 }

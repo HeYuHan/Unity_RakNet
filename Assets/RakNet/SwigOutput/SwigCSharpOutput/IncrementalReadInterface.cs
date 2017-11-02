@@ -33,7 +33,7 @@ public class IncrementalReadInterface : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_IncrementalReadInterface(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_IncrementalReadInterface(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,11 +41,11 @@ public class IncrementalReadInterface : IDisposable {
     }
   }
 
-  public IncrementalReadInterface() : this(RakNetPINVOKE.new_IncrementalReadInterface(), true) {
+  public IncrementalReadInterface() : this(RakNetPINVOKE.CSharp_new_IncrementalReadInterface(), true) {
   }
 
   public uint GetFilePart(string filename, uint startReadBytes, uint numBytesToRead, byte[] inOutByteArray, FileListNodeContext context) {
-    uint ret = RakNetPINVOKE.IncrementalReadInterface_GetFilePart(swigCPtr, filename, startReadBytes, numBytesToRead, inOutByteArray, FileListNodeContext.getCPtr(context));
+    uint ret = RakNetPINVOKE.CSharp_IncrementalReadInterface_GetFilePart(swigCPtr, filename, startReadBytes, numBytesToRead, inOutByteArray, FileListNodeContext.getCPtr(context));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

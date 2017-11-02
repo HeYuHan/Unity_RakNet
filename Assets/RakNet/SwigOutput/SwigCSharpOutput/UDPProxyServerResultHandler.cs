@@ -33,7 +33,7 @@ public class UDPProxyServerResultHandler : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_UDPProxyServerResultHandler(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_UDPProxyServerResultHandler(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,27 +41,27 @@ public class UDPProxyServerResultHandler : IDisposable {
     }
   }
 
-  public UDPProxyServerResultHandler() : this(RakNetPINVOKE.new_UDPProxyServerResultHandler(), true) {
+  public UDPProxyServerResultHandler() : this(RakNetPINVOKE.CSharp_new_UDPProxyServerResultHandler(), true) {
     SwigDirectorConnect();
   }
 
   public virtual void OnLoginSuccess(RakString usedPassword, UDPProxyServer proxyServerPlugin) {
-    RakNetPINVOKE.UDPProxyServerResultHandler_OnLoginSuccess(swigCPtr, RakString.getCPtr(usedPassword), UDPProxyServer.getCPtr(proxyServerPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyServerResultHandler_OnLoginSuccess(swigCPtr, RakString.getCPtr(usedPassword), UDPProxyServer.getCPtr(proxyServerPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void OnAlreadyLoggedIn(RakString usedPassword, UDPProxyServer proxyServerPlugin) {
-    RakNetPINVOKE.UDPProxyServerResultHandler_OnAlreadyLoggedIn(swigCPtr, RakString.getCPtr(usedPassword), UDPProxyServer.getCPtr(proxyServerPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyServerResultHandler_OnAlreadyLoggedIn(swigCPtr, RakString.getCPtr(usedPassword), UDPProxyServer.getCPtr(proxyServerPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void OnNoPasswordSet(RakString usedPassword, UDPProxyServer proxyServerPlugin) {
-    RakNetPINVOKE.UDPProxyServerResultHandler_OnNoPasswordSet(swigCPtr, RakString.getCPtr(usedPassword), UDPProxyServer.getCPtr(proxyServerPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyServerResultHandler_OnNoPasswordSet(swigCPtr, RakString.getCPtr(usedPassword), UDPProxyServer.getCPtr(proxyServerPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void OnWrongPassword(RakString usedPassword, UDPProxyServer proxyServerPlugin) {
-    RakNetPINVOKE.UDPProxyServerResultHandler_OnWrongPassword(swigCPtr, RakString.getCPtr(usedPassword), UDPProxyServer.getCPtr(proxyServerPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyServerResultHandler_OnWrongPassword(swigCPtr, RakString.getCPtr(usedPassword), UDPProxyServer.getCPtr(proxyServerPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -74,7 +74,7 @@ public class UDPProxyServerResultHandler : IDisposable {
       swigDelegate2 = new SwigDelegateUDPProxyServerResultHandler_2(SwigDirectorOnNoPasswordSet);
     if (SwigDerivedClassHasMethod("OnWrongPassword", swigMethodTypes3))
       swigDelegate3 = new SwigDelegateUDPProxyServerResultHandler_3(SwigDirectorOnWrongPassword);
-    RakNetPINVOKE.UDPProxyServerResultHandler_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3);
+    RakNetPINVOKE.CSharp_UDPProxyServerResultHandler_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, Type[] methodTypes) {

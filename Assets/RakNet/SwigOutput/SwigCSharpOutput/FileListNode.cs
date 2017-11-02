@@ -33,7 +33,7 @@ public class FileListNode : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_FileListNode(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_FileListNode(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -46,10 +46,10 @@ public class FileListNode : IDisposable {
 
   public RakString filename {
     set {
-      RakNetPINVOKE.FileListNode_filename_set(swigCPtr, RakString.getCPtr(value));
+      RakNetPINVOKE.CSharp_FileListNode_filename_set(swigCPtr, RakString.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.FileListNode_filename_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_FileListNode_filename_get(swigCPtr);
       RakString ret = (cPtr == IntPtr.Zero) ? null : new RakString(cPtr, false);
       return ret;
     } 
@@ -57,10 +57,10 @@ public class FileListNode : IDisposable {
 
   public RakString fullPathToFile {
     set {
-      RakNetPINVOKE.FileListNode_fullPathToFile_set(swigCPtr, RakString.getCPtr(value));
+      RakNetPINVOKE.CSharp_FileListNode_fullPathToFile_set(swigCPtr, RakString.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.FileListNode_fullPathToFile_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_FileListNode_fullPathToFile_get(swigCPtr);
       RakString ret = (cPtr == IntPtr.Zero) ? null : new RakString(cPtr, false);
       return ret;
     } 
@@ -79,7 +79,7 @@ public class FileListNode : IDisposable {
             byte[] returnArray;
             if (!dataIsCached)
             {
-                IntPtr cPtr = RakNetPINVOKE.FileListNode_data_get (swigCPtr);
+                IntPtr cPtr = RakNetPINVOKE.CSharp_FileListNode_data_get (swigCPtr);
                 int len = (int) dataLengthBytes;
 		if (len<=0)
 		{
@@ -103,30 +103,30 @@ public class FileListNode : IDisposable {
 
   public uint dataLengthBytes {
     set {
-      RakNetPINVOKE.FileListNode_dataLengthBytes_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FileListNode_dataLengthBytes_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.FileListNode_dataLengthBytes_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_FileListNode_dataLengthBytes_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint fileLengthBytes {
     set {
-      RakNetPINVOKE.FileListNode_fileLengthBytes_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FileListNode_fileLengthBytes_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.FileListNode_fileLengthBytes_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_FileListNode_fileLengthBytes_get(swigCPtr);
       return ret;
     } 
   }
 
   public FileListNodeContext context {
     set {
-      RakNetPINVOKE.FileListNode_context_set(swigCPtr, FileListNodeContext.getCPtr(value));
+      RakNetPINVOKE.CSharp_FileListNode_context_set(swigCPtr, FileListNodeContext.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.FileListNode_context_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_FileListNode_context_get(swigCPtr);
       FileListNodeContext ret = (cPtr == IntPtr.Zero) ? null : new FileListNodeContext(cPtr, false);
       return ret;
     } 
@@ -134,19 +134,19 @@ public class FileListNode : IDisposable {
 
   public bool isAReference {
     set {
-      RakNetPINVOKE.FileListNode_isAReference_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FileListNode_isAReference_set(swigCPtr, value);
     } 
     get {
-      bool ret = RakNetPINVOKE.FileListNode_isAReference_get(swigCPtr);
+      bool ret = RakNetPINVOKE.CSharp_FileListNode_isAReference_get(swigCPtr);
       return ret;
     } 
   }
 
-  public FileListNode() : this(RakNetPINVOKE.new_FileListNode(), true) {
+  public FileListNode() : this(RakNetPINVOKE.CSharp_new_FileListNode(), true) {
   }
 
   public void SetData(byte[] inByteArray, int numBytes) {
-    RakNetPINVOKE.FileListNode_SetData(swigCPtr, inByteArray, numBytes);
+    RakNetPINVOKE.CSharp_FileListNode_SetData(swigCPtr, inByteArray, numBytes);
   }
 
 }

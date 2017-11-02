@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 public class ReadyEvent : PluginInterface2 {
   private HandleRef swigCPtr;
 
-  internal ReadyEvent(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.ReadyEvent_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ReadyEvent(IntPtr cPtr, bool cMemoryOwn) : base(RakNetPINVOKE.CSharp_ReadyEvent_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
@@ -31,7 +31,7 @@ public class ReadyEvent : PluginInterface2 {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_ReadyEvent(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_ReadyEvent(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,102 +41,102 @@ public class ReadyEvent : PluginInterface2 {
   }
 
   public static ReadyEvent GetInstance() {
-    IntPtr cPtr = RakNetPINVOKE.ReadyEvent_GetInstance();
+    IntPtr cPtr = RakNetPINVOKE.CSharp_ReadyEvent_GetInstance();
     ReadyEvent ret = (cPtr == IntPtr.Zero) ? null : new ReadyEvent(cPtr, false);
     return ret;
   }
 
   public static void DestroyInstance(ReadyEvent i) {
-    RakNetPINVOKE.ReadyEvent_DestroyInstance(ReadyEvent.getCPtr(i));
+    RakNetPINVOKE.CSharp_ReadyEvent_DestroyInstance(ReadyEvent.getCPtr(i));
   }
 
-  public ReadyEvent() : this(RakNetPINVOKE.new_ReadyEvent(), true) {
+  public ReadyEvent() : this(RakNetPINVOKE.CSharp_new_ReadyEvent(), true) {
   }
 
   public bool SetEvent(int eventId, bool isReady) {
-    bool ret = RakNetPINVOKE.ReadyEvent_SetEvent(swigCPtr, eventId, isReady);
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_SetEvent(swigCPtr, eventId, isReady);
     return ret;
   }
 
   public void ForceCompletion(int eventId) {
-    RakNetPINVOKE.ReadyEvent_ForceCompletion(swigCPtr, eventId);
+    RakNetPINVOKE.CSharp_ReadyEvent_ForceCompletion(swigCPtr, eventId);
   }
 
   public bool DeleteEvent(int eventId) {
-    bool ret = RakNetPINVOKE.ReadyEvent_DeleteEvent(swigCPtr, eventId);
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_DeleteEvent(swigCPtr, eventId);
     return ret;
   }
 
   public bool IsEventSet(int eventId) {
-    bool ret = RakNetPINVOKE.ReadyEvent_IsEventSet(swigCPtr, eventId);
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_IsEventSet(swigCPtr, eventId);
     return ret;
   }
 
   public bool IsEventCompletionProcessing(int eventId) {
-    bool ret = RakNetPINVOKE.ReadyEvent_IsEventCompletionProcessing(swigCPtr, eventId);
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_IsEventCompletionProcessing(swigCPtr, eventId);
     return ret;
   }
 
   public bool IsEventCompleted(int eventId) {
-    bool ret = RakNetPINVOKE.ReadyEvent_IsEventCompleted(swigCPtr, eventId);
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_IsEventCompleted(swigCPtr, eventId);
     return ret;
   }
 
   public bool HasEvent(int eventId) {
-    bool ret = RakNetPINVOKE.ReadyEvent_HasEvent(swigCPtr, eventId);
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_HasEvent(swigCPtr, eventId);
     return ret;
   }
 
   public uint GetEventListSize() {
-    uint ret = RakNetPINVOKE.ReadyEvent_GetEventListSize(swigCPtr);
+    uint ret = RakNetPINVOKE.CSharp_ReadyEvent_GetEventListSize(swigCPtr);
     return ret;
   }
 
   public int GetEventAtIndex(uint index) {
-    int ret = RakNetPINVOKE.ReadyEvent_GetEventAtIndex(swigCPtr, index);
+    int ret = RakNetPINVOKE.CSharp_ReadyEvent_GetEventAtIndex(swigCPtr, index);
     return ret;
   }
 
   public bool AddToWaitList(int eventId, RakNetGUID guid) {
-    bool ret = RakNetPINVOKE.ReadyEvent_AddToWaitList(swigCPtr, eventId, RakNetGUID.getCPtr(guid));
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_AddToWaitList(swigCPtr, eventId, RakNetGUID.getCPtr(guid));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool RemoveFromWaitList(int eventId, RakNetGUID guid) {
-    bool ret = RakNetPINVOKE.ReadyEvent_RemoveFromWaitList(swigCPtr, eventId, RakNetGUID.getCPtr(guid));
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_RemoveFromWaitList(swigCPtr, eventId, RakNetGUID.getCPtr(guid));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool IsInWaitList(int eventId, RakNetGUID guid) {
-    bool ret = RakNetPINVOKE.ReadyEvent_IsInWaitList(swigCPtr, eventId, RakNetGUID.getCPtr(guid));
+    bool ret = RakNetPINVOKE.CSharp_ReadyEvent_IsInWaitList(swigCPtr, eventId, RakNetGUID.getCPtr(guid));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public uint GetRemoteWaitListSize(int eventId) {
-    uint ret = RakNetPINVOKE.ReadyEvent_GetRemoteWaitListSize(swigCPtr, eventId);
+    uint ret = RakNetPINVOKE.CSharp_ReadyEvent_GetRemoteWaitListSize(swigCPtr, eventId);
     return ret;
   }
 
   public RakNetGUID GetFromWaitListAtIndex(int eventId, uint index) {
-    RakNetGUID ret = new RakNetGUID(RakNetPINVOKE.ReadyEvent_GetFromWaitListAtIndex(swigCPtr, eventId, index), true);
+    RakNetGUID ret = new RakNetGUID(RakNetPINVOKE.CSharp_ReadyEvent_GetFromWaitListAtIndex(swigCPtr, eventId, index), true);
     return ret;
   }
 
   public ReadyEventSystemStatus GetReadyStatus(int eventId, RakNetGUID guid) {
-    ReadyEventSystemStatus ret = (ReadyEventSystemStatus)RakNetPINVOKE.ReadyEvent_GetReadyStatus(swigCPtr, eventId, RakNetGUID.getCPtr(guid));
+    ReadyEventSystemStatus ret = (ReadyEventSystemStatus)RakNetPINVOKE.CSharp_ReadyEvent_GetReadyStatus(swigCPtr, eventId, RakNetGUID.getCPtr(guid));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetSendChannel(byte newChannel) {
-    RakNetPINVOKE.ReadyEvent_SetSendChannel(swigCPtr, newChannel);
+    RakNetPINVOKE.CSharp_ReadyEvent_SetSendChannel(swigCPtr, newChannel);
   }
 
   public static int RemoteSystemCompByGuid(RakNetGUID key, SWIGTYPE_p_RakNet__ReadyEvent__RemoteSystem data) {
-    int ret = RakNetPINVOKE.ReadyEvent_RemoteSystemCompByGuid(RakNetGUID.getCPtr(key), SWIGTYPE_p_RakNet__ReadyEvent__RemoteSystem.getCPtr(data));
+    int ret = RakNetPINVOKE.CSharp_ReadyEvent_RemoteSystemCompByGuid(RakNetGUID.getCPtr(key), SWIGTYPE_p_RakNet__ReadyEvent__RemoteSystem.getCPtr(data));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -33,7 +33,7 @@ public class UDPForwarder : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_UDPForwarder(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_UDPForwarder(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,39 +41,39 @@ public class UDPForwarder : IDisposable {
     }
   }
 
-  public UDPForwarder() : this(RakNetPINVOKE.new_UDPForwarder(), true) {
+  public UDPForwarder() : this(RakNetPINVOKE.CSharp_new_UDPForwarder(), true) {
   }
 
   public void Startup() {
-    RakNetPINVOKE.UDPForwarder_Startup(swigCPtr);
+    RakNetPINVOKE.CSharp_UDPForwarder_Startup(swigCPtr);
   }
 
   public void Shutdown() {
-    RakNetPINVOKE.UDPForwarder_Shutdown(swigCPtr);
+    RakNetPINVOKE.CSharp_UDPForwarder_Shutdown(swigCPtr);
   }
 
   public void SetMaxForwardEntries(ushort maxEntries) {
-    RakNetPINVOKE.UDPForwarder_SetMaxForwardEntries(swigCPtr, maxEntries);
+    RakNetPINVOKE.CSharp_UDPForwarder_SetMaxForwardEntries(swigCPtr, maxEntries);
   }
 
   public int GetMaxForwardEntries() {
-    int ret = RakNetPINVOKE.UDPForwarder_GetMaxForwardEntries(swigCPtr);
+    int ret = RakNetPINVOKE.CSharp_UDPForwarder_GetMaxForwardEntries(swigCPtr);
     return ret;
   }
 
   public int GetUsedForwardEntries() {
-    int ret = RakNetPINVOKE.UDPForwarder_GetUsedForwardEntries(swigCPtr);
+    int ret = RakNetPINVOKE.CSharp_UDPForwarder_GetUsedForwardEntries(swigCPtr);
     return ret;
   }
 
   public UDPForwarderResult StartForwarding(SystemAddress source, SystemAddress destination, uint timeoutOnNoDataMS, string forceHostAddress, ushort socketFamily, out ushort forwardingPort, out int forwardingSocket) {
-    UDPForwarderResult ret = (UDPForwarderResult)RakNetPINVOKE.UDPForwarder_StartForwarding(swigCPtr, SystemAddress.getCPtr(source), SystemAddress.getCPtr(destination), timeoutOnNoDataMS, forceHostAddress, socketFamily, out forwardingPort, out forwardingSocket);
+    UDPForwarderResult ret = (UDPForwarderResult)RakNetPINVOKE.CSharp_UDPForwarder_StartForwarding(swigCPtr, SystemAddress.getCPtr(source), SystemAddress.getCPtr(destination), timeoutOnNoDataMS, forceHostAddress, socketFamily, out forwardingPort, out forwardingSocket);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void StopForwarding(SystemAddress source, SystemAddress destination) {
-    RakNetPINVOKE.UDPForwarder_StopForwarding(swigCPtr, SystemAddress.getCPtr(source), SystemAddress.getCPtr(destination));
+    RakNetPINVOKE.CSharp_UDPForwarder_StopForwarding(swigCPtr, SystemAddress.getCPtr(source), SystemAddress.getCPtr(destination));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 

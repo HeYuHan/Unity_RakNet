@@ -33,7 +33,7 @@ public class UDPProxyClientResultHandler : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_UDPProxyClientResultHandler(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_UDPProxyClientResultHandler(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,37 +41,37 @@ public class UDPProxyClientResultHandler : IDisposable {
     }
   }
 
-  public UDPProxyClientResultHandler() : this(RakNetPINVOKE.new_UDPProxyClientResultHandler(), true) {
+  public UDPProxyClientResultHandler() : this(RakNetPINVOKE.CSharp_new_UDPProxyClientResultHandler(), true) {
     SwigDirectorConnect();
   }
 
   public virtual void OnForwardingSuccess(string proxyIPAddress, ushort proxyPort, SystemAddress proxyCoordinator, SystemAddress sourceAddress, SystemAddress targetAddress, RakNetGUID targetGuid, UDPProxyClient proxyClientPlugin) {
-    RakNetPINVOKE.UDPProxyClientResultHandler_OnForwardingSuccess(swigCPtr, proxyIPAddress, proxyPort, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyClientResultHandler_OnForwardingSuccess(swigCPtr, proxyIPAddress, proxyPort, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void OnForwardingNotification(string proxyIPAddress, ushort proxyPort, SystemAddress proxyCoordinator, SystemAddress sourceAddress, SystemAddress targetAddress, RakNetGUID targetGuid, UDPProxyClient proxyClientPlugin) {
-    RakNetPINVOKE.UDPProxyClientResultHandler_OnForwardingNotification(swigCPtr, proxyIPAddress, proxyPort, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyClientResultHandler_OnForwardingNotification(swigCPtr, proxyIPAddress, proxyPort, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void OnNoServersOnline(SystemAddress proxyCoordinator, SystemAddress sourceAddress, SystemAddress targetAddress, RakNetGUID targetGuid, UDPProxyClient proxyClientPlugin) {
-    RakNetPINVOKE.UDPProxyClientResultHandler_OnNoServersOnline(swigCPtr, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyClientResultHandler_OnNoServersOnline(swigCPtr, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void OnRecipientNotConnected(SystemAddress proxyCoordinator, SystemAddress sourceAddress, SystemAddress targetAddress, RakNetGUID targetGuid, UDPProxyClient proxyClientPlugin) {
-    RakNetPINVOKE.UDPProxyClientResultHandler_OnRecipientNotConnected(swigCPtr, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyClientResultHandler_OnRecipientNotConnected(swigCPtr, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void OnAllServersBusy(SystemAddress proxyCoordinator, SystemAddress sourceAddress, SystemAddress targetAddress, RakNetGUID targetGuid, UDPProxyClient proxyClientPlugin) {
-    RakNetPINVOKE.UDPProxyClientResultHandler_OnAllServersBusy(swigCPtr, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyClientResultHandler_OnAllServersBusy(swigCPtr, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void OnForwardingInProgress(string proxyIPAddress, ushort proxyPort, SystemAddress proxyCoordinator, SystemAddress sourceAddress, SystemAddress targetAddress, RakNetGUID targetGuid, UDPProxyClient proxyClientPlugin) {
-    RakNetPINVOKE.UDPProxyClientResultHandler_OnForwardingInProgress(swigCPtr, proxyIPAddress, proxyPort, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
+    RakNetPINVOKE.CSharp_UDPProxyClientResultHandler_OnForwardingInProgress(swigCPtr, proxyIPAddress, proxyPort, SystemAddress.getCPtr(proxyCoordinator), SystemAddress.getCPtr(sourceAddress), SystemAddress.getCPtr(targetAddress), RakNetGUID.getCPtr(targetGuid), UDPProxyClient.getCPtr(proxyClientPlugin));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -88,7 +88,7 @@ public class UDPProxyClientResultHandler : IDisposable {
       swigDelegate4 = new SwigDelegateUDPProxyClientResultHandler_4(SwigDirectorOnAllServersBusy);
     if (SwigDerivedClassHasMethod("OnForwardingInProgress", swigMethodTypes5))
       swigDelegate5 = new SwigDelegateUDPProxyClientResultHandler_5(SwigDirectorOnForwardingInProgress);
-    RakNetPINVOKE.UDPProxyClientResultHandler_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5);
+    RakNetPINVOKE.CSharp_UDPProxyClientResultHandler_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, Type[] methodTypes) {

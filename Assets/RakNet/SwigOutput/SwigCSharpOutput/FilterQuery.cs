@@ -33,7 +33,7 @@ public class FilterQuery : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_FilterQuery(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_FilterQuery(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -41,38 +41,38 @@ public class FilterQuery : IDisposable {
     }
   }
 
-  public FilterQuery() : this(RakNetPINVOKE.new_FilterQuery__SWIG_0(), true) {
+  public FilterQuery() : this(RakNetPINVOKE.CSharp_new_FilterQuery__SWIG_0(), true) {
   }
 
-  public FilterQuery(uint column, Cell cell, Table.FilterQueryType op) : this(RakNetPINVOKE.new_FilterQuery__SWIG_1(column, Cell.getCPtr(cell), (int)op), true) {
+  public FilterQuery(uint column, Cell cell, Table.FilterQueryType op) : this(RakNetPINVOKE.CSharp_new_FilterQuery__SWIG_1(column, Cell.getCPtr(cell), (int)op), true) {
   }
 
   public string columnName {
     set {
-      RakNetPINVOKE.FilterQuery_columnName_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FilterQuery_columnName_set(swigCPtr, value);
     } 
     get {
-      string ret = RakNetPINVOKE.FilterQuery_columnName_get(swigCPtr);
+      string ret = RakNetPINVOKE.CSharp_FilterQuery_columnName_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint columnIndex {
     set {
-      RakNetPINVOKE.FilterQuery_columnIndex_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FilterQuery_columnIndex_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.FilterQuery_columnIndex_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_FilterQuery_columnIndex_get(swigCPtr);
       return ret;
     } 
   }
 
   public Cell cellValue {
     set {
-      RakNetPINVOKE.FilterQuery_cellValue_set(swigCPtr, Cell.getCPtr(value));
+      RakNetPINVOKE.CSharp_FilterQuery_cellValue_set(swigCPtr, Cell.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.FilterQuery_cellValue_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_FilterQuery_cellValue_get(swigCPtr);
       Cell ret = (cPtr == IntPtr.Zero) ? null : new Cell(cPtr, false);
       return ret;
     } 
@@ -80,10 +80,10 @@ public class FilterQuery : IDisposable {
 
   public Table.FilterQueryType operation {
     set {
-      RakNetPINVOKE.FilterQuery_operation_set(swigCPtr, (int)value);
+      RakNetPINVOKE.CSharp_FilterQuery_operation_set(swigCPtr, (int)value);
     } 
     get {
-      Table.FilterQueryType ret = (Table.FilterQueryType)RakNetPINVOKE.FilterQuery_operation_get(swigCPtr);
+      Table.FilterQueryType ret = (Table.FilterQueryType)RakNetPINVOKE.CSharp_FilterQuery_operation_get(swigCPtr);
       return ret;
     } 
   }

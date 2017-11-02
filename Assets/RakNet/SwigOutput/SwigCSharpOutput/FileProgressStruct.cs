@@ -48,7 +48,7 @@ public class FileProgressStruct : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_FileProgressStruct(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_FileProgressStruct(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -63,10 +63,10 @@ public class FileProgressStruct : IDisposable {
 
   public OnFileStruct onFileStruct {
     set {
-      RakNetPINVOKE.FileProgressStruct_onFileStruct_set(swigCPtr, OnFileStruct.getCPtr(value));
+      RakNetPINVOKE.CSharp_FileProgressStruct_onFileStruct_set(swigCPtr, OnFileStruct.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.FileProgressStruct_onFileStruct_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_FileProgressStruct_onFileStruct_get(swigCPtr);
       OnFileStruct ret = (cPtr == IntPtr.Zero) ? null : new OnFileStruct(cPtr, false);
       return ret;
     } 
@@ -74,30 +74,30 @@ public class FileProgressStruct : IDisposable {
 
   public uint partCount {
     set {
-      RakNetPINVOKE.FileProgressStruct_partCount_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FileProgressStruct_partCount_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.FileProgressStruct_partCount_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_FileProgressStruct_partCount_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint partTotal {
     set {
-      RakNetPINVOKE.FileProgressStruct_partTotal_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FileProgressStruct_partTotal_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.FileProgressStruct_partTotal_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_FileProgressStruct_partTotal_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint dataChunkLength {
     set {
-      RakNetPINVOKE.FileProgressStruct_dataChunkLength_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FileProgressStruct_dataChunkLength_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.FileProgressStruct_dataChunkLength_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_FileProgressStruct_dataChunkLength_get(swigCPtr);
       return ret;
     } 
   }
@@ -115,7 +115,7 @@ public class FileProgressStruct : IDisposable {
             byte[] returnArray;
             if (!firstDataChunkIsCached)
             {
-                IntPtr cPtr = RakNetPINVOKE.FileProgressStruct_firstDataChunk_get (swigCPtr);
+                IntPtr cPtr = RakNetPINVOKE.CSharp_FileProgressStruct_firstDataChunk_get (swigCPtr);
                 int len = (int) dataChunkLength;
 		if (len<=0)
 		{
@@ -150,7 +150,7 @@ public class FileProgressStruct : IDisposable {
             byte[] returnArray;
             if (!iriDataChunkIsCached)
             {
-                IntPtr cPtr = RakNetPINVOKE.FileProgressStruct_iriDataChunk_get (swigCPtr);
+                IntPtr cPtr = RakNetPINVOKE.CSharp_FileProgressStruct_iriDataChunk_get (swigCPtr);
                 int len = (int) dataChunkLength;
 		if (len<=0)
 		{
@@ -174,20 +174,20 @@ public class FileProgressStruct : IDisposable {
 
   public uint iriWriteOffset {
     set {
-      RakNetPINVOKE.FileProgressStruct_iriWriteOffset_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FileProgressStruct_iriWriteOffset_set(swigCPtr, value);
     } 
     get {
-      uint ret = RakNetPINVOKE.FileProgressStruct_iriWriteOffset_get(swigCPtr);
+      uint ret = RakNetPINVOKE.CSharp_FileProgressStruct_iriWriteOffset_get(swigCPtr);
       return ret;
     } 
   }
 
   public SystemAddress senderSystemAddress {
     set {
-      RakNetPINVOKE.FileProgressStruct_senderSystemAddress_set(swigCPtr, SystemAddress.getCPtr(value));
+      RakNetPINVOKE.CSharp_FileProgressStruct_senderSystemAddress_set(swigCPtr, SystemAddress.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.FileProgressStruct_senderSystemAddress_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_FileProgressStruct_senderSystemAddress_get(swigCPtr);
       SystemAddress ret = (cPtr == IntPtr.Zero) ? null : new SystemAddress(cPtr, false);
       return ret;
     } 
@@ -195,10 +195,10 @@ public class FileProgressStruct : IDisposable {
 
   public RakNetGUID senderGuid {
     set {
-      RakNetPINVOKE.FileProgressStruct_senderGuid_set(swigCPtr, RakNetGUID.getCPtr(value));
+      RakNetPINVOKE.CSharp_FileProgressStruct_senderGuid_set(swigCPtr, RakNetGUID.getCPtr(value));
     } 
     get {
-      IntPtr cPtr = RakNetPINVOKE.FileProgressStruct_senderGuid_get(swigCPtr);
+      IntPtr cPtr = RakNetPINVOKE.CSharp_FileProgressStruct_senderGuid_get(swigCPtr);
       RakNetGUID ret = (cPtr == IntPtr.Zero) ? null : new RakNetGUID(cPtr, false);
       return ret;
     } 
@@ -206,23 +206,23 @@ public class FileProgressStruct : IDisposable {
 
   public bool allocateIrIDataChunkAutomatically {
     set {
-      RakNetPINVOKE.FileProgressStruct_allocateIrIDataChunkAutomatically_set(swigCPtr, value);
+      RakNetPINVOKE.CSharp_FileProgressStruct_allocateIrIDataChunkAutomatically_set(swigCPtr, value);
     } 
     get {
-      bool ret = RakNetPINVOKE.FileProgressStruct_allocateIrIDataChunkAutomatically_get(swigCPtr);
+      bool ret = RakNetPINVOKE.CSharp_FileProgressStruct_allocateIrIDataChunkAutomatically_get(swigCPtr);
       return ret;
     } 
   }
 
-  public FileProgressStruct() : this(RakNetPINVOKE.new_FileProgressStruct(), true) {
+  public FileProgressStruct() : this(RakNetPINVOKE.CSharp_new_FileProgressStruct(), true) {
   }
 
   private void SetFirstDataChunk(byte[] inByteArray, int numBytes) {
-    RakNetPINVOKE.FileProgressStruct_SetFirstDataChunk(swigCPtr, inByteArray, numBytes);
+    RakNetPINVOKE.CSharp_FileProgressStruct_SetFirstDataChunk(swigCPtr, inByteArray, numBytes);
   }
 
   private void SetIriDataChunk(byte[] inByteArray, int numBytes) {
-    RakNetPINVOKE.FileProgressStruct_SetIriDataChunk(swigCPtr, inByteArray, numBytes);
+    RakNetPINVOKE.CSharp_FileProgressStruct_SetIriDataChunk(swigCPtr, inByteArray, numBytes);
   }
 
 }

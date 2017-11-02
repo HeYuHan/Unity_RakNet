@@ -33,7 +33,7 @@ public class TransportInterface : IDisposable {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          RakNetPINVOKE.delete_TransportInterface(swigCPtr);
+          RakNetPINVOKE.CSharp_delete_TransportInterface(swigCPtr);
         }
         swigCPtr = new HandleRef(null, IntPtr.Zero);
       }
@@ -42,47 +42,47 @@ public class TransportInterface : IDisposable {
   }
 
   public virtual bool Start(ushort port, bool serverMode) {
-    bool ret = RakNetPINVOKE.TransportInterface_Start(swigCPtr, port, serverMode);
+    bool ret = RakNetPINVOKE.CSharp_TransportInterface_Start(swigCPtr, port, serverMode);
     return ret;
   }
 
   public virtual void Stop() {
-    RakNetPINVOKE.TransportInterface_Stop(swigCPtr);
+    RakNetPINVOKE.CSharp_TransportInterface_Stop(swigCPtr);
   }
 
   public virtual void CloseConnection(SystemAddress systemAddress) {
-    RakNetPINVOKE.TransportInterface_CloseConnection(swigCPtr, SystemAddress.getCPtr(systemAddress));
+    RakNetPINVOKE.CSharp_TransportInterface_CloseConnection(swigCPtr, SystemAddress.getCPtr(systemAddress));
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual Packet Receive() {
-    IntPtr cPtr = RakNetPINVOKE.TransportInterface_Receive(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_TransportInterface_Receive(swigCPtr);
     Packet ret = (cPtr == IntPtr.Zero) ? null : new Packet(cPtr, false);
     return ret;
   }
 
   public virtual void DeallocatePacket(Packet packet) {
-    RakNetPINVOKE.TransportInterface_DeallocatePacket(swigCPtr, Packet.getCPtr(packet));
+    RakNetPINVOKE.CSharp_TransportInterface_DeallocatePacket(swigCPtr, Packet.getCPtr(packet));
   }
 
   public virtual SystemAddress HasNewIncomingConnection() {
-    SystemAddress ret = new SystemAddress(RakNetPINVOKE.TransportInterface_HasNewIncomingConnection(swigCPtr), true);
+    SystemAddress ret = new SystemAddress(RakNetPINVOKE.CSharp_TransportInterface_HasNewIncomingConnection(swigCPtr), true);
     return ret;
   }
 
   public virtual SystemAddress HasLostConnection() {
-    SystemAddress ret = new SystemAddress(RakNetPINVOKE.TransportInterface_HasLostConnection(swigCPtr), true);
+    SystemAddress ret = new SystemAddress(RakNetPINVOKE.CSharp_TransportInterface_HasLostConnection(swigCPtr), true);
     return ret;
   }
 
   public virtual CommandParserInterface GetCommandParser() {
-    IntPtr cPtr = RakNetPINVOKE.TransportInterface_GetCommandParser(swigCPtr);
+    IntPtr cPtr = RakNetPINVOKE.CSharp_TransportInterface_GetCommandParser(swigCPtr);
     CommandParserInterface ret = (cPtr == IntPtr.Zero) ? null : new CommandParserInterface(cPtr, false);
     return ret;
   }
 
   public void Send(SystemAddress systemAddress, byte[] inByteArray) {
-    RakNetPINVOKE.TransportInterface_Send(swigCPtr, SystemAddress.getCPtr(systemAddress), inByteArray);
+    RakNetPINVOKE.CSharp_TransportInterface_Send(swigCPtr, SystemAddress.getCPtr(systemAddress), inByteArray);
     if (RakNetPINVOKE.SWIGPendingException.Pending) throw RakNetPINVOKE.SWIGPendingException.Retrieve();
   }
 
